@@ -1,0 +1,174 @@
+.footer {
+  background: $color-bg2;
+  padding: 5px 30px;
+  color: $white;
+  font-size: $size-small;
+  .top {
+    overflow: hidden;
+    padding: 5px 15px 25px;
+    margin: 0 -20px;
+  }
+  .bottom {
+    overflow: hidden;
+    padding: 25px 0;
+    margin: 0 15px;
+    clear: both;
+    border-top: 2px dashed #a5979d;
+    color: #a5979d;
+    @include font($bold, 16px, $font-secondary);
+    &:first-child {
+      border-top: none;
+    }
+  }
+  .footer-box {
+    float: left;
+    width: 33.33%;
+    padding: 0 20px;
+    .footer-box-header {
+      position: relative;
+      display: table;
+      height: 96px;
+      padding: 10px 0;
+      margin-bottom: 15px;
+      .footer-box-header-inner {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+        width: 100%;
+        img {
+          display: block;
+        }
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 2px;
+        width: 90px;
+        background: $white;
+      }
+    }
+    .footer-box-content {
+      max-width: 340px;
+      width: 100%;
+      line-height: 1.2;
+      letter-spacing: 0;
+      > p {
+        margin-bottom: 0;
+      }
+      a.find-out-more {
+        font-size: 17px;
+        text-transform: uppercase;
+        color: $white;
+        text-decoration: none;
+        letter-spacing: 2px;
+        &:hover, &:focus {
+          text-decoration: none;
+          color: $color-text2;
+        }
+      }
+    }
+  }
+  .contact-list {
+    font-family: $font-secondary;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-left: -28px;
+    li {
+      margin-bottom: 15px;
+      font-weight: $bold;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .fas, .far {
+        float: left;
+        font-size: 18px;
+        width: 20px;
+        text-align: center;
+        margin-right: 8px;
+        margin-top: 3px;
+      }
+      p {
+        overflow: hidden;
+      }
+      a {
+        font-family: $font-secondary;
+        color: $white;
+        &:hover, &:focus {
+          color: $color-text2;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .social-list {
+    overflow: hidden;
+    padding: 4px 0 0;
+    li {
+      float: left;
+      padding: 0 10px 10px;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        font-size: 30px;
+        line-height: 1;
+        color: $white;
+        text-decoration: none;
+        &:hover, &:focus {
+          text-decoration: none;
+          color: $color-text2;
+        }
+      }
+    }
+  }
+  .footer-menu {
+    overflow: hidden;
+    float: left;
+    li {
+      float: left;
+      padding: 0 10px;
+      border-right: 2px solid #a5979d;
+      line-height: 1;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        border-right: none;
+      }
+      a {
+        text-transform: uppercase;
+        color: #a5979d;
+        line-height: 1;
+        @include font($bold, 16px, $font-secondary);
+        &:hover, &:focus {
+          color: $white;
+        }
+      }
+      &.current-menu-item {
+        > a {
+          color: $white;
+        }
+      }
+      li {
+        display: none;
+      }
+    }
+  }
+  .copyright {
+    float: right;
+    text-transform: uppercase;
+    p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+}
