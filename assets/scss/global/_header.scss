@@ -95,13 +95,14 @@
   }
   header {
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
     &:not(:last-child) {
       margin-bottom: 26px;
     }
     h1, h2, h3 {
-      font-size: $size-heading1;
-      line-height: $line-height-heading;
+      font-size: 64px;
+      font-weight: $normal;
+      line-height: 1;
     }
     &:after {
       content: '';
@@ -170,7 +171,11 @@
   }
   &.full {
     header {
+      padding-bottom: 15px;
       h1, h2, h3 {
+        font-size: $size-heading1;
+        font-weight: $bold;
+        line-height: 1;
         @include spacing-break();
       }
     }

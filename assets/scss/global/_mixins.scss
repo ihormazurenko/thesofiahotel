@@ -44,3 +44,28 @@
   #{$property}: -webkit-calc(#{$value});
   #{$property}: calc(#{$value});
 }
+
+@mixin centered() {
+  position: absolute;
+  z-index: 3;
+  //max-height: 100%;
+  //max-width: initial;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: -9999px;
+  left: -9999px;
+  right: -9999px;
+  bottom: -9999px;
+  margin: auto;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: .35s;
+  -moz-transition: .35s;
+  -o-transition: .35s;
+  transition: .35s;
+}

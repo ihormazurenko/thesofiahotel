@@ -13,11 +13,13 @@ $size-main: 32px;
 $size-small: 24px;
 $size-heading1: 144px;
 $size-heading2: 76px;
-$size-heading3: 48px;
+$size-heading3: 53px;
+$size-heading4: 48px;
+$size-heading5: 27px;
 
 /*line-height*/
 $line-height: 1.4;
-$line-height-heading: 1;
+$line-height-heading: .9;
 
 /*colors*/
 $white: #ffffff;
@@ -27,6 +29,8 @@ $color-text3: #739193;
 $color-text4: #4b2936;
 $color-bg1: #eff5f8;
 $color-bg2: #4b2936;
+$color-bg3: #EDF5F8;
+$color-bg4: #586669;
 
 /*transition*/
 $transition-link: 0.25s;

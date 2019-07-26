@@ -6,20 +6,22 @@ get_header(); ?>
 
     <?php get_template_part('inc/hero'); ?>
 
-    <section class="section-two-columns">
+    <section class="section-two-columns abstract-bg high-block vertical-middle">
         <div class="container">
             <div class="two-column-box">
                 <div class="column image">
                     <div class="inner-box">
-                        <div class="img-wrap centered-img">
+                        <div class="img-wrap ">
                             <img src="<?php echo get_bloginfo('template_url'); ?>/img/world-class-accommodations.jpg" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="column text">
                     <div class="inner-box">
-                        <h2 class="section-title">World Class Accommodations</h2>
-                        <div class="content-wrap">
+                        <div class="section-title-box">
+                            <h2 class="section-title">World Class Accommodations 123</h2>
+                        </div>
+                        <div class="content-box">
                             <div class="content">
                                 <p>An unforgettable experience for any guest lies in the hands of the host.
                                     Sofia's graciousness, charm, and attention to detail are everywhere from
@@ -56,8 +58,10 @@ get_header(); ?>
             <div class="two-column-box">
                 <div class="column text">
                     <div class="inner-box">
-                        <h2 class="section-title">VIP Sеuites</h2>
-                        <div class="content-wrap">
+                        <div class="section-title-box">
+                            <h2 class="section-title">VIP Sеuites</h2>
+                        </div>
+                        <div class="content-box">
                             <div class="content">
                                 <p>For guests who require special accommodations, Sofia offers special suites
                                     featuring all the standard guest room amenities and additional touches.</p>
@@ -65,7 +69,7 @@ get_header(); ?>
                         </div>
                         <ul class="link-list">
                             <li>
-                                <a href="#" class="btn" title="View our suites">View our suites</a>
+                                <a href="#" class="btn grey" title="View our suites">View our suites</a>
                             </li>
                         </ul>
                     </div>
@@ -76,8 +80,8 @@ get_header(); ?>
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/vip-suites-section.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/vip-suites-section.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/vip-suites-section.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/hero-home.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/prefooter-home.jpg" alt=""></div>
                                 </div>
                                 <!-- Add Arrows -->
                                 <div class="swiper-button-next"></div>
@@ -135,13 +139,13 @@ get_header(); ?>
                     <a href="#" title="">
                         <span class="service-box">
                             <span class="centered-img">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/reserve-a-table-img.jpg" alt="">
+                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/book-a-treatment-img.jpg" alt="">
                             </span>
                             <span class="inner-box">
                                 <span class="inner-table">
                                     <span class="inner-cell">
-                                        <span class="service-subtitle">RESERVE A TABLE</span>
-                                        <span class="service-title">CURRANT BRASSERIE</span>
+                                        <span class="service-subtitle">BOOK A TREATMENT</span>
+                                        <span class="service-title">SOFIA SPA</span>
                                     </span>
                                 </span>
                             </span>
@@ -152,13 +156,13 @@ get_header(); ?>
                     <a href="#" title="">
                         <span class="service-box">
                             <span class="centered-img">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/reserve-a-table-img.jpg" alt="">
+                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/bundle-and-save-img.jpg" alt="">
                             </span>
                             <span class="inner-box">
                                 <span class="inner-table">
                                     <span class="inner-cell">
-                                        <span class="service-subtitle">RESERVE A TABLE</span>
-                                        <span class="service-title">CURRANT BRASSERIE</span>
+                                        <span class="service-subtitle">BUNDLE AND SAVE</span>
+                                        <span class="service-title">PACKAGES</span>
                                     </span>
                                 </span>
                             </span>
