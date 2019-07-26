@@ -1,14 +1,52 @@
 .header {
   display: block;
   position: absolute;
-  z-index: 100;
+  z-index: 15;
   top: 0;
   left: 0;
   right: 0;
   background-color: transparent;
+  opacity: 1;
+  @include transition(.6s);
+  .direction-down &,
+  .direction-up & {
+    opacity: 0;
+    @include transition($transition-other);
+  }
+  &.show-burger {
+    opacity: 1;
+    .container {
+      position: relative;
+      z-index: 99999;
+      .header .container {
+        //padding-left: 60px;
+        //padding-right: 60px;
+      }
+    }
+    .btn, a.btn {
+      background-color: transparent;
+      &:hover,
+      &:focus {
+        background-color: $color-bg2;
+      }
+    }
+    & + #header-scrolling {
+      z-index: -1;
+    }
+  }
   .container {
-    max-width: none;
+    max-width: 2560px;
     padding: 60px 72px 50px;
+    @media all and (max-width: 1024px) {
+      padding: 60px 60px 50px;
+    }
+    @media all and (max-width: 768px) {
+      padding: 30px 35px 50px 45px;
+    }
+    @media all and (max-width: 360px) {
+      padding-right: 30px;
+      padding-left: 40px;
+    }
   }
   .logo {
     float: left;
@@ -22,6 +60,10 @@
       width: auto;
       height: auto;
     }
+    @media all and (max-width: 768px) {
+      margin-top: 14px;
+      max-width: 176px;
+    }
   }
   .weather-box {
     float: right;
@@ -32,20 +74,123 @@
     letter-spacing: 0;
     &:not(:last-child) {
       margin-left: 32px;
+      @media all and (max-width: 1024px) {
+        margin-left: 26px;
+      }
     }
     .icon {
       font-size: 0.9em;
       margin-left: 2px;
     }
+    @media all and (max-width: 768px) {
+      position: absolute;
+      right: 90px;
+      top: 20px;
+      display: none;
+    }
+    @media all and (max-width: 400px) {
+      top: 60px;
+      right: 30px;
+    }
   }
+
   .btn-find-rooms {
     float: right;
     margin-top: 12px;
     &:not(:last-child) {
       margin-left: 32px;
     }
+    @media all and (max-width: 768px) {
+      display: none;
+    }
   }
 }
+
+.admin-bar .header.show-burger .container {
+  //top: 32px;
+  padding-top: 92px;
+  @media all and (max-width: 782px) {
+    //top: 46px;
+    padding-top: 106px;
+  }
+  @media all and (max-width: 768px) {
+    //top: 46px;
+    padding-top: 70px;
+  }
+  @media all and (max-width: 600px) {
+    //top: 0;
+    padding-top: 20px;
+  }
+}
+
+#header-scrolling {
+  overflow: hidden;
+  position: fixed;
+  z-index: 30;
+  background-color: #F1F2F2;
+  opacity: 1;
+  @include transition($transition-other);
+  @include css3-prefix('transform', 'translateY(-100%)');
+  .container {
+    overflow: hidden;
+    padding-top: 49px;
+    padding-bottom: 46px;
+    @media all and (max-width: 1024px) {
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+    @media all and (max-width: 480px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .direction-up & {
+    @include css3-prefix('transform', 'translateY(0)');
+    @include css3-prefix('box-shadow','0 2px 8px 0 rgba(0, 0, 0, 0.75)');
+  }
+  .direction-down & {
+    box-shadow: none;
+  }
+  .weather-box {
+    color: $color-text5;
+  }
+  .menu-toggle {
+    span {
+      &, &:before, &:after {
+        background-color: $color-text5;
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    .weather-box {
+      display: none;
+    }
+    .btn-find-rooms {
+      display: none;
+    }
+  }
+  .btn, a.btn {
+    color: $color-text5;
+    border-color: $color-text5;
+    background-color: transparent;
+    &:hover, &:focus {
+      color: $white;
+      background-color: $color-text5;
+    }
+  }
+
+  .admin-bar.direction-up & {
+    @include css3-prefix('transform', 'translateY(32px)');
+    @media all and (max-width: 782px) {
+      @include css3-prefix('transform', 'translateY(46px)');
+    }
+    @media all and (max-width: 600px) {
+      @include css3-prefix('transform', 'translateY(0)');
+    }
+  }
+}
+
+
 .hero {
   position: relative;
   z-index: 10;
@@ -54,6 +199,9 @@
   background-color: #737373;
   color: $white;
   text-align: center;
+  @media all and (max-width: 768px) {
+    padding: 20px;
+  }
   > :not(.hero-img) {
     position: relative;
     z-index: 3;
@@ -92,6 +240,12 @@
     background: transparent;
     border: 2px solid #ffffff;
     pointer-events: none;
+    @media all and (max-width: 768px) {
+      top: 18px;
+      right: 18px;
+      bottom: 18px;
+      left: 18px;
+    }
   }
   header {
     position: relative;
@@ -146,6 +300,12 @@
       letter-spacing: 4px;
       &:not(:last-child) {
         margin-bottom: 18px;
+        @media all and (max-width: 768px) {
+          margin-bottom: 10px;
+        }
+      }
+      @media all and (max-width: 768px) {
+        font-size: 20px;
       }
     }
     .scroll-link {
@@ -177,6 +337,12 @@
         font-weight: $bold;
         line-height: 1;
         @include spacing-break();
+        @media all and (max-width: 1024px) {
+          font-size: 120px;
+        }
+        @media all and (max-width: 768px) {
+          font-size: 80px;
+        }
       }
     }
   }
@@ -200,5 +366,232 @@
     width: 100%;
     min-height: 200px;
     vertical-align: middle;
+  }
+}
+
+
+#burger-box {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  @include css3-prefix('transform-origin','50% 50%');
+  //@include css3-prefix('transform', 'scale(0)');
+  @include transition(opacity 0.4s ease 0s);
+  .show-burger & {
+    z-index: 9999;
+    opacity: 1;
+    //@include css3-prefix('transform', 'scale(1)');
+  }
+  .hero {
+    min-height: auto;
+    height: 100%;
+    max-height: 100%;
+    .hero-img {
+      background-color: $color-text2;
+    }
+  }
+  .container {
+    display: table;
+    width: 100%;
+    padding-top: 20px;
+  //  overflow: hidden;
+  //  padding-top: 166px;
+  //  padding-left: 100px;
+  //  padding-right: 100px;
+    @media all and (max-width: 1024px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @media all and (max-width: 768px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  .admin-bar & {
+    top: 32px;
+    @media all and (max-width: 782px) {
+      top: 46px;
+    }
+    @media all and (max-width: 600px) {
+      top: 0;
+    }
+  }
+}
+.burger-box {
+  .burger-inner-wrap {
+    margin-top: 90px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    max-height: 85%;
+    max-height: -webkit-calc(100% - 120px);
+    max-height: calc(100% - 120px);
+    overflow-x: auto;
+    @media all and (max-width: 1024px) {
+      padding-top: 30px;
+    }
+    @media all and (max-width: 640px) {
+      padding-top: 10px;
+    }
+  }
+  .burger-inner-box {
+    display: block;
+    width: 100%;
+  }
+  .left-box,
+  .right-box {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%;
+    @media all and (max-width: 640px) {
+      display: block;
+      width: 100%;
+    }
+  }
+  .left-box {
+    padding-right: 20px;
+    text-align: left;
+     > * {
+       position: relative;
+       padding-bottom: 21px;
+       margin-bottom: 26px;
+       &:after {
+         position: absolute;
+         content: '';
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         max-width: 120px;
+         height: 4px;
+         background-color: $white;
+       }
+       &:last-child {
+         padding-bottom: 0;
+         margin-bottom: 0;
+         &:after {
+           content: none;
+         }
+       }
+     }
+    @media all and (max-width: 640px) {
+      > * {
+        &:last-child {
+          padding-bottom: 21px;
+          margin-bottom: 26px;
+          &:after {
+          content: '';
+          }
+        }
+      }
+    }
+  }
+
+  .right-box {
+    padding-left: 20px;
+    @media all and (max-width: 640px) {
+      padding-left: 0;
+    }
+    .burger-menu {
+      text-align: right;
+      @media all and (max-width: 640px) {
+        text-align: left;
+      }
+    }
+  }
+  .contact-list {
+    margin-bottom: 11px;
+    font-family: $font-secondary;
+    font-size: 16px;
+    text-transform: uppercase;
+    > li {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+      a {
+        font-family: $font-secondary;
+        color: $white;
+      }
+    }
+  }
+  .social-box {
+    padding-top: 4px;
+  }
+}
+
+  .burger-menu {
+    > li {
+      &:not(:last-child) {
+        margin-bottom: 18px;
+      }
+      a {
+        //padding: 15px 0;
+        font-size: 64px;
+        font-weight: $normal;
+        color: $white;
+        letter-spacing: -.04em;
+        line-height: $line-height-heading;
+        &:hover,
+        &:focus {
+          color: $color-text4;
+        }
+        @media all and (max-width: 1024px) {
+          font-size: 40px;
+        }
+        @media all and (max-width: 640px) {
+          font-size: 32px;
+        }
+      }
+      &.active {
+        color: $color-text4;
+      }
+    }
+    .small & {
+      > li {
+        margin-bottom: 0;
+        a {
+          font-family: $font-secondary;
+          font-size: 32px;
+          font-weight: $light;
+          text-transform: uppercase;
+          @media all and (max-width: 1024px) {
+            font-size: 26px;
+          }
+          @media all and (max-width: 640px) {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+
+.social-list {
+  overflow: hidden;
+  padding: 4px 0 0;
+  li {
+    float: left;
+    padding: 0 10px 10px;
+    @media all and (max-width: 640px) {
+      padding: 0 8px 8px;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    a {
+      font-size: 30px;
+      line-height: 1;
+      color: $white;
+      text-decoration: none;
+      &:hover, &:focus {
+        text-decoration: none;
+        color: $color-text4;
+      }
+    }
   }
 }

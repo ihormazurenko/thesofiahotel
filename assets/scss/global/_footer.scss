@@ -1,4 +1,6 @@
 .footer {
+  position: relative;
+  z-index: 20;
   background: $color-bg2;
   padding: 5px 30px;
   color: $white;
@@ -7,6 +9,14 @@
     overflow: hidden;
     padding: 5px 15px 25px;
     margin: 0 -20px;
+    @media all and (max-width: 1024px) {
+      > *:last-child {
+        width: 100%;
+        .footer-box-header {
+          height: 50px;
+        }
+      }
+    }
   }
   .bottom {
     overflow: hidden;
@@ -19,11 +29,21 @@
     &:first-child {
       border-top: none;
     }
+    @media all and (max-width: 1024px) {
+      margin: 0;
+    }
   }
   .footer-box {
     float: left;
     width: 33.33%;
     padding: 0 20px;
+    @media all and (max-width: 1024px) {
+      width: 50%;
+    }
+    @media all and (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
     .footer-box-header {
       position: relative;
       display: table;
@@ -160,6 +180,10 @@
         display: none;
       }
     }
+    @media all and (max-width: 768px) {
+      float: none;
+      margin-bottom: 20px;
+    }
   }
   .copyright {
     float: right;
@@ -169,6 +193,13 @@
     }
     &:not(:first-child) {
       margin-left: 30px;
+      @media all and (max-width: 768px) {
+        margin-left: 0;
+      }
+    }
+    @media all and (max-width: 768px) {
+      float: none;
+      width: 100%;
     }
   }
 }

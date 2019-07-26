@@ -19,7 +19,7 @@ get_header(); ?>
                 <div class="column text">
                     <div class="inner-box">
                         <div class="section-title-box">
-                            <h2 class="section-title">World Class Accommodations 123</h2>
+                            <h2 class="section-title">World Class Accommodations</h2>
                         </div>
                         <div class="content-box">
                             <div class="content">
@@ -84,8 +84,8 @@ get_header(); ?>
                                     <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/prefooter-home.jpg" alt=""></div>
                                 </div>
                                 <!-- Add Arrows -->
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-prev"><span class="tsh-icon-arrow"></span></div>
+                                <div class="swiper-button-next"><span class="tsh-icon-arrow"></span></div>
                             </div>
                         </div>
                     </div>

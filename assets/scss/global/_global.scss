@@ -74,6 +74,12 @@ a, .btn {
     pointer-events: none;
     @include transition($transition-link);
   }
+  @media all and (max-width: 768px) {
+    min-width: 200px;
+    padding: 22px 20px;
+    font-size: 14px;
+  }
+
   &:hover, &:focus {
     background-color: #4b2936;
     text-decoration: none;
@@ -125,6 +131,9 @@ img {
 .content {
   letter-spacing: -.03em;
   word-spacing: -.01em;
+  @media all and (max-width: 1024px) {
+    font-size: 26px;
+  }
   * {
     margin-bottom: 12px;
     line-height: 1.25;
@@ -219,6 +228,11 @@ img {
       background: rgba(0,0,0,.54);
     }
   }
+  &.gold {
+    &:after {
+      background-color: rgba($color-text2, .75);
+    }
+  }
 }
 
 .btn-jump-to-content, a.btn-jump-to-content {
@@ -284,4 +298,9 @@ img {
     //max-height: 100%;
     //max-width: initial;
   }
+}
+
+#content {
+  position: relative;
+  z-index: 20;
 }
