@@ -3,7 +3,6 @@
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
 body                            { padding:0; margin:0; @include font(); background: #ffffff; color: $color-text;
-  letter-spacing: 1px; word-spacing: 1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -191,6 +190,10 @@ img {
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+.home {
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
 .wrapper {
   position: relative;
   display: block;

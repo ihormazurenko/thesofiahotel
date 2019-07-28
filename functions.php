@@ -87,8 +87,9 @@ if ( function_exists( 'add_theme_support' ) ) {
 // support menus
 if ( function_exists( 'register_nav_menus' ) ) {
     register_nav_menus(array(
-        'main-menu'     => 'Main Menu',
-        'footer-menu'   => 'Footer Menu'
+        'main-menu'         => 'Main Menu',
+        'secondary-menu'    => 'Secondary Menu',
+        'footer-menu'       => 'Footer Menu'
     ));
 }
 

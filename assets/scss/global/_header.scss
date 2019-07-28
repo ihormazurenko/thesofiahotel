@@ -199,6 +199,7 @@
   background-color: #737373;
   color: $white;
   text-align: center;
+  word-break: break-word;
   @media all and (max-width: 768px) {
     padding: 20px;
   }
@@ -267,6 +268,17 @@
       margin-left: -58px;
       height: 3px;
       background: $white;
+    }
+  }
+  .hero-content {
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.2;
+    p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 26px;
     }
   }
   .hero-links {
@@ -350,21 +362,36 @@
 .hero-vertical-align {
   display: table;
   width: 100%;
-  height: 526px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  height: 510px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  @media all and (max-width: 768px) {
+    height: 530px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
   .full & {
     @include calc('height', '100vh - 60px');
     padding-top: 140px;
     padding-bottom: 140px;
+    @media all and (max-width: 768px) {
+      @include calc('height', '100vh - 40px');
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
     .admin-bar & {
       @include calc('height', '100vh - 60px - 32px');
+      @media all and (min-width: 769px) and (max-width: 782px) {
+        @include calc('height', '100vh - 60px - 46px');
+      }
+      @media all and (max-width: 768px) {
+        @include calc('height', '100vh - 40px - 46px');
+      }
     }
   }
   .hero-box {
     display: table-cell;
     width: 100%;
-    min-height: 200px;
     vertical-align: middle;
   }
 }
@@ -514,6 +541,9 @@
       a {
         font-family: $font-secondary;
         color: $white;
+        &:hover, &:focus {
+          color: $color-text4;
+        }
       }
     }
   }

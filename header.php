@@ -35,52 +35,87 @@
                         <div class="burger-inner-box">
                             <div class="container">
                                 <div class="left-box">
-                                    <div class="burger-menu-box small">
-                                        <ul class="burger-menu">
-                                            <li><a href="#" title="Contact">Contact</a></li>
-                                            <li><a href="#" title="Blog">Blog</a></li>
-                                            <li><a href="#" title="Press">Press</a></li>
-                                            <li><a href="#" title="History">History</a></li>
-                                        </ul>
-                                    </div>
+                                    <?php if (has_nav_menu('secondary-menu')) { ?>
+                                        <nav class="burger-menu-box small">
+                                            <ul class="burger-menu">
+                                                <?php
+                                                wp_nav_menu(array(
+                                                    'theme_location'  => 'secondary-menu',
+                                                    'menu'            => 'Secondary Menu',
+                                                    'container'       => false,
+                                                    'items_wrap'      => '%3$s',
+                                                    'depth'           => 1
+                                                ));
+                                                ?>
+                                            </ul>
+                                        </nav>
+                                    <?php } ?>
 
-                                    <div class="contact-box">
-                                        <ul class="contact-list">
-                                            <li>
-                                                <p>Toll Free: <a href="tel:+18008260009" title="800.826.0009">800.826.0009</a></p>
-                                            </li>
-                                            <li>
-                                                <p>T: <a href="tel:+16192349200" title="619.234.9200">619.234.9200</a>  F:<a href="tel:+16195449879" title="619.544.9879">619.544.9879</a></p>
-                                            </li>
-                                            <li>
-                                                <p>150 West Broadway, San Diego, CA 92101</p>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <?php
+                                        $contacts   = get_field('contacts', 'option');
+                                        $social     = get_field('social', 'option');
+                                    ?>
+                                    <?php if ($contacts && ($contacts['toll_free'] || $contacts['address'] || $contacts['tel'])) : ?>
+                                        <div class="contact-box">
+                                            <ul class="contact-list">
+                                                <?php if (trim($contacts['toll_free'])) { ?>
+                                                    <li>
+                                                        <p>Toll Free: <?php echo $contacts['toll_free']; ?></p>
+                                                    </li>
+                                                <?php }
+                                                if (trim($contacts['tel'])) { ?>
+                                                    <li>
+                                                        <p><?php echo $contacts['tel']; ?></p>
+                                                    </li>
+                                                <?php }
+                                                if (trim($contacts['address'])) { ?>
+                                                    <li>
+                                                        <p><?php echo strip_tags($contacts['address']); ?></p>
+                                                    </li>
+                                                <?php } ?>
+                                            </ul>
+                                        </div>
+                                    <?php endif; ?>
 
-                                    <div class="social-box">
-                                        <ul class="social-list">
-                                            <li><a href="https://www.facebook.com/TheSofiaHotel" title="Facebook" target="_blank" rel="nofollow noopener"><i class="fab fa-facebook-square" aria-hidden="true"></i></a></li>
-                                            <li><a href="https://twitter.com/thesofiahotel" title="Twitter" target="_blank" rel="nofollow noopener"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="https://www.instagram.com/thesofiahotel/" title="Instagram" target="_blank" rel="nofollow noopener"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                                            <li><a href="https://www.yelp.com/biz/the-sofia-hotel-san-diego" title="Yelp" target="_blank" rel="nofollow noopener"><i class="fab fa-yelp" aria-hidden="true"></i></a></li>
-                                            <li><a href="https://www.tripadvisor.com/Hotel_Review-g60750-d628619-Reviews-The_Sofia_Hotel-San_Diego_California.html" title="TripAdvisor" target="_blank" rel="nofollow noopener"><i class="fab fa-tripadvisor" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </div>
+                                    <?php if ($social && ($social['facebook'] || $social['twitter'] || $social['instagram'] || $social['yelp'] || $social['tripadvisor'])) : ?>
+                                        <div class="social-box">
+                                            <ul class="social-list">
+                                                <?php
+                                                    if ($social['facebook'])
+                                                        echo "<li><a href='".esc_url($social['facebook'])."' title='Facebook' target='_blank' rel='nofollow noopener'><i class='fab fa-facebook-square'></i></a></li>";
+
+                                                    if ($social['twitter'])
+                                                        echo "<li><a href='".esc_url($social['twitter'])."' title='Twitter' target='_blank' rel='nofollow noopener'><i class='fab fa-twitter'></i></a></li>";
+
+                                                    if ($social['instagram'])
+                                                        echo "<li><a href='".esc_url($social['instagram'])."' title='Instagram' target='_blank' rel='nofollow noopener'><i class='fab fa-instagram'></i></a></li>";
+
+                                                    if ($social['yelp'])
+                                                        echo "<li><a href='".esc_url($social['yelp'])."' title='Yelp' target='_blank' rel='nofollow noopener'><i class='fab fa-yelp'></i></a></li>";
+
+                                                    if ($social['tripadvisor'])
+                                                        echo "<li><a href='".esc_url($social['tripadvisor'])."' title='TripAdvisor' target='_blank' rel='nofollow noopener'><i class='fab fa-tripadvisor'></i></a></li>";
+                                                ?>
+                                            </ul>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="right-box">
-                                    <div class="burger-menu-box">
-                                        <ul class="burger-menu">
-                                            <li><a href="#" title="Book Now">Book Now</a></li>
-                                            <li><a href="#" title="Accommodations">Accommodations</a></li>
-                                            <li><a href="#" title="Business Travel">Business Travel</a></li>
-                                            <li><a href="#" title="Gallery">Gallery</a></li>
-                                            <li><a href="#" title="Explore">Explore</a></li>
-                                            <li><a href="#" title="Dining">Dining</a></li>
-                                            <li><a href="#" title="Specials">Specials</a></li>
-                                            <li><a href="#" title="Shop">Shop</a></li>
-                                        </ul>
-                                    </div>
+                                    <?php if (has_nav_menu('main-menu')) { ?>
+                                        <nav class="burger-menu-box">
+                                            <ul class="burger-menu">
+                                                <?php
+                                                wp_nav_menu(array(
+                                                    'theme_location'  => 'main-menu',
+                                                    'menu'            => 'Main Menu',
+                                                    'container'       => false,
+                                                    'items_wrap'      => '%3$s',
+                                                    'depth'           => 1
+                                                ));
+                                                ?>
+                                            </ul>
+                                        </nav>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>
