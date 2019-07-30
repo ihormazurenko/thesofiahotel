@@ -35,14 +35,23 @@ jQuery(document).ready(function($) {
     });
 
 	$(document).ready(function() {
+        // for placeholder link
+        function prevent(){
+            $('.prevent, .btn-modal, a[href="#"]').on('click touch', function(event){
+                event.preventDefault();
+            });
+        }
+
+        // for empty link
+        prevent();
+
+
         // for burger menu
         $('.menu-toggle').on('click', function(){
             $('.menu-toggle').toggleClass('active');
             $('#header-main').toggleClass('show-burger');
             $(document.body).toggleClass('overflow');
         });
-
-
 
         //for slider
         $(function () {
@@ -93,6 +102,25 @@ jQuery(document).ready(function($) {
                     }, 50);
                 }
             }
+        });
+
+        //for masonry
+        $(function () {
+            if ($('.popup-gallery a > img'))
+            $('.popup-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                },
+                image: {
+                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                }
+            });
         });
 
         //header scroll effect

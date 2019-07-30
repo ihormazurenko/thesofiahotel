@@ -1,6 +1,8 @@
 <?php
 // loading styles and scripts
 function load_style_script(){
+    global $is_IE;
+
     wp_enqueue_style('swiper.min', '//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css', array(), null );
     wp_enqueue_style('screen', get_template_directory_uri() . '/assets/css/screen.css', array(), null );
     wp_enqueue_style('style', get_stylesheet_uri(), array(), null );
@@ -9,6 +11,16 @@ function load_style_script(){
     if ( !wp_script_is( 'jquery' ) ) {
         wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', false  );
     }
+
+    if (is_page(72)) {
+//        wp_enqueue_script('imagesloaded', '//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js', array(), '4.1.4', true );
+//        wp_enqueue_script('masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array(), '4.2.2', true );
+        wp_enqueue_script('magnific', get_template_directory_uri() . '/assets/js/magnific.js', array('jquery'), '1.1.0', true );
+        wp_enqueue_script('accessible-tabs', get_template_directory_uri() . '/assets/js/accessible-tabs.js', array('jquery'), '1.0.0', true );
+        wp_enqueue_script('accessible-tabs-ie9', get_template_directory_uri() . '/assets/js/accessible-tabs-ie9.js', array('jquery'), '1.0.0', true );
+        wp_script_add_data('accessible-tabs-ie9','conditional','IE 9');
+    }
+
     wp_enqueue_script('fontawesome', '//kit.fontawesome.com/0d9005a90f.js', array(), '5.9.0', false );
     wp_enqueue_script('jquery.nicescroll.min', '//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js', array(), '3.7.6', true );
     wp_enqueue_script('swiper.min', '//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js', array(), '4.5.0', false );
@@ -33,7 +45,7 @@ add_action('wp_head', 'add_ie_html5_shiv');
 // logo at the entrance to the admin panel
 function my_custom_login_logo(){
     echo '<style type="text/css">
-    h1 a {height:142px !important; width:190px !important; background-size:contain !important; background-image:url('.get_bloginfo("template_url").'/img/logo.svg) !important;}
+    h1 a {height:40px !important; width:280px !important; background-size:contain !important; background-image:url('.get_bloginfo("template_url").'/img/logo.svg) !important;}
     </style>';
 }
 add_action('login_head', 'my_custom_login_logo');
@@ -120,6 +132,7 @@ function guid_write( $id ){
         $wpdb->query("UPDATE $wpdb->posts SET guid='". get_permalink($id) ."' WHERE ID=$id LIMIT 1");
 }
 add_action ('save_post', 'guid_write', 100);
+
 
 
 // for Options Page

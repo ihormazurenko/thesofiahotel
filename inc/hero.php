@@ -10,16 +10,21 @@
             $title  = get_the_title();
         }
 
-        $bg         = !empty($hero['bg']) ? $hero['bg'] : '';
+        $bg         = !empty($hero['bg']) ? $hero['bg']['url'] : '';
         $overlay    = $hero['overlay'] ? ' overlay black' : '';
         $full       = $hero['full'] ? ' full' : '';
     } else {
-        $title = get_the_title();
+        $title      = get_the_title();
+    }
+
+    if (is_single() && !$bg && has_post_thumbnail()) {
+        $bg         = get_the_post_thumbnail_url(get_the_ID(), 'full');
+        $overlay    = ' overlay black';
     }
 ?>
 <div class="hero<?php echo $full; ?>">
     <?php if ($bg) : ?>
-        <div class="hero-img<?php echo $overlay; ?>" style="background-image: url(<?php echo esc_url($bg['url']); ?>);"></div>
+        <div class="hero-img<?php echo $overlay; ?>" style="background-image: url(<?php echo esc_url($bg); ?>);"></div>
     <?php endif; ?>
 
     <div class="hero-vertical-align">

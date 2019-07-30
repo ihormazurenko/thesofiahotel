@@ -6,7 +6,7 @@ get_header(); ?>
 
     <?php get_template_part('inc/hero'); ?>
 
-    <section class="section-two-columns abstract-bg high-block vertical-middle">
+    <section class="section-two-columns abstract-bg high-block vertical-middle color-purple">
         <div class="container">
             <div class="two-column-box">
                 <div class="column image">
@@ -173,6 +173,21 @@ get_header(); ?>
         </div>
     </section>
 
-    <?php get_template_part('inc/banner', 'pre-footer'); ?>
+    <section class="section-banner pre-footer" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/prefooter-home-2.jpg);">
+        <div class="container">
+            <div class="vertical-align-box">
+                <div class="inner-box">
+                    <ul class="banner-link">
+                        <li>
+                            <a href="#" title="" class="btn">Find Rooms</a>
+                        </li>
+                        <li>
+                            <a href="#" title="" class="btn">Accommodations</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <?php get_footer(); ?>

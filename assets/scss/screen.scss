@@ -9,9 +9,12 @@
 @import 'global/header';
 @import 'global/navigation';
 @import 'global/sliders';
+@import 'global/magnific';
 @import 'global/footer';
 
 /* styles used throughout site */
 @import 'partials/home';
+@import 'partials/blog';
+@import 'partials/tabs';
 
 @import 'global/responsive';
