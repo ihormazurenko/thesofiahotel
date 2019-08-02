@@ -1,9 +1,10 @@
+.single-slider,
 .inner-slider {
-  height: 100%;
   .swiper-container {
     height: 100%;
   }
   .swiper-slide {
+    overflow: hidden;
     position: relative;
     img {
       @include centered();
@@ -19,6 +20,60 @@
       @include css3-prefix('transform','rotate(90deg)');
     }
   }
+}
+
+.inner-slider {
+  height: 100%;
+}
+
+.single-slider {
+  .swiper-slide {
+    padding-bottom: 39%;
+    @media all and (max-width: 1024px) {
+      padding-bottom: 50%;
+    }
+    @media all and (max-width: 768px) {
+      padding-bottom: 70%;
+    }
+    @media all and (max-width: 480px) {
+      padding-bottom: 120%;
+    }
+  }
+  &.small {
+    .swiper-slide {
+      padding-bottom: 25%;
+      @media all and (max-width: 1024px) {
+        //padding-bottom: 50%;
+      }
+      @media all and (max-width: 768px) {
+        padding-bottom: 30%;
+      }
+      @media all and (max-width: 480px) {
+        padding-bottom: 60%;
+      }
+    }
+  }
+}
+
+.slide-title {
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: $bold;
+  letter-spacing: .1em;
+  color: $white;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, .5);
+}
+
+.slide-name-box {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  .slide-title {}
 }
 
 
@@ -102,4 +157,3 @@
     }
   }
 }
-

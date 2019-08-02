@@ -3,6 +3,9 @@
   padding-bottom: 24px;
   @include font($normal, $size-heading2, $font-main, $line-height-heading);
   letter-spacing: -.04em;
+  .small & {
+    font-size: $size-heading4;
+  }
   @media all and (max-width: 1024px) {
     font-size: 60px;
   }
@@ -12,21 +15,29 @@
 }
 
 .section-title-box {
+  padding-bottom: 30px;
   margin-bottom: 25px;
   border-bottom: 2px dashed $color-text;
   .section-title {
-    padding-bottom: 26px;
+    padding-bottom: 0;
     letter-spacing: -.05em;
   }
-  .color-purple & {
-    .section-title {
-      color: $color-text6;
-    }
+  //.color-purple & {
+  //  .section-title {
+  //    color: $color-text6;
+  //  }
+  //}
+  //.color-gold & {
+  //  .section-title {
+  //    color: $color-text2;
+  //  }
+  //}
+  > :last-child {
+    margin-bottom: 0;
   }
-  .color-gold & {
-    .section-title {
-      color: $color-text2;
-    }
+  .small & {
+    padding-bottom: 20px;
+    margin-bottom: 23px;
   }
 }
 
@@ -45,6 +56,12 @@
     //* {
     //  line-height: 1.25;
     //}
+    > * {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   .section-title {
     position: relative;
@@ -61,18 +78,18 @@
     }
   }
 
-  &.color-purple {
-    color: $color-text4;
-    .section-title:after {
-      background-color: $color-text4;
-    }
-  }
-  &.color-gold {
-    color: $color-text2;
-    .section-title:after {
-      background-color: $color-text2;
-    }
-  }
+  //&.color-purple {
+  //  color: $color-text4;
+  //  .section-title:after {
+  //    background-color: $color-text4;
+  //  }
+  //}
+  //&.color-gold {
+  //  color: $color-text2;
+  //  .section-title:after {
+  //    background-color: $color-text2;
+  //  }
+  //}
 }
 
 
@@ -90,12 +107,17 @@
 }
 
 .section-banner {
+  text-align: center;
   @include bg();
   .vertical-align-box {
-
+    .inner-box {
+      >:last-child:not(.banner-link) {
+        margin-bottom: 0;
+      }
+    }
   }
   .banner-link {
-    text-align: center;
+    //text-align: center;
     &:last-child {
       margin-bottom: -26px;
       @media all and (max-width: 560px) {
@@ -113,12 +135,56 @@
       a {}
     }
   }
-  &.pre-footer {
-    .vertical-align-box {
-      height: 414px;
+  //&.pre-footer {
+  //  .vertical-align-box {
+  //    height: 414px;
+  //  }
+  //}
+}
+  .banner-title-box {
+    position: relative;
+    margin-bottom: 35px;
+    padding-bottom: 34px;
+    &:after {
+      position: absolute;
+      content: '';
+      left: 50%;
+      bottom: 0;
+      width: 100%;
+      max-width: 120px;
+      height: 4px;
+      background-color: $white;
+      @include css3-prefix('transform', 'translateX(-50%)');
+    }
+    > :last-child {
+      margin-bottom: 0;
     }
   }
-}
+    .banner-title {
+      margin-bottom: 32px;
+      font-size: 64px;
+      font-weight: $normal;
+      line-height: $line-height-heading;
+      color: $white;
+      letter-spacing: -.04em;
+    }
+  .banner-desc-box {
+    margin-bottom: 32px;
+    .content {
+      font-size: 26px;
+      color: $white;
+      word-spacing: .05em;
+      > * {
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
 
 .two-column-box {
   display: table;
@@ -175,13 +241,16 @@
     overflow-y: auto;
     max-height: 400px;
     margin-bottom: 32px;
+    .small & {
+      max-height: 380px;
+    }
   }
   .link-list {
-    margin-left: -10px;
+    //margin-left: -10px;
     text-align: left;
     > li {
       margin-left: 0;
-      margin-right: 20px;
+      margin-right: 5px;
     }
     @media all and (max-width: 1024px) {
       margin-left: auto;
@@ -192,17 +261,28 @@
         margin: 0 10px 20px;
       }
     }
-  }
-  .high-block & {
-    .two-column-box {
-      height: 830px;
+    + .section-title-box {
+      margin-top: 37px;
     }
   }
+  .btn, a.btn {
+    min-width: 220px;
+  }
+  .high-block & {
+    //.two-column-box {
+      height: 830px;
+    //}
+  }
   .vertical-middle & {
-    .two-column-box {
+    //.two-column-box {
       .column {
         vertical-align: middle;
       }
+    //}
+  }
+  .small & {
+    .content {
+      font-size: 26px;
     }
   }
 }
@@ -210,7 +290,10 @@
 
 .section-two-columns {
   overflow: hidden;
-  background-color: $color-bg3;
+  background-color: $white;
+  &.light-blue-bg {
+    background-color: $color-bg3;
+  }
   .container {
     position: relative;
     z-index: 3;
@@ -237,10 +320,10 @@
   }
 }
 
-.section-services {
+.section-more-ways {
   .container {}
 }
-  .services-list {
+  .more-ways-list {
     overflow: hidden;
     margin: 0 -10px;
     > li {
@@ -255,7 +338,7 @@
           .centered-img img {
             @include css3-prefix('transform', 'scale(1.1)');
           }
-          .service-subtitle:after {
+          .more-way-subtitle:after {
             max-width: 100%;
           }
         }
@@ -274,7 +357,7 @@
     }
   }
 
-        .service-box {
+        .more-way-box {
           overflow: hidden;
           position: relative;
           display: block;
@@ -304,7 +387,7 @@
             width: 100%;
             vertical-align: bottom;
           }
-          .service-subtitle {
+          .more-way-subtitle {
             position: relative;
             display: block;
             padding-bottom: 30px;
@@ -333,7 +416,7 @@
               }
             }
           }
-          .service-title {
+          .more-way-title {
             display: block;
             min-height: 136px;
             font-size: $size-heading3;
@@ -347,6 +430,56 @@
             }
           }
         }
+
+.color-purple {
+  .section-title,
+  & .content h1,
+  & .content h2,
+  & .content h3,
+  & .content h4,
+  & .content h5,
+  & .content h6,
+  &.section-interesting-info .content{
+
+    color: $color-text6;
+  }
+  &.section-interesting-info .section-title:after {
+    background-color: $color-text6;
+  }
+}
+.color-gold {
+  .section-title,
+  & .content h1,
+  & .content h2,
+  & .content h3,
+  & .content h4,
+  & .content h5,
+  & .content h6,
+  &.section-interesting-info .content {
+    color: $color-text2;
+  }
+  &.section-interesting-info .section-title:after {
+    background-color: $color-text2;
+  }
+}
+.color-light-blue {
+  .section-title,
+  & .content h1,
+  & .content h2,
+  & .content h3,
+  & .content h4,
+  & .content h5,
+  & .content h6,
+  &.section-interesting-info .content {
+    color: $color-text3;
+  }
+  &.section-interesting-info .section-title:after {
+    background-color: $color-text3;
+  }
+}
+
+
+
 
 #cursor-15px .nicescroll-cursors {
   right: -15px;

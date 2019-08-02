@@ -127,65 +127,7 @@ img {
   padding: 0 20px;
 }
 
-.content {
-  letter-spacing: -.03em;
-  word-spacing: -.01em;
-  @media all and (max-width: 1024px) {
-    font-size: 26px;
-  }
-  * {
-    margin-bottom: 12px;
-    line-height: 1.25;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-  a {
-    color: $color-text;
-    &:hover,
-    &:focus {
-      opacity: 0.7;
-      text-decoration: none;
-    }
-  }
-  ul {
-    & > li {
-      list-style-type: disc;
-    }
-  }
-  ol {
-    & > li {
-      list-style-type: decimal;
-    }
-  }
-  li {
-    margin-bottom: 12px;
-    text-align: left;
-  }
-  blockquote {
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-    &.alignleft {
-      float: left;
-      margin: 4px 12px 12px 0;
-    }
-    &.alignright {
-      float: right;
-      margin: 4px 0 12px 12px;
-    }
-    &.aligncenter{
-      display: block;
-      margin: 0 auto 12px;
-      clear: both;
-    }
-  }
-}
+@import '../global/content';
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
@@ -212,6 +154,9 @@ img {
   padding: 60px 0;
   .lace-curtain & {
     padding: 100px 0;
+  }
+  .container {
+    max-width: 960px;
   }
 }
 

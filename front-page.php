@@ -6,7 +6,7 @@ get_header(); ?>
 
     <?php get_template_part('inc/hero'); ?>
 
-    <section class="section-two-columns abstract-bg high-block vertical-middle color-purple">
+    <section class="section-two-columns abstract-bg high-block vertical-middle color-purple light-blue-bg">
         <div class="container">
             <div class="two-column-box">
                 <div class="column image">
@@ -53,13 +53,13 @@ get_header(); ?>
     </section>
 
 <!--        for slider-->
-    <section class="section-two-columns">
+    <section class="section-two-columns light-blue-bg">
         <div class="container">
             <div class="two-column-box">
                 <div class="column text">
                     <div class="inner-box">
                         <div class="section-title-box">
-                            <h2 class="section-title">VIP Sеuites</h2>
+                            <h2 class="section-title">VIP Suites</h2>
                         </div>
                         <div class="content-box">
                             <div class="content">
@@ -115,20 +115,20 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="section-services">
+    <section class="section-more-ways">
         <div class="container">
-            <ul class="services-list">
+            <ul class="more-ways-list">
                 <li>
                     <a href="#" title="">
-                        <span class="service-box">
+                        <span class="more-way-box">
                             <span class="centered-img">
                                 <img src="<?php echo get_bloginfo('template_url'); ?>/img/reserve-a-table-img.jpg" alt="">
                             </span>
                             <span class="inner-box">
                                 <span class="inner-table">
                                     <span class="inner-cell">
-                                        <span class="service-subtitle">RESERVE A TABLE</span>
-                                        <span class="service-title">CURRANT BRASSERIE</span>
+                                        <span class="more-way-subtitle">RESERVE A TABLE</span>
+                                        <span class="more-way-title">CURRANT BRASSERIE</span>
                                     </span>
                                 </span>
                             </span>
@@ -137,15 +137,15 @@ get_header(); ?>
                 </li>
                 <li>
                     <a href="#" title="">
-                        <span class="service-box">
+                        <span class="more-way-box">
                             <span class="centered-img">
                                 <img src="<?php echo get_bloginfo('template_url'); ?>/img/book-a-treatment-img.jpg" alt="">
                             </span>
                             <span class="inner-box">
                                 <span class="inner-table">
                                     <span class="inner-cell">
-                                        <span class="service-subtitle">BOOK A TREATMENT</span>
-                                        <span class="service-title">SOFIA SPA</span>
+                                        <span class="more-way-subtitle">BOOK A TREATMENT</span>
+                                        <span class="more-way-title">SOFIA SPA</span>
                                     </span>
                                 </span>
                             </span>
@@ -154,15 +154,15 @@ get_header(); ?>
                 </li>
                 <li>
                     <a href="#" title="">
-                        <span class="service-box">
+                        <span class="more-way-box">
                             <span class="centered-img">
                                 <img src="<?php echo get_bloginfo('template_url'); ?>/img/bundle-and-save-img.jpg" alt="">
                             </span>
                             <span class="inner-box">
                                 <span class="inner-table">
                                     <span class="inner-cell">
-                                        <span class="service-subtitle">BUNDLE AND SAVE</span>
-                                        <span class="service-title">PACKAGES</span>
+                                        <span class="more-way-subtitle">BUNDLE AND SAVE</span>
+                                        <span class="more-way-title">PACKAGES</span>
                                     </span>
                                 </span>
                             </span>

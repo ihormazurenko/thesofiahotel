@@ -70,7 +70,6 @@
 
         var _tabHovered = function (e) {
             var a = e.target;
-            // console.log(e);
             var useHover = a.tabList.classList.contains(hoverableClass);
             if (useHover) {
                 _activateTab(e);

@@ -1,0 +1,120 @@
+.content {
+  letter-spacing: -.03em;
+  word-spacing: -.01em;
+  @media all and (max-width: 1024px) {
+    font-size: 26px;
+  }
+
+  * {
+    //margin-bottom: 10px;
+    margin-bottom: 32px;
+    line-height: 1.25;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 18px;
+    line-height: $line-height-heading;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 56px;
+  }
+
+  h3 {
+    font-size: 50px;
+  }
+
+  h4 {
+    font-size: 44px;
+  }
+
+  h5 {
+    font-size: 38px;
+  }
+
+  h6 {
+    font-size: 32px;
+  }
+  a {
+    color: $color-text;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+      text-decoration: none;
+    }
+  }
+
+  ul, ol {
+    padding-left: 40px;
+  }
+
+  ul {
+    & > li {
+      list-style-type: disc;
+    }
+  }
+
+  ol {
+    & > li {
+      list-style-type: decimal;
+    }
+  }
+
+  li {
+    margin-bottom: 12px;
+    text-align: left;
+  }
+
+  blockquote {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+
+    &.alignleft {
+      float: left;
+      margin: 4px 12px 12px 0;
+    }
+
+    &.alignright {
+      float: right;
+      margin: 4px 0 12px 12px;
+    }
+
+    &.aligncenter {
+      display: block;
+      margin: 0 auto 12px;
+      clear: both;
+    }
+  }
+  .section & {
+    * {
+      //margin-bottom: 10px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 5px;
+      font-family: $font-secondary;
+      font-size: 26px;
+      font-weight: $bold;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h2, h3, h4, h5, h6 {
+      font-size: 22px;
+    }
+  }
+}

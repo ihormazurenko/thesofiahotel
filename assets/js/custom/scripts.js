@@ -56,6 +56,7 @@ jQuery(document).ready(function($) {
         //for slider
         $(function () {
             if (typeof Swiper !== 'undefined') {
+                //for inner slider
                 if ($('.inner-slider .swiper-container').length) {
 
                     var innerSliders = $('.inner-slider .swiper-container');
@@ -68,6 +69,67 @@ jQuery(document).ready(function($) {
                                 nextEl: '.swiper-button-next',
                                 prevEl: '.swiper-button-prev',
                             },
+                        });
+                    });
+                }
+
+                //for single slider
+                if ($('.single-slider:not(.small) .swiper-container').length) {
+                    var singleSliders = $('.single-slider:not(.small) .swiper-container');
+
+                    singleSliders.each(function () {
+                        new Swiper($(this), {
+                            slidesPerView: 4,
+                            spaceBetween: 0,
+                            freeMode: true,
+                            freeModeSticky: true,
+                            loop: true,
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                            breakpoints: {
+                                1024: {
+                                    slidesPerView: 3,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                                480: {
+                                    slidesPerView: 1,
+                                }
+                            }
+                        });
+                    });
+                }
+
+                if ($('.single-slider.small .swiper-container').length) {
+                    var singleSliders = $('.single-slider.small .swiper-container');
+
+                    singleSliders.each(function () {
+                        new Swiper($(this), {
+                            slidesPerView: 3.4,
+                            spaceBetween: 0,
+                            freeMode: true,
+                            freeModeSticky: true,
+                            centeredSlides: true,
+                            loop: true,
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                            breakpoints: {
+                                1024: {
+                                    slidesPerView: 2.2,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                    centeredSlides: false,
+                                },
+                                480: {
+                                    slidesPerView: 1,
+                                }
+                            }
                         });
                     });
                 }
@@ -104,23 +166,26 @@ jQuery(document).ready(function($) {
             }
         });
 
-        //for masonry
+        //for popup
         $(function () {
-            if ($('.popup-gallery a > img'))
-            $('.popup-gallery').magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                tLoading: 'Loading image #%curr%...',
-                mainClass: 'mfp-img-mobile',
-                gallery: {
-                    enabled: true,
-                    navigateByImgClick: true,
-                    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-                },
-                image: {
-                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            if (typeof $.fn.magnificPopup !== 'undefined') {
+                if ($('.popup-gallery a > img')) {
+                    $('.popup-gallery').magnificPopup({
+                        delegate: 'a',
+                        type: 'image',
+                        tLoading: 'Loading image #%curr%...',
+                        mainClass: 'mfp-img-mobile',
+                        gallery: {
+                            enabled: true,
+                            navigateByImgClick: true,
+                            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                        },
+                        image: {
+                            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                        }
+                    });
                 }
-            });
+            }
         });
 
         //header scroll effect
