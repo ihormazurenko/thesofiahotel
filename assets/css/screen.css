@@ -3068,10 +3068,10 @@ a.read-more,
 
 .year-full-with-img {
   padding-bottom: 20.6%;
-  background-color: #EDF5F8;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-color: #EDF5F8; }
   @media all and (max-width: 1200px) {
     .year-full-with-img {
       height: 280px;
