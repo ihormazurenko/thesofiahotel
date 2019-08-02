@@ -39,6 +39,9 @@
     padding-bottom: 20px;
     margin-bottom: 23px;
   }
+  .inverse & {
+    border-bottom-color: $white;
+  }
 }
 
 .section-interesting-info {
@@ -78,18 +81,9 @@
     }
   }
 
-  //&.color-purple {
-  //  color: $color-text4;
-  //  .section-title:after {
-  //    background-color: $color-text4;
-  //  }
-  //}
-  //&.color-gold {
-  //  color: $color-text2;
-  //  .section-title:after {
-  //    background-color: $color-text2;
-  //  }
-  //}
+  &.transparent-bg {
+    background-color: transparent;
+  }
 }
 
 
@@ -108,7 +102,11 @@
 
 .section-banner {
   text-align: center;
+  background-color: $color-bg3;
   @include bg();
+  &.transparent-bg {
+    background-color: transparent;
+  }
   .vertical-align-box {
     .inner-box {
       >:last-child:not(.banner-link) {
@@ -294,6 +292,9 @@
   &.light-blue-bg {
     background-color: $color-bg3;
   }
+  &.purple-translucency-bg {
+    background-color: rgba(99, 23, 59, .8);
+  }
   .container {
     position: relative;
     z-index: 3;
@@ -478,6 +479,22 @@
   }
 }
 
+.inverse {
+  .section-title,
+  & .content h1,
+  & .content h2,
+  & .content h3,
+  & .content h4,
+  & .content h5,
+  & .content h6,
+  &.section-two-columns .content,
+  &.section-interesting-info .content {
+    color: $white;
+  }
+  &.section-interesting-info .section-title:after {
+    background-color: $white;
+  }
+}
 
 
 

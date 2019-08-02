@@ -1870,6 +1870,8 @@ uncomment this part if you haven't added this code anywhere else
   .small .section-title-box {
     padding-bottom: 20px;
     margin-bottom: 23px; }
+  .inverse .section-title-box {
+    border-bottom-color: #ffffff; }
 
 .section-interesting-info {
   padding: 100px 0;
@@ -1899,6 +1901,8 @@ uncomment this part if you haven't added this code anywhere else
       -ms-transform: translateX(-50%);
       -o-transform: translateX(-50%);
       transform: translateX(-50%); }
+  .section-interesting-info.transparent-bg {
+    background-color: transparent; }
 
 .link-list {
   text-align: center; }
@@ -1910,9 +1914,12 @@ uncomment this part if you haven't added this code anywhere else
 
 .section-banner {
   text-align: center;
+  background-color: #EDF5F8;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
+  .section-banner.transparent-bg {
+    background-color: transparent; }
   .section-banner .vertical-align-box .inner-box > :last-child:not(.banner-link) {
     margin-bottom: 0; }
   .section-banner .banner-link:last-child {
@@ -2067,6 +2074,8 @@ uncomment this part if you haven't added this code anywhere else
   background-color: #ffffff; }
   .section-two-columns.light-blue-bg {
     background-color: #EDF5F8; }
+  .section-two-columns.purple-translucency-bg {
+    background-color: rgba(99, 23, 59, 0.8); }
   .section-two-columns .container {
     position: relative;
     z-index: 3;
@@ -2199,6 +2208,11 @@ uncomment this part if you haven't added this code anywhere else
   color: #739193; }
 .color-light-blue.section-interesting-info .section-title:after {
   background-color: #739193; }
+
+.inverse .section-title, .inverse .content h1, .inverse .content h2, .inverse .content h3, .inverse .content h4, .inverse .content h5, .inverse .content h6, .inverse.section-two-columns .content, .inverse.section-interesting-info .content {
+  color: #ffffff; }
+.inverse.section-interesting-info .section-title:after {
+  background-color: #ffffff; }
 
 #cursor-15px .nicescroll-cursors {
   right: -15px; }
@@ -3180,6 +3194,30 @@ a.read-more,
     -ms-box-shadow: 10px 10px 13px -2px rgba(0,0,0,0.25);
     -o-box-shadow: 10px 10px 13px -2px rgba(0,0,0,0.25);
     box-shadow: 10px 10px 13px -2px rgba(0,0,0,0.25); }
+
+#parallax-container div {
+  position: fixed;
+  top: 780px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center !important;
+  transform: translateY(0px);
+  height: 1260px;
+  width: 100%; }
+
+#current-content {
+  position: relative; }
+  #current-content .section-two-columns.small .content {
+    font-size: 32px; }
+    #current-content .section-two-columns.small .content * {
+      margin-bottom: 14px;
+      line-height: .95; }
+      #current-content .section-two-columns.small .content *:last-child {
+        margin-bottom: 0; }
+    #current-content .section-two-columns.small .content h1, #current-content .section-two-columns.small .content h2, #current-content .section-two-columns.small .content h3, #current-content .section-two-columns.small .content h4, #current-content .section-two-columns.small .content h5, #current-content .section-two-columns.small .content h6 {
+      margin-bottom: 11px; }
+  #current-content .section-two-columns .content-box {
+    max-height: 420px; }
 
 /*--------------------------------------MEDIA-----------------------------------------*/
 

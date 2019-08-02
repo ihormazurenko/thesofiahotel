@@ -169,7 +169,7 @@ jQuery(document).ready(function($) {
         //for popup
         $(function () {
             if (typeof $.fn.magnificPopup !== 'undefined') {
-                if ($('.popup-gallery a > img')) {
+                if ($('.popup-gallery a > img').length) {
                     $('.popup-gallery').magnificPopup({
                         delegate: 'a',
                         type: 'image',
@@ -185,6 +185,21 @@ jQuery(document).ready(function($) {
                         }
                     });
                 }
+            }
+        });
+
+        $(function () {
+            if ($('#parallax-container div').length) {
+                function newBgPosition() {
+                    let parent = document.getElementById('parallax-container');
+                    let children = parent.getElementsByTagName('div');
+                    for(let i = 0; i < children.length; i++) {
+                        children[i].style.transform = 'translateY(-' + (window.pageYOffset * 0.8 / children.length) + 'px)';
+                    }
+                }
+
+                window.addEventListener('load', newBgPosition, false);
+                window.addEventListener('scroll', newBgPosition, false);
             }
         });
 

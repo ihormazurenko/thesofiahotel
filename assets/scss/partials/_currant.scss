@@ -1,0 +1,49 @@
+//#parallax-container {
+//  display: block;
+//  height: 750px; // This height can be adjusted here and below
+//}
+
+#parallax-container div {
+  position: fixed;
+  top: 780px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center !important;
+  transform: translateY(0px);
+  height: 1260px; // Keep this the same height as above
+  width: 100%;
+}
+
+#current-content {
+  position: relative;
+  .section-two-columns {
+    &.small {
+      .content {
+        font-size: 32px;
+        * {
+          margin-bottom: 14px;
+          line-height: .95;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        h1, h2, h3, h4, h5, h6 {
+          margin-bottom: 11px;
+        }
+      }
+    }
+    .content-box {
+      max-height: 420px;
+    }
+  }
+}
+//@supports (display: flex) {
+//  .tab-list {
+//    display: flex;
+//    flex-wrap: nowrap;
+//  }
+//  .tab-list > li {
+//    margin-top: 0;
+//    width: 20%;
+//  }
+//}
