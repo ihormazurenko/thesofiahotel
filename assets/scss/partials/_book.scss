@@ -47,6 +47,9 @@
         background-color: $white;
       }
     }
+    @media all and (max-width: 640px) {
+      font-size: 14px;
+    }
   }
   .top-link-box {
     margin-bottom: 90px;
@@ -56,6 +59,10 @@
         padding-bottom: 16px;
         font-size: 32px;
         text-transform: initial;
+        @media all and (max-width: 768px) {
+          padding-bottom: 15px;
+          font-size: 22px;
+        }
       }
     }
   }
@@ -64,13 +71,14 @@
   margin-bottom: 125px;
 }
   .interesting-link-list {
-    margin: 0 -40px;
+    margin: 0 -40px -40px;
     > li {
       display: inline-block;
       width: 32%;
       width: -webkit-calc(33.333% - 6px);
       width: calc(33.333% - 6px);
       padding: 0 40px;
+      margin-bottom: 40px;
       vertical-align: top;
       a {
         display: inline-block;
@@ -81,9 +89,32 @@
         letter-spacing: -.02em;
         line-height: 1.2;
         text-transform: uppercase;
+        @media all and (max-width: 1024px) {
+          font-size: 26px;
+        }
+      }
+    }
+    @media all and (max-width: 768px) {
+      margin: 0 -10px -40px;
+      > li {
+        padding: 0 10px;
+      }
+    }
+    @media all and (max-width: 640px) {
+      > li {
+        width: 49%;
+        width: -webkit-calc(50% - 6px);
+        width: calc(50% - 6px);
+      }
+    }
+    @media all and (max-width: 460px) {
+      > li {
+        width: 100%;
       }
     }
   }
+
+
 .subscribe-box {}
   .subscribe-form-list {
     display: table;
@@ -99,12 +130,32 @@
       &:last-child {
         padding-right: 0;
         width: 315px;
+        @media all and (max-width: 768px) {
+          width: 215px;
+        }
       }
       a.btn, .btn {
         &.transparent {
           padding-top: 16px;
           padding-bottom: 16px;
           min-width: 100%;
+        }
+      }
+    }
+    @media all and (max-width: 768px) {
+      display: block;
+      > li {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+        &:first-child {
+          width: 100%;
+          text-align: center;
+        }
+        &:last-child {
+          width: 100%;
+          text-align: center;
         }
       }
     }

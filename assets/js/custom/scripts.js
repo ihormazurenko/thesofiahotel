@@ -244,6 +244,7 @@ jQuery(document).ready(function($) {
             }
         });
 
+        //for parralax
         $(function () {
             if ($('#parallax-container div').length) {
                 function newBgPosition() {
@@ -256,6 +257,44 @@ jQuery(document).ready(function($) {
 
                 window.addEventListener('load', newBgPosition, false);
                 window.addEventListener('scroll', newBgPosition, false);
+            }
+        });
+
+        //for read more
+        $(function () {
+           if ($('.service-box').length) {
+               $(window).on('load resize', function () {
+                   var serviceBox = $('.service-box');
+
+                   serviceBox.each(function () {
+                       var box = $(this),
+                           content = box.find('.content'),
+                           contentHeight = content.height(),
+                           descBox = content.closest('.service-desc');
+
+                       if (contentHeight > 160) {
+                           descBox.addClass('show-read-more');
+                       } else {
+                           descBox.removeClass('show-read-more');
+                       }
+                   });
+               });
+
+               $('.read-more').on('click', function (e) {
+                   e.preventDefault();
+
+                   var btn = $(this),
+                       parentBox = btn.prev('.service-desc');
+
+                        if (parentBox.hasClass('less-more')) {
+                            parentBox.removeClass('less-more');
+                            btn.text('Read More');
+                       } else {
+                            parentBox.addClass('less-more');
+                            btn.text('Less');
+                       }
+
+               })
             }
         });
 

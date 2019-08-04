@@ -6,7 +6,7 @@ get_header(); ?>
 
     <?php get_template_part('inc/hero'); ?>
 
-    <?php if (get_current_user_id() == 1) { ?>
+    <?php /* if (get_current_user_id() == 1) { ?>
         <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/banner_img.jpg);">
             <div class="container">
                 <div class="vertical-align-box">
@@ -32,7 +32,7 @@ get_header(); ?>
                 </div>
             </div>
         </section>
-    <?php } ?>
+    <?php } */ ?>
 
     <section class="section section-two-columns small color-light-blue">
         <div class="container">
@@ -186,8 +186,8 @@ get_header(); ?>
                             <div class="content">
                                 <p>Circulates blood, lymph and breath so that you can get in touch with your flow.</p>
                             </div>
-                            <a href="#" class="read-more">Read More</a>
                         </div>
+                        <a href="#" class="read-more">Read More</a>
                         <ul class="price-list">
                            <li>
                                <div class="price-box">
@@ -211,8 +211,8 @@ get_header(); ?>
                             <div class="content">
                                 <p>Release into your deep tissue therapeutic massage. Soften the tissue, strengthen the spirit and soothe the soul.</p>
                             </div>
-                            <a href="#" class="read-more">Read More</a>
                         </div>
+                        <a href="#" class="read-more">Read More</a>
                         <ul class="price-list">
                             <li>
                                 <div class="price-box">
@@ -236,8 +236,8 @@ get_header(); ?>
                             <div class="content">
                                 <p>A blend of circulatory and deep tissue techniques specifically customized for your session.</p>
                             </div>
-                            <a href="#" class="read-more">Read More</a>
                         </div>
+                        <a href="#" class="read-more">Read More</a>
                         <ul class="price-list">
                             <li>
                                 <div class="price-box">
@@ -268,8 +268,8 @@ get_header(); ?>
                         <div class="content">
                             <p>A special session for mothers to be. Promotes circulation and relaxation, easing aching joints and muscles. Great for both mama and baby.</p>
                         </div>
-                        <a href="#" class="read-more">Read More</a>
                     </div>
+                    <a href="#" class="read-more">Read More</a>
                     <ul class="price-list">
                         <li>
                             <div class="price-box">
@@ -291,10 +291,10 @@ get_header(); ?>
                     </div>
                     <div class="service-desc">
                         <div class="content">
-                            <p>A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty accumulations in the thighs and buttocks.</p>
+                            <p>A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty accumulations in the thighs and buttocks. A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty</p>
                         </div>
-                        <a href="#" class="read-more">Read More</a>
                     </div>
+                    <a href="#" class="read-more">Read More</a>
                     <ul class="price-list">
                         <li>
                             <div class="price-box">
@@ -312,11 +312,11 @@ get_header(); ?>
                     <div class="service-desc show-more">
                         <div class="content">
                             <p>A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
-                                shoulders. Great for dry tresses as well!
-                            </p>
+                                shoulders. Great for dry tresses as well! A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
+                                shoulders. Great for dry tresses as well!</p>
                         </div>
-                        <a href="#" class="read-more">Read More</a>
                     </div>
+                    <a href="#" class="read-more">Read More</a>
                     <ul class="price-list">
                         <li>
                             <div class="price-box">

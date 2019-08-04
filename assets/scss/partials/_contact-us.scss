@@ -14,6 +14,9 @@
   }
   .top-box {
     margin-bottom: 75px;
+    @media all and (max-width: 1024px) {
+      margin-bottom: 55px;
+    }
   }
   .bottom-box {
     position: relative;
@@ -52,6 +55,9 @@
       @media all and (max-width: 1024px) {
         font-size: 60px;
       }
+      @media all and (max-width: 1024px) {
+        font-size: 42px;
+      }
     }
 
 .bottom-sticky-box {
@@ -59,9 +65,17 @@
   bottom: 65px;
   left: 0;
   right: 0;
+  padding: 0 20px;
   color: $white;
   font-size: 26px;
   text-align: center;
+  @media all and (max-width: 1024px) {
+    bottom: 45px;
+    font-size: 24px;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 22px;
+  }
 }
 
 .accordion {
@@ -82,6 +96,9 @@
   @include transition($transition-other);
   @media all and (max-width: 1024px) {
     font-size: 26px;
+  }
+  @media all and (max-width: 1024px) {
+    font-size: 24px;
   }
   &:hover,
   &:focus,

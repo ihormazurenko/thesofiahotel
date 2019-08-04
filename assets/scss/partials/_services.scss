@@ -68,15 +68,18 @@
         font-size: $size-heading4;
         font-weight: $normal;
         line-height: 1.05;
+        letter-spacing: -.02em;
         color: $color-text3;
         @media all and (max-width: 1024px) {
           font-size: 36px;
         }
       }
       .service-desc {
-        margin-bottom: 33px;
-        max-height: 155px;
-        min-height: 155px;
+        overflow: hidden;
+        //margin-bottom: 33px;
+        margin-bottom: 22px;
+        max-height: 160px;
+        min-height: 160px;
         @media all and (max-width: 1024px) {
           max-height: 160px;
           min-height: 160px;
@@ -91,17 +94,19 @@
             font-size: 22px;
           }
         }
-        a.read-more,
-        .read-more {
+        & + a.read-more,
+        & + .read-more {
           display: none;
+          margin-top: -22px;
+          margin-bottom: 10px;
         }
-        &.show-more {
-          a.read-more,
-          .read-more {
+        &.show-read-more {
+          & + a.read-more,
+          & + .read-more {
             display: block;
           }
-          & + .price-list {
-            //margin-top: -17px;
+          &.less-more {
+            max-height: 1000px;
           }
         }
       }
