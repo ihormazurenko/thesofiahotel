@@ -116,6 +116,19 @@ a, .btn {
       }
     }
   }
+  &.transparent {
+    padding: 24px 20px;
+    font-weight: $light;
+    border: 2px solid $white;
+    background-color: transparent;
+    &:before {
+      content: none;
+    }
+    &:hover, &:focus {
+      color: $color-text2;
+      background-color: $white;
+    }
+  }
 }
 img {
   @include css3-prefix('user-select', 'none');

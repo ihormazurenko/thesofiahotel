@@ -16,12 +16,14 @@
   &.show-burger {
     position: fixed;
     opacity: 1;
+    z-index: 99999;
     .container {
       position: relative;
       z-index: 99999;
       .header .container {
         //padding-left: 60px;
         //padding-right: 60px;
+
       }
     }
     .btn, a.btn {
@@ -411,8 +413,7 @@
   }
 }
 
-
-#burger-box {
+.burger-box {
   position: fixed;
   z-index: -1;
   top: 0;
@@ -424,7 +425,7 @@
   @include css3-prefix('transform-origin','50% 50%');
   //@include css3-prefix('transform', 'scale(0)');
   @include transition('opacity 0.4s ease 0s, right 0s');
-  .show-burger & {
+  &.show-tsh-popup {
     z-index: 9999;
     opacity: 1;
     right: 0;
@@ -445,8 +446,8 @@
     padding-top: 20px;
   //  overflow: hidden;
   //  padding-top: 166px;
-  //  padding-left: 100px;
-  //  padding-right: 100px;
+    padding-left: 106px;
+    padding-right: 106px;
     @media all and (max-width: 1024px) {
       padding-left: 30px;
       padding-right: 30px;
@@ -463,6 +464,7 @@
     }
   }
 }
+
 .burger-box {
   .burger-inner-wrap {
     margin-top: 90px;
@@ -487,10 +489,6 @@
   .right-box {
     display: block;
     vertical-align: top;
-    @media all and (max-width: 640px) {
-      display: block;
-      width: 100%;
-    }
   }
   .right-box {
     float: right;
@@ -498,6 +496,10 @@
     position: relative;
     padding-bottom: 21px;
     margin-bottom: 26px;
+    @media all and (max-width: 640px) {
+      float: none;
+      width: 100%;
+    }
     @media all and (max-width: 640px) {
       margin-bottom: 16px;
       &:after {
@@ -516,7 +518,12 @@
     float: left;
     width: 45%;
     padding-right: 20px;
+    padding-top: 5px;
     text-align: left;
+    @media all and (max-width: 640px) {
+      float: none;
+      width: 100%;
+    }
      > * {
        position: relative;
        padding-bottom: 21px;
@@ -557,6 +564,7 @@
     margin-bottom: 11px;
     font-family: $font-secondary;
     font-size: 16px;
+    letter-spacing: .055em;
     text-transform: uppercase;
     > li {
       &:not(:last-child) {
@@ -572,7 +580,7 @@
     }
   }
   .social-box {
-    padding-top: 4px;
+    padding-top: 8px;
   }
 }
 
@@ -580,12 +588,15 @@
   > li {
     &:not(:last-child) {
       margin-bottom: 18px;
+      @media all and (max-width: 640px) {
+        margin-bottom: 8px;
+      }
     }
     a {
       font-size: 64px;
       font-weight: $normal;
       color: $white;
-      letter-spacing: -.04em;
+      letter-spacing: -.015em;
       line-height: $line-height-heading;
       @media all and (max-width: 1024px) {
         font-size: 40px;
@@ -607,8 +618,10 @@
   }
   .small & {
     > li {
-      margin-bottom: 0;
+      //margin-bottom: 0;
+      margin-bottom: 10px;
       a {
+        display: block;
         font-family: $font-secondary;
         font-size: 32px;
         font-weight: $light;

@@ -47,9 +47,29 @@ jQuery(document).ready(function($) {
 
 
         // for burger menu
-        $('.menu-toggle').on('click', function(){
+        // $('.menu-toggle').on('click', function(){
+        //     $('.menu-toggle').toggleClass('active');
+        //     $('#header-main').toggleClass('show-burger');
+        //     $(document.body).toggleClass('overflow');
+        // });
+
+        //for burger menu and modal
+        $('.open-tsh-popup').on('click', function(e){
+            e.preventDefault();
+
+            var modalId = $(this).attr('href'),
+                mainHeader = $('#header-main');
+
+            if (mainHeader.hasClass('show-burger')) {
+                modalId = mainHeader.find('.menu-toggle').data('open');
+                mainHeader.find('[data-open]').data('open', '');
+            } else {
+                mainHeader.find('[data-open]').data('open', modalId);
+            }
+
             $('.menu-toggle').toggleClass('active');
-            $('#header-main').toggleClass('show-burger');
+            mainHeader.toggleClass('show-burger');
+            $(modalId).toggleClass('show-tsh-popup');
             $(document.body).toggleClass('overflow');
         });
 
@@ -166,6 +186,30 @@ jQuery(document).ready(function($) {
             }
         });
 
+        //for accordion
+        $(function () {
+            if ($('.accordion-box .accordion').length && $('.accordion-box .panel').length) {
+                var accordion = $('.accordion-box .accordion');
+
+                $(window).on('load', function () {
+                    accordion.eq(2).addClass('active');
+                    accordion.eq(2).next().slideDown();
+                });
+
+                accordion.on('click', function() {
+                    $(this).toggleClass('active');
+                    var panel = $(this).next();
+
+                    if(panel.is(':visible')) {
+                        panel.slideUp();
+                    } else {
+                        panel.slideDown();
+                    }
+
+                });
+            }
+        });
+
         //for popup
         $(function () {
             if (typeof $.fn.magnificPopup !== 'undefined') {
@@ -185,6 +229,18 @@ jQuery(document).ready(function($) {
                         }
                     });
                 }
+
+                $('.popup-modal').magnificPopup({
+                    type: 'inline',
+                    preloader: false,
+                    focus: '#username',
+                    modal: true
+                });
+
+                $(document).on('click', '.popup-modal-dismiss', function (e) {
+                    e.preventDefault();
+                    $.magnificPopup.close();
+                });
             }
         });
 
@@ -386,5 +442,4 @@ jQuery(document).ready(function($) {
 
         scrollEffects();
 	});
-
 });

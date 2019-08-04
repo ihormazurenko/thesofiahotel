@@ -6,6 +6,34 @@ get_header(); ?>
 
     <?php get_template_part('inc/hero'); ?>
 
+    <?php if (get_current_user_id() == 1) { ?>
+        <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/banner_img.jpg);">
+            <div class="container">
+                <div class="vertical-align-box">
+                    <div class="inner-box">
+                        <div class="banner-title-box">
+                            <h2 class="banner-title">Test modals</h2>
+                        </div>
+                        <ul class="banner-link">
+                            <li>
+                                <a class="open-tsh-popup btn" href="#book-modal">Book modal</a>
+                            </li>
+                            <li>
+                                <a class="open-tsh-popup btn" href="#form-modal">Form modal</a>
+                            </li>
+                            <li>
+                                <a class="open-tsh-popup btn" href="#let-us-know-modal">Let Us Know modal</a>
+                            </li>
+                            <li>
+                                <a class="open-tsh-popup btn" href="#thank-modal">Thank modal</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php } ?>
+
     <section class="section section-two-columns small color-light-blue">
         <div class="container">
             <div class="two-column-box">

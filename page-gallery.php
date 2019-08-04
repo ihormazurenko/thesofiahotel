@@ -56,32 +56,39 @@ get_header(); ?>
                             <div class="grid popup-gallery">
                                 <div class="grid-item">
                                     <a href="<?php echo get_bloginfo('template_url'); ?>/img/gallery_1.jpg">
-                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_1.jpg" alt=""></div>
+                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_1.jpg" alt="">
                                     </a>
+                                </div>
                                 <div class="grid-item">
                                     <a href="<?php echo get_bloginfo('template_url'); ?>/img/gallery_4.jpg">
-                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_4.jpg" alt=""></div>
+                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_4.jpg" alt="">
                                     </a>
+                                </div>
                                 <div class="grid-item">
                                     <a href="<?php echo get_bloginfo('template_url'); ?>/img/gallery_3.jpg">
-                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_3.jpg" alt=""></div>
+                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_3.jpg" alt="">
                                     </a>
+                                </div>
                                 <div class="grid-item">
                                     <a href="<?php echo get_bloginfo('template_url'); ?>/img/gallery_7.jpg">
-                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_7.jpg" alt=""></div>
+                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_7.jpg" alt="">
                                     </a>
+                                </div>
                                 <div class="grid-item">
                                     <a href="<?php echo get_bloginfo('template_url'); ?>/img/gallery_2.jpg">
-                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_2.jpg" alt=""></div>
+                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_2.jpg" alt="">
                                     </a>
+                                </div>
                                 <div class="grid-item">
                                     <a href="<?php echo get_bloginfo('template_url'); ?>/img/gallery_5.jpg">
-                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_5.jpg" alt=""></div>
+                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_5.jpg" alt="">
                                     </a>
+                                </div>
                                 <div class="grid-item">
                                     <a href="<?php echo get_bloginfo('template_url'); ?>/img/gallery_6.jpg">
-                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_6.jpg" alt=""></div>
+                                        <img src="<?php echo get_bloginfo('template_url'); ?>/img/gallery_6.jpg" alt="">
                                     </a>
+                                </div>
                             </div>
                         </div>
                     </div>
