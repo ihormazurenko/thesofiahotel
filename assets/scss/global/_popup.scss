@@ -1,0 +1,61 @@
+.burger-box {
+  .container {
+    padding-left: 106px;
+    padding-right: 100px;
+    @media all and (max-width: 1024px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    @media all and (max-width: 768px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  &.has-sticky-message {
+    .hero {
+      padding-bottom: 110px;
+    }
+  }
+}
+  .full-width-box {
+    width: 100%;
+    padding-top: 72px;
+    text-align: left;
+    .top-box {
+      //min-height: 285px;
+      margin-bottom: 75px;
+    }
+    .bottom-box {
+      position: relative;
+      padding-top: 26px;
+      &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 115px;
+        height: 4px;
+        background-color: $white;
+      }
+      .burger-menu-box {
+        margin-top: -8px;
+      }
+    }
+  }
+    .modal-message-box {
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+      .modal-message {
+        margin-bottom: 32px;
+        font-size: $size-heading2;
+        font-weight: $normal;
+        line-height: $line-height-heading;
+        letter-spacing: -.04em;
+        word-spacing: .01em;
+        color: $white;
+        text-align: left;
+      }
+

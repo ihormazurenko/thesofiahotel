@@ -121,6 +121,11 @@
         height: auto;
         width: auto;
       }
+      @media all and (max-width: 768px) {
+        top: -120px;
+        left: -100px;
+        max-width: 400px;
+      }
     }
   }
   &.year-1930 {
@@ -131,6 +136,13 @@
       right: -36px;
       top: 2px;
       max-width: 330px;
+      @media all and (max-width: 768px) {
+        top: -30px;
+        max-width: 260px;
+      }
+      @media all and (max-width: 540px) {
+        max-width: 160px;
+      }
       @include css3-prefix('transform', 'rotate(18.4deg)');
       &:after {
         position: absolute;
@@ -181,6 +193,9 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+    @media all and (max-width: 768px) {
+      font-size: 22px;
     }
   }
   &.inverse {
@@ -258,6 +273,9 @@
         border-bottom: 2px dashed $color-text3;
         @include css3-prefix('transform', 'translateX(-50%)');
       }
+      @media all and (max-width: 540px) {
+        font-size: 70px;
+      }
       .big & {
         padding-bottom: 58px;
         font-size: 200px;
@@ -266,6 +284,13 @@
           max-width: 120px;
           border-bottom-style: solid;
           border-bottom-width: 4px;
+        }
+        @media all and (max-width: 768px) {
+          font-size: 150px;
+        }
+        @media all and (max-width: 540px) {
+          font-size: 100px;
+          padding-bottom: 38px;
         }
       }
       .inverse & {
@@ -282,6 +307,13 @@
       letter-spacing: -.04em;
       color: $color-text6;
       text-transform: uppercase;
+      @media all and (max-width: 768px) {
+        font-size: 36px;
+      }
+      @media all and (max-width: 540px) {
+        margin-bottom: -28px;
+        font-size: 30px;
+      }
     }
 
   .year-full-with-img {
@@ -310,6 +342,9 @@
       width: 1px;
       height: 100px;
       background-color: #9B7F50;
+      @media all and (max-width: 540px) {
+        height: 150px;
+      }
     }
   }
     .photo-collage {
@@ -319,6 +354,11 @@
         width: 32%;
         width: -webkit-calc(33% - 6px);
         width: calc(33% - 6px);
+        @media all and (max-width: 540px) {
+          width: 49%;
+          width: -webkit-calc(50% - 6px);
+          width: calc(50% - 6px);
+        }
         &:nth-child(6n - 5) {
           z-index: 5;
           .photo-box {
@@ -326,6 +366,12 @@
             right: -40px;
           }
           @include css3-prefix('transform', 'rotate(-10.6deg)');
+          @media all and (max-width: 540px) {
+            .photo-box {
+              top: 10px;
+              right: -34px;
+            }
+          }
         }
         &:nth-child(6n - 4) {
           z-index: 3;
@@ -333,6 +379,11 @@
             left: 5px;
           }
           @include css3-prefix('transform', 'rotate(12deg)');
+          @media all and (max-width: 540px) {
+            .photo-box {
+
+            }
+          }
         }
         &:nth-child(6n - 3) {
           z-index: 6;
@@ -341,6 +392,12 @@
             left: -62px;
           }
           @include css3-prefix('transform', 'rotate(-10.6deg)');
+          @media all and (max-width: 540px) {
+            .photo-box {
+              top: -12px;
+              left: 20px;
+            }
+          }
         }
         &:nth-child(6n - 2) {
           z-index: 2;
@@ -349,6 +406,12 @@
             right: -40px;
           }
           @include css3-prefix('transform', 'rotate(10.6deg)');
+          @media all and (max-width: 540px) {
+            .photo-box {
+              top: 0;
+              right: 32px;
+            }
+          }
         }
         &:nth-child(6n - 1) {
           z-index: 15;
@@ -356,6 +419,11 @@
             top: -30px;
           }
           @include css3-prefix('transform', 'rotate(-11deg)');
+          @media all and (max-width: 540px) {
+            .photo-box {
+
+            }
+          }
         }
         &:nth-child(6n) {
           z-index: 5;
@@ -364,6 +432,13 @@
             left: -62px;
           }
           @include css3-prefix('transform', 'rotate(10deg)');
+          @media all and (max-width: 540px) {
+            z-index: 3;
+            .photo-box {
+              top: -21px;
+              left: 0;
+            }
+          }
         }
       }
     }
@@ -381,6 +456,12 @@
             width: auto;
             height: auto;
             @include css3-prefix('box-shadow', '10px 10px 13px -2px rgba(0,0,0,0.25)');
+            @media all and (max-width: 1024px) {
+              border-width: 12px;
+            }
+            @media all and (max-width: 768px) {
+              border-width: 8px;
+            }
           }
         }
 
