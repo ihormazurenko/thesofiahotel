@@ -57,11 +57,29 @@
   .blog-list {
     > li {
       a:not(.btn) {
+        .color-gold & {
+          &:hover, &:focus {
+            color: $color-text6;
+            .section-title {
+              color: $color-text6;
+            }
+          }
+        }
+        .color-purple &,
+        .color-light-blue &,
+        .inverse &,
+        & {
+          &:hover, &:focus {
+            color: $color-text2;
+            .section-title {
+              color: $color-text2;
+            }
+          }
+        }
         &:hover, &:focus {
           img {
             @include css3-prefix('transform', 'scale(1.1)');
           }
-          color: $color-text6;
         }
       }
       .column {

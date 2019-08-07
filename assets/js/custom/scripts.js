@@ -159,9 +159,9 @@ jQuery(document).ready(function($) {
         //for nicescroll
         $(function () {
             if (typeof NiceScroll !== 'undefined') {
-                if ($('.section-two-columns .content-box').length) {
+                if ($('.two-column-box .content-box').length) {
                     setTimeout(function () {
-                        $('.section-two-columns .content-box').niceScroll({
+                        $('.two-column-box .content-box').niceScroll({
                             cursoropacitymin: 0.1,
                             cursoropacitymax: 0.8,
                             cursorcolor: "#62666a",
