@@ -711,6 +711,7 @@ div.wpcf7-acceptance-missing {
       padding-top: 76px; } }
 
 #header-scrolling {
+  visibility: hidden;
   overflow: hidden;
   position: fixed;
   z-index: 30;
@@ -741,6 +742,7 @@ div.wpcf7-acceptance-missing {
         padding-left: 20px;
         padding-right: 20px; } }
   .direction-up #header-scrolling {
+    visibility: visible;
     -webkit-transform: translateY(0);
     -khtml-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -995,6 +997,7 @@ div.wpcf7-acceptance-missing {
   bottom: 0;
   width: 100%;
   opacity: 0;
+  visibility: hidden;
   -webkit-transform-origin: 50% 50%;
   -khtml-transform-origin: 50% 50%;
   -moz-transform-origin: 50% 50%;
@@ -1010,7 +1013,8 @@ div.wpcf7-acceptance-missing {
   .burger-box.show-tsh-popup {
     z-index: 9999;
     opacity: 1;
-    right: 0; }
+    right: 0;
+    visibility: visible; }
   .burger-box .hero {
     min-height: auto;
     height: 100%;
@@ -1346,7 +1350,12 @@ div.wpcf7-acceptance-missing {
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.5); }
+  -webkit-text-shadow: 1px 1px rgba(0, 0, 0, .5);
+  -khtml-text-shadow: 1px 1px rgba(0, 0, 0, .5);
+  -moz-text-shadow: 1px 1px rgba(0, 0, 0, .5);
+  -ms-text-shadow: 1px 1px rgba(0, 0, 0, .5);
+  -o-text-shadow: 1px 1px rgba(0, 0, 0, .5);
+  text-shadow: 1px 1px rgba(0, 0, 0, .5); }
 
 .slide-name-box {
   position: absolute;
@@ -1355,6 +1364,47 @@ div.wpcf7-acceptance-missing {
   bottom: 0;
   right: 0;
   padding: 10px; }
+
+.banner-slider-box {
+  overflow: hidden;
+  position: relative; }
+  .banner-slider-box .vertical-align-box {
+    padding: 60px 0 80px; }
+    .banner-slider-box .vertical-align-box .inner-box {
+      padding: 0 20px; }
+  .banner-slider-box .swiper-slide img {
+    position: absolute;
+    z-index: 3;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: .35s;
+    -moz-transition: .35s;
+    -o-transition: .35s;
+    transition: .35s; }
+  .banner-slider-box .banner-title,
+  .banner-slider-box .content {
+    -webkit-text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    -khtml-text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    -moz-text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    -ms-text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    -o-text-shadow: 1px 1px rgba(0, 0, 0, .5);
+    text-shadow: 1px 1px rgba(0, 0, 0, .5); }
+
+.banner-slider-content-box {
+  position: relative;
+  z-index: 5; }
 
 .swiper-button-prev,
 .swiper-button-next,
@@ -1432,6 +1482,25 @@ div.wpcf7-acceptance-missing {
     left: 33%;
     left: -webkit-calc(35% - 5px);
     left: calc(35% - 5px); }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 8px; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 28px; }
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  opacity: 1;
+  background-color: transparent;
+  cursor: pointer; }
+  .swiper-pagination-bullet:hover, .swiper-pagination-bullet:focus {
+    background-color: rgba(255, 255, 255, 0.75); }
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff; }
 
 /* Magnific Popup CSS */
 .mfp-bg {
@@ -1867,7 +1936,7 @@ uncomment this part if you haven't added this code anywhere else
 .burger-box .container {
   padding-left: 106px;
   padding-right: 100px; }
-  @media all and (max-width: 1024px) {
+  @media all and (max-width: 1120px) {
     .burger-box .container {
       padding-left: 30px;
       padding-right: 30px; } }
@@ -2173,6 +2242,12 @@ uncomment this part if you haven't added this code anywhere else
         margin-left: 10px;
         margin-right: 10px;
         margin-bottom: 20px; } }
+  .section-banner.banner-slider {
+    position: relative;
+    min-height: 410px; }
+    .section-banner.banner-slider .container {
+      max-width: 100%;
+      padding: 0; }
 
 .banner-title-box {
   position: relative;
@@ -2994,6 +3069,14 @@ a.load-more-btn,
 [role="tabpanel"][aria-hidden="true"] {
   display: none; }
 
+.temp-box.centered-img {
+  padding-bottom: 690px; }
+  @media all and (max-width: 1200px) {
+    .temp-box.centered-img {
+      padding-bottom: 57.5%; } }
+  .temp-box.centered-img img {
+    max-width: 100%; }
+
 .grid .grid-item {
   overflow: hidden;
   position: relative;
@@ -3081,6 +3164,20 @@ a.load-more-btn,
       margin-bottom: 0; }
   .service-box > :last-child {
     margin-bottom: 32px; }
+  ul:not(.press) .service-box > :last-child {
+    margin-bottom: 0; }
+  .service-box a.btn, .service-box .btn {
+    width: 100%; }
+
+.service-logo-box {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto 20px;
+  text-align: center; }
+  .service-logo-box img {
+    max-width: 100%;
+    width: 100%;
+    height: auto; }
 
 a.read-more,
 .read-more {
@@ -3114,13 +3211,17 @@ a.read-more,
   margin-bottom: 22px;
   max-height: 160px;
   min-height: 160px; }
+  .press .service-desc {
+    min-height: 96px; }
   @media all and (max-width: 1024px) {
     .service-desc {
       max-height: 160px;
       min-height: 160px; } }
   @media all and (max-width: 580px) {
     .service-desc {
-      min-height: auto; } }
+      min-height: auto; }
+      .press .service-desc {
+        min-height: auto; } }
   .service-desc .content {
     font-size: 26px;
     letter-spacing: -.02em; }
@@ -3135,6 +3236,9 @@ a.read-more,
     display: block; }
   .service-desc.show-read-more.less-more {
     max-height: 1000px; }
+
+.price-list {
+  margin-bottom: 26px; }
 
 .price-box {
   font-size: 26px;
@@ -3167,6 +3271,9 @@ a.read-more,
       margin-bottom: 18px; }
     .section-important-information .content h1, .section-important-information .content h2, .section-important-information .content h3, .section-important-information .content h4, .section-important-information .content h5, .section-important-information .content h6 {
       margin-bottom: 7px; }
+
+.section-load-more {
+  border-top: 1px solid #c1c1c1; }
 
 .section-history {
   overflow: hidden;

@@ -142,6 +142,7 @@
 }
 
 #header-scrolling {
+  visibility: hidden;
   overflow: hidden;
   position: fixed;
   z-index: 30;
@@ -163,8 +164,10 @@
     }
   }
   .direction-up & {
+    visibility: visible;
     @include css3-prefix('transform', 'translateY(0)');
     @include css3-prefix('box-shadow','0 2px 8px 0 rgba(0, 0, 0, 0.75)');
+
   }
   .direction-down & {
     box-shadow: none;
@@ -422,6 +425,7 @@
   bottom: 0;
   width: 100%;
   opacity: 0;
+  visibility: hidden;
   @include css3-prefix('transform-origin','50% 50%');
   //@include css3-prefix('transform', 'scale(0)');
   @include transition('opacity 0.4s ease 0s, right 0s');
@@ -429,6 +433,7 @@
     z-index: 9999;
     opacity: 1;
     right: 0;
+    visibility: visible;
     //@include css3-prefix('transform', 'scale(1)');
 
   }

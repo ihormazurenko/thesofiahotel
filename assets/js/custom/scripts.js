@@ -93,6 +93,22 @@ jQuery(document).ready(function($) {
                     });
                 }
 
+                //for banner slider
+                if ($('.banner-slider .swiper-container').length) {
+
+                    var bannerSliders = $('.banner-slider .swiper-container');
+
+                    bannerSliders.each(function (i) {
+                        new Swiper(bannerSliders.eq(i), {
+                            effect: 'fade',
+                            loop: true,
+                            pagination: {
+                                el: '.swiper-pagination',
+                            },
+                        });
+                    });
+                }
+
                 //for single slider
                 if ($('.single-slider:not(.small) .swiper-container').length) {
                     var singleSliders = $('.single-slider:not(.small) .swiper-container');
@@ -262,9 +278,9 @@ jQuery(document).ready(function($) {
 
         //for read more
         $(function () {
-           if ($('.service-box').length) {
+           if ($('ul:not(.press) .service-box').length) {
                $(window).on('load resize', function () {
-                   var serviceBox = $('.service-box');
+                   var serviceBox = $('ul:not(.press) .service-box');
 
                    serviceBox.each(function () {
                        var box = $(this),

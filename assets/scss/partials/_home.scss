@@ -141,7 +141,16 @@
   //    height: 414px;
   //  }
   //}
+  &.banner-slider {
+    position: relative;
+    min-height: 410px;
+    .container {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
 }
+
   .banner-title-box {
     position: relative;
     margin-bottom: 35px;

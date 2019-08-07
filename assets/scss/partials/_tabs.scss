@@ -552,6 +552,18 @@
       [role="tabpanel"][aria-hidden="true"] {
         display: none;
       }
+.temp-box {
+  &.centered-img {
+    padding-bottom: 690px;
+    @media all and (max-width: 1200px) {
+      padding-bottom: 57.5%;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
 
 .grid {
   .grid-item {

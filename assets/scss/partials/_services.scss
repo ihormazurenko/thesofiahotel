@@ -48,7 +48,26 @@
       > :last-child {
         margin-bottom: 32px;
       }
+      ul:not(.press) & {
+        > :last-child {
+          margin-bottom: 0;
+        }
+      }
+      a.btn, .btn {
+        width: 100%;
+      }
     }
+      .service-logo-box {
+        display: block;
+        max-width: 300px;
+        margin: 0 auto 20px;
+        text-align: center;
+        img {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+        }
+      }
       a.read-more,
       .read-more {
         font-size: 26px;
@@ -80,12 +99,18 @@
         margin-bottom: 22px;
         max-height: 160px;
         min-height: 160px;
+        .press & {
+          min-height: 96px;
+        }
         @media all and (max-width: 1024px) {
           max-height: 160px;
           min-height: 160px;
         }
         @media all and (max-width: 580px) {
           min-height: auto;
+          .press & {
+            min-height: auto;
+          }
         }
         .content {
           font-size: 26px;
@@ -111,6 +136,7 @@
         }
       }
       .price-list {
+        margin-bottom: 26px;
         > li {}
       }
         .price-box {
@@ -153,4 +179,8 @@
       margin-bottom: 7px;
     }
   }
+}
+
+.section-load-more {
+  border-top: 1px solid #c1c1c1;
 }
