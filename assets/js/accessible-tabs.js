@@ -29,8 +29,8 @@
         var setTab = function (tab, switchOn) {
             if (tab && tab.panelId) {
                 d.getElementById(tab.panelId).setAttribute("aria-hidden", !switchOn);
-                tab.setAttribute("aria-selected", switchOn);
-                tab.setAttribute("tabindex", switchOn ? "0" : "-1");
+                // tab.setAttribute("aria-selected", switchOn);
+                // tab.setAttribute("tabindex", switchOn ? "0" : "-1");
             }
         };
 

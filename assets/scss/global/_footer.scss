@@ -4,6 +4,10 @@
   padding: 5px 30px;
   color: $white;
   font-size: $size-small;
+  @media all and (max-width: 768px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .top {
     overflow: hidden;
     padding: 5px 15px 25px;
@@ -15,6 +19,10 @@
           height: 50px;
         }
       }
+    }
+    @media all and (max-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
   .bottom {
@@ -94,7 +102,9 @@
     font-family: $font-secondary;
     font-size: 17px;
     text-transform: uppercase;
-    margin-left: -28px;
+    @media all and (min-width: 769px) {
+      margin-left: -28px;
+    }
     li {
       margin-bottom: 15px;
       font-weight: $bold;
@@ -149,9 +159,15 @@
   .footer-menu {
     overflow: hidden;
     float: left;
+    margin-bottom: -10px;
+    @media all and (max-width: 768px) {
+      float: none;
+      margin-bottom: 10px;
+    }
     li {
       float: left;
       padding: 0 10px;
+      margin-bottom: 10px;
       border-right: 2px solid #a5979d;
       line-height: 1;
       &:first-child {
@@ -178,10 +194,6 @@
       li {
         display: none;
       }
-    }
-    @media all and (max-width: 768px) {
-      float: none;
-      margin-bottom: 20px;
     }
   }
   .copyright {

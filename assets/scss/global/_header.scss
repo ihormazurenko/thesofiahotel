@@ -294,6 +294,9 @@
     max-width: 480px;
     margin: 0 auto;
     line-height: 1.2;
+    &.wide {
+      max-width: 980px;
+    }
     p:not(:last-child) {
       margin-bottom: 10px;
     }

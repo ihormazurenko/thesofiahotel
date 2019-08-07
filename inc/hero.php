@@ -36,8 +36,10 @@
                     </header>
                 <?php endif; ?>
 
-                <?php if ($content) : ?>
-                    <div class="hero-content"><?php echo $content; ?></div>
+                <?php if ($content) :
+                    $content_class = $hero['content_wide'] ? ' wide' : '';
+                ?>
+                    <div class="hero-content<?php echo $content_class; ?>"><?php echo $content; ?></div>
                 <?php endif; ?>
 
                 <?php if (!empty($buttons) && count($buttons) > 0) : ?>
