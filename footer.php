@@ -1,6 +1,13 @@
             </div><!-- end div for lace -->
         </div> <!-- end #main-content -->
 
+            <?php if (get_current_user_id() == 1) { ?>
+                <?php get_template_part('inc/popup', 'thank'); ?>
+                <?php get_template_part('inc/popup', 'form'); ?>
+                <?php get_template_part('inc/popup', 'book'); ?>
+                <?php get_template_part('inc/popup', 'let-us-know'); ?>
+            <?php } ?>
+
         <footer class="footer" id="footer">
             <div class="container">
                 <?php

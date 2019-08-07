@@ -12,18 +12,11 @@ function load_style_script(){
         wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', false  );
     }
 
-    if (is_page(75)) {
+    if (is_page(75) || is_page(72)) {
         wp_enqueue_script('magnific', get_template_directory_uri() . '/assets/js/magnific.js', array('jquery'), '1.1.0', true );
     }
 
-//    if (is_page(67)) {
-//        //        wp_enqueue_script('simpleParallax', get_template_directory_uri() . '/assets/js/simpleParallax.min', array('jquery'), '5.1.0', true );
-//        wp_enqueue_script('simpleParallax', '//cdn.jsdelivr.net/npm/simple-parallax-js@5.1.0/dist/simpleParallax.min.js', array('jquery'), '5.1.0', true );
-//    }
-
-    if (is_page(72)) {
-//        wp_enqueue_script('imagesloaded', '//unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js', array(), '4.1.4', true );
-//        wp_enqueue_script('masonry', '//unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', array(), '4.2.2', true );
+    if (is_page(72) || is_page(69)) {
         wp_enqueue_script('magnific', get_template_directory_uri() . '/assets/js/magnific.js', array('jquery'), '1.1.0', true );
         wp_enqueue_script('accessible-tabs', get_template_directory_uri() . '/assets/js/accessible-tabs.js', array('jquery'), '1.0.0', true );
         wp_enqueue_script('accessible-tabs-ie9', get_template_directory_uri() . '/assets/js/accessible-tabs-ie9.js', array('jquery'), '1.0.0', true );

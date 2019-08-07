@@ -20,7 +20,7 @@
                     </a>
                 </div>
 
-                <a href="#" title="<?php esc_attr_e('Navigation Menu', 'the-sofia-hotel') ?>" class="menu-toggle">
+                <a href="#burger-menu" title="<?php esc_attr_e('Navigation Menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup" data-open="">
                     <span></span>
                 </a>
 
@@ -28,7 +28,7 @@
 
                 <a href="#" class="btn btn-sm btn-find-rooms" title="<?php _e('Find Rooms', 'the-sofia-hotel'); ?>"><?php _e('Find Rooms', 'the-sofia-hotel'); ?></a>
             </div>
-            <div class="burger-box" id="burger-box">
+            <div class="burger-box" id="burger-menu">
                 <div class="hero">
                     <div class="hero-img" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/burger-bg.jpg);"></div>
                     <div class="burger-inner-wrap">
@@ -133,7 +133,7 @@
                     </a>
                 </div>
 
-                <a href="#" title="<?php esc_attr_e('Navigation Menu', 'the-sofia-hotel') ?>" class="menu-toggle">
+                <a href="#burger-menu" title="<?php esc_attr_e('Navigation Menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup">
                     <span></span>
                 </a>
 

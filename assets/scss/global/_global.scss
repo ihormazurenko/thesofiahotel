@@ -116,7 +116,25 @@ a, .btn {
       }
     }
   }
+  &.transparent {
+    padding: 24px 20px;
+    font-weight: $light;
+    border: 2px solid $white;
+    background-color: transparent;
+    &:before {
+      content: none;
+    }
+    &:hover, &:focus {
+      color: $color-text2;
+      background-color: $white;
+    }
+    @media all and (max-width: 768px) {
+      padding-bottom: 15px;
+      font-size: 22px;
+    }
+  }
 }
+
 img {
   @include css3-prefix('user-select', 'none');
 }
@@ -198,6 +216,7 @@ img {
 }
 
 .lace-curtain {
+  overflow: hidden;
   position: relative;
   &:after,
   &:before {

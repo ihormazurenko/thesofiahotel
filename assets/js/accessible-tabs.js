@@ -202,14 +202,14 @@
                             tabs = parent.find('.tab-section');
 
                         $(window).on('resize', function () {
-                            if ($(window).width() > 600) {
+                            if ($(window).width() > 768) {
                                 buttons.removeClass('active');
                                 tabs.css('display', '');
                             }
                         });
 
                         buttons.on('click touch', function () {
-                            if ($(window).width() < 601) {
+                            if ($(window).width() < 769) {
                                 var btn = $(this),
                                     currentTab = btn.closest('.tab-box-btn').next('.tab-section');
 

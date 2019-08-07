@@ -1,5 +1,8 @@
 .section-tabs {
   padding: 45px 0 0;
+  @media all and (max-width: 768px) {
+    padding-bottom: 20px;
+  }
   .container {
     max-width: 100%;
     padding: 0;
@@ -13,6 +16,9 @@
     max-width: 1200px;
     margin: 0 auto 26px;
     padding: 0 20px;
+    @media all and (max-width: 768px) {
+      display: none;
+    }
   }
     .tab-list {
       overflow: hidden;
@@ -70,6 +76,9 @@
     cursor: pointer;
     @include transition($transition-other);
     word-break: break-all;
+    @media all and (max-width: 1024px) {
+      font-size: 19px;
+    }
     &:before {
       position: absolute;
       content: '';
@@ -81,6 +90,13 @@
       background-position: center;
       background-repeat: no-repeat;
       @include transition($transition-other);
+      @media all and (max-width: 768px) {
+        top: 50% !important;
+        left: 55px !important;
+        max-width: 80px;
+        max-height: 45px;
+        @include css3-prefix('transform','translate(-50%, -50%)');
+      }
     }
     &:after {
       position: absolute;
@@ -92,6 +108,9 @@
       height: 4px;
       background-color: #4D4F50;
       @include transition($transition-other);
+      @media all and (max-width: 768px) {
+        content: none;
+      }
     }
     &.hotel {
       &:before {
@@ -477,13 +496,23 @@
     margin-bottom: 5px;
     padding: 0 15px;
     a {
+      position: relative;
       padding: 16px 10px 14px;
       font-size: 25px;
       text-align: center;
       //-webkit-border-radius: 2px 2px 0 0;
       //-moz-border-radius: 2px 2px 0 0;
       //border-radius: 2px 2px 0 0;
-      background-color: #FCF4EB;
+      background-color: #F0F5F9;
+      @media all and (max-width: 768px) {
+        font-size: 19px;
+        padding-left: 110px;
+        text-align: left;
+      }
+    }
+    @media all and (max-width: 768px) {
+     display: block;
+      padding: 0;
     }
   }
 
@@ -508,15 +537,33 @@
     @include transition($transition-other);
   }
       .tab-inner-box {
+        overflow: hidden;
         padding: 0;
-        background-color: #FCF4EB;
+        background-color: $white;
         > :last-child {
           margin-bottom: 0;
+        }
+        > img {
+          max-width: 100%;
+          height: auto;
+          width: auto;
         }
       }
       [role="tabpanel"][aria-hidden="true"] {
         display: none;
       }
+.temp-box {
+  &.centered-img {
+    padding-bottom: 690px;
+    @media all and (max-width: 1200px) {
+      padding-bottom: 57.5%;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
 
 .grid {
   .grid-item {

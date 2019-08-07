@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Test
+ * Template Name: Business Travel
  */
 get_header(); ?>
 
@@ -34,7 +34,7 @@ get_header(); ?>
         </section>
     <?php } */ ?>
 
-    <section class="section section-two-columns small color-light-blue">
+    <section class="section section-two-columns small color-gold abstract-bg">
         <div class="container">
             <div class="two-column-box">
                 <div class="column image">
@@ -60,30 +60,29 @@ get_header(); ?>
                         </div>
                         <div class="content-box">
                             <div class="content">
-                                <h3>Hours of Operation</h3>
-                                <p>Monday - Friday 8am - 8pm </br>
-                                    Saturday, Sunday 8am - 8pm
-                                </p>
+                                <p>For guests who require special accommodations the hotel offers special suites
+                                    featuring all the standard guest room amenities and additional touches.</p>
+                                <h3>FEATURES AND AMENITIES:</h3>
+                                <ul>
+                                    <li>Soaking spa tub with jets</li>
+                                    <li>Fine art, decorative wallpaper, plumped cushions  and accessories</li>
+                                    <li>Wide selection of Free Television Channels including HBO</li>
+                                    <li>Universal Docking station alarm clock/radio</li>
+                                    <li>Illuminating, adjustable bedside lamps</li>
+                                    <li>Fine linens with white down comforters, plush pillows and pillow-top mattresses</li>
+                                    <li>Updated, modern bathroom with sparkling, contemporary bath and vanity fixtures</li>
+                                    <li>Separate vanities with lighted cosmetic mirrors</li>
+                                    <li>Pro Terra products and toiletries</li>
+                                    <li>In-room refreshment center with coffeemaker, mini-fridge and microwave</li>
+                                    <li>Hair dryer and iron with board</li>
+                                    <li>Electronic in-room laptop safe</li>
+                                    <li>Pet-friendly rooms</li>
+                                </ul>
                             </div>
                         </div>
                         <ul class="link-list">
                             <li>
-                                <a href="#" class="btn grey" title="View services">View services</a>
-                            </li>
-                        </ul>
-
-                        <div class="section-title-box">
-                            <h2 class="section-title">Yoga + Health Center</h2>
-                        </div>
-                        <div class="content-box">
-                            <div class="content">
-                                <h3>Hours of Operation</h3>
-                                <p>The Harkishan Yoga Studio and Health Center are open 24 / 7.</p>
-                            </div>
-                        </div>
-                        <ul class="link-list">
-                            <li>
-                                <a href="#" class="btn grey" title="Health center">Health center</a>
+                                <a href="#" class="btn" title="View services">View services</a>
                             </li>
                         </ul>
                     </div>
@@ -134,207 +133,14 @@ get_header(); ?>
                 </div>
                 <div class="column image">
                     <div class="inner-box">
-                        <div class="inner-slider">
-                            <div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/vip-suites-section.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/hero-home.jpg" alt=""></div>
-                                    <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/prefooter-home.jpg" alt=""></div>
-                                </div>
-                                <!-- Add Arrows -->
-                                <div class="swiper-button-prev"><span class="tsh-icon-arrow"></span></div>
-                                <div class="swiper-button-next"><span class="tsh-icon-arrow"></span></div>
-                            </div>
+                        <div class="img-wrap ">
+                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/world-class-accommodations.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/banner_img.jpg);">
-        <div class="container">
-            <div class="vertical-align-box">
-                <div class="inner-box">
-                    <div class="banner-title-box">
-                        <h2 class="banner-title">Body Treatments</h2>
-                    </div>
-                    <div class="banner-desc-box">
-                        <div class="content">
-                            <p>All body treatments include a gharsana treatment.</p>
-                        </div>
-                    </div>
-                    <ul class="banner-link">
-                        <li>
-                            <a href="#" title="" class="btn">Book Now</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-services">
-        <div class="container">
-            <ul class="service-list">
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <h3 class="service-title">Circulatory</h3>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>Circulates blood, lymph and breath so that you can get in touch with your flow.</p>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                           <li>
-                               <div class="price-box">
-                                   <p>50 min: <span class="price">$98</span></p>
-                               </div>
-                           </li>
-                            <li>
-                               <div class="price-box">
-                                   <p>80 min: <span class="price">$80</span></p>
-                               </div>
-                           </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <h3 class="service-title">Deep Tissue</h3>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>Release into your deep tissue therapeutic massage. Soften the tissue, strengthen the spirit and soothe the soul.</p>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$115</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$155</span></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <h3 class="service-title">Fusion</h3>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>A blend of circulatory and deep tissue techniques specifically customized for your session.</p>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$110</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$150</span></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section-services">
-    <div class="container">
-        <ul class="service-list">
-            <li>
-                <div class="service-box">
-                    <div class="title-box">
-                        <h3 class="service-title">Luna</h3>
-                    </div>
-                    <div class="service-desc">
-                        <div class="content">
-                            <p>A special session for mothers to be. Promotes circulation and relaxation, easing aching joints and muscles. Great for both mama and baby.</p>
-                        </div>
-                    </div>
-                    <a href="#" class="read-more">Read More</a>
-                    <ul class="price-list">
-                        <li>
-                            <div class="price-box">
-                                <p>50 min: <span class="price">$110</span></p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="price-box">
-                                <p>80 min: <span class="price">$150</span></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="service-box">
-                    <div class="title-box">
-                        <h3 class="service-title">Sublime Thigh Treatment</h3>
-                    </div>
-                    <div class="service-desc">
-                        <div class="content">
-                            <p>A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty accumulations in the thighs and buttocks. A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty</p>
-                        </div>
-                    </div>
-                    <a href="#" class="read-more">Read More</a>
-                    <ul class="price-list">
-                        <li>
-                            <div class="price-box">
-                                <p>50 min: <span class="price">$120</span></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="service-box">
-                    <div class="title-box">
-                        <h3 class="service-title">Crowning Chakra</h3>
-                    </div>
-                    <div class="service-desc show-more">
-                        <div class="content">
-                            <p>A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
-                                shoulders. Great for dry tresses as well! A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
-                                shoulders. Great for dry tresses as well!</p>
-                        </div>
-                    </div>
-                    <a href="#" class="read-more">Read More</a>
-                    <ul class="price-list">
-                        <li>
-                            <div class="price-box">
-                                <p>30 min: <span class="price">$80</span></p>
-                                <div class="additional-info">(add-on to any treatment)</div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="price-box">
-                                <p>50 min: <span class="price">$150</span></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
 
     <section class="section-slider">
         <div class="container">
@@ -374,38 +180,13 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="section section-important-information color-light-blue">
+    <section class="section section-interesting-info color-gold">
         <div class="container">
+            <h2 class="section-title">A Room For Every Occasion</h2>
             <div class="content">
-                <h3>CANCELLATION POLICY</h3>
-                <p>Any cancellation must be received within 4 hours of your appointment. Any late cancellations will
-                    incur a 50% cancellation fee. A full fee will be imposed for a no show client.</p>
-                <h3>GRATUITIES</h3>
-                <p>As a courtesy to your therapist an 18% gratuity will be automatically added to your bill.</p>
-                <h3>REFUND POLICY</h3>
-                <p>Fitness packages are non transferable, non refundable and non exchangeable.</p>
-                <h3>SPECIAL CONSIDERATION</h3>
-                <p>Guests who have any medical issues are advised to consult a physician before signing up for
-                    fitness services. Please report any medical conditions to your instructor. Liability waivers will
-                    be provided, and are to be signed before any fitness activity is performed.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-slider">
-        <div class="container">
-            <div class="single-slider small">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/explore_slide_1.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/explore_slide_2.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/explore_slide_3.jpg" alt=""></div>
-                        <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/explore_slide_4.jpg" alt=""></div>
-                    </div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-prev"><span class="tsh-icon-arrow"></span></div>
-                    <div class="swiper-button-next"><span class="tsh-icon-arrow"></span></div>
-                </div>
+                <p>Sofia is a sensible hostess who has thought of everything from a laptop safe to a mini-fridge.
+                    Her responsiveness and ability to anticipate her guests' needs will resonate with visitors for
+                    years to come.</p>
             </div>
         </div>
     </section>
