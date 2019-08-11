@@ -7,77 +7,77 @@ get_header(); ?>
     <?php get_template_part('inc/hero'); ?>
 
     <section class="section-services">
-    <div class="container">
-        <ul class="service-list press">
-            <li>
-                <div class="service-box">
-                    <div class="title-box">
-                        <a href="#" class="service-logo-box">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_smaggle@2x.png" alt="">
-                        </a>
-                    </div>
-                    <div class="service-desc">
-                        <div class="content">
-                            <p>"9 Things To Do In San Diego"</p>
+        <div class="container">
+            <ul class="service-list press">
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <a href="#" class="service-logo-box">
+                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_smaggle@2x.png" alt="">
+                            </a>
                         </div>
-                    </div>
-                    <ul class="price-list">
-                        <li>
-                            <div class="price-box">
-                                <p>January 2017</p>
+                        <div class="service-desc">
+                            <div class="content">
+                                <p>"9 Things To Do In San Diego"</p>
                             </div>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </li>
-            <li>
-                <div class="service-box">
-                    <div class="title-box">
-                        <a href="#" class="service-logo-box">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_traveller@2x.png" alt="">
-                        </a>
-                    </div>
-                    <div class="service-desc">
-                        <div class="content">
-                            <p>"Hotel Review: The Sofia Hotel, San Diego, California"</p>
                         </div>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p>January 2017</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn">Read More</a>
                     </div>
-                    <ul class="price-list">
-                        <li>
-                            <div class="price-box">
-                                <p>September 2016</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </li>
-            <li>
-                <div class="service-box">
-                    <div class="title-box">
-                        <a href="#" class="service-logo-box">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_go@2x.png" alt="">
-                        </a>
-                    </div>
-                    <div class="service-desc show-more">
-                        <div class="content">
-                            <p>Comic Con, San Diego: The world's biggest pop culture convention"</p>
+                </li>
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <a href="#" class="service-logo-box">
+                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_traveller@2x.png" alt="">
+                            </a>
                         </div>
-                    </div>
-                    <ul class="price-list">
-                        <li>
-                            <div class="price-box">
-                                <p>March 2016</p>
+                        <div class="service-desc">
+                            <div class="content">
+                                <p>"Hotel Review: The Sofia Hotel, San Diego, California"</p>
                             </div>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
+                        </div>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p>September 2016</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <a href="#" class="service-logo-box">
+                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_go@2x.png" alt="">
+                            </a>
+                        </div>
+                        <div class="service-desc show-more">
+                            <div class="content">
+                                <p>Comic Con, San Diego: The world's biggest pop culture convention"</p>
+                            </div>
+                        </div>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p>March 2016</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <section class="section-banner banner-slider" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/banner_img.jpg);">
         <div class="container">
@@ -159,86 +159,81 @@ get_header(); ?>
     </section>
 
     <section class="section-services">
-    <div class="container">
-        <ul class="service-list press">
-            <li>
-                <div class="service-box">
-                    <div class="title-box">
-                        <a href="#" class="service-logo-box">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_smaggle@2x.png" alt="">
-                        </a>
-                    </div>
-                    <div class="service-desc">
-                        <div class="content">
-                            <p>"9 Things To Do In San Diego"</p>
+        <div class="container">
+            <ul class="service-list press">
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <a href="#" class="service-logo-box">
+                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_smaggle@2x.png" alt="">
+                            </a>
                         </div>
-                    </div>
-                    <ul class="price-list">
-                        <li>
-                            <div class="price-box">
-                                <p>January 2017</p>
+                        <div class="service-desc">
+                            <div class="content">
+                                <p>"9 Things To Do In San Diego"</p>
                             </div>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </li>
-            <li>
-                <div class="service-box">
-                    <div class="title-box">
-                        <a href="#" class="service-logo-box">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_traveller@2x.png" alt="">
-                        </a>
-                    </div>
-                    <div class="service-desc">
-                        <div class="content">
-                            <p>"Hotel Review: The Sofia Hotel, San Diego, California"</p>
                         </div>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p>January 2017</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn">Read More</a>
                     </div>
-                    <ul class="price-list">
-                        <li>
-                            <div class="price-box">
-                                <p>September 2016</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </li>
-            <li>
-                <div class="service-box">
-                    <div class="title-box">
-                        <a href="#" class="service-logo-box">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_go@2x.png" alt="">
-                        </a>
-                    </div>
-                    <div class="service-desc show-more">
-                        <div class="content">
-                            <p>Comic Con, San Diego: The world's biggest pop culture convention"</p>
+                </li>
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <a href="#" class="service-logo-box">
+                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_traveller@2x.png" alt="">
+                            </a>
                         </div>
-                    </div>
-                    <ul class="price-list">
-                        <li>
-                            <div class="price-box">
-                                <p>March 2016</p>
+                        <div class="service-desc">
+                            <div class="content">
+                                <p>"Hotel Review: The Sofia Hotel, San Diego, California"</p>
                             </div>
-                        </li>
-                    </ul>
-                    <a href="#" class="btn">Read More</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</section>
+                        </div>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p>September 2016</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <a href="#" class="service-logo-box">
+                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_go@2x.png" alt="">
+                            </a>
+                        </div>
+                        <div class="service-desc show-more">
+                            <div class="content">
+                                <p>Comic Con, San Diego: The world's biggest pop culture convention"</p>
+                            </div>
+                        </div>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p>March 2016</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <section class="section-load-more">
         <div class="container">
-            <div class="load-more-box">
-                <a href="#" class="load-more-btn" title="Load More">
-                    <span class="tsh-icon-arrow"></span>
-                    <span class="btn-text">Load More</span>
-                </a>
-            </div>
+            <?php get_template_part('inc/load-more'); ?>
         </div>
     </section>
 

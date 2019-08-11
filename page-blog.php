@@ -8,6 +8,29 @@ get_header(); ?>
 
     <section class="section-blog">
         <div class="container">
+            <?php global $wp_query;
+
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+            $args = array(
+                'post_type'     => 'post',
+                'post_status'   => 'publish',
+                'orderby'       => 'date',
+                'order'         => 'DESC',
+                'posts_per_page'=> 3,
+                'paged'         => $paged,
+            );
+            $new_query = new WP_Query( $args );
+
+            if ( $new_query->have_posts() ) : while ( $new_query->have_posts() ) : $new_query->the_post();
+                ?>
+                <?php //get_template_part('loop', 'post'); ?>
+
+            <?php endwhile; ?>
+
+                <?php //wp_pagenavi( array( 'query' => $new_query ) ); ?>
+
+            <?php else: echo "<p class='no-results'>".__('Sorry, no posts found...', 'the-sofia-hotel')."</p>";
+            endif; wp_reset_query(); ?>
             <ul class="blog-list">
                 <li>
                     <div class="two-column-box">
@@ -115,45 +138,9 @@ get_header(); ?>
                     </div>
                 </li>
             </ul>
-            <div class="load-more-box">
-                <a href="#" class="load-more-btn" title="Load More">
-                    <span class="tsh-icon-arrow"></span>
-                    <span class="btn-text">Load More</span>
-                </a>
-            </div>
+
+            <?php get_template_part('inc/load-more'); ?>
         </div>
     </section>
 
-<?php  /*
-    <div class="content-wrap">
-		<div class="content">
-			<?php global $wp_query;
-
-                $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-                $args = array(
-                    'post_type'     => 'post',
-                    'post_status'   => 'publish',
-                    'orderby'       => 'date',
-                    'order'         => 'DESC',
-                    'paged'         => $paged,
-                );
-                $new_query = new WP_Query( $args );
-
-                if ( $new_query->have_posts() ) : while ( $new_query->have_posts() ) : $new_query->the_post();
-            ?>
-				<?php get_template_part('loop', 'post'); ?>
-
-			<?php endwhile; ?>
-
-                <?php wp_pagenavi( array( 'query' => $new_query ) ); ?>
-
-            <?php else: echo "<p class='no-results'>".__('Sorry, no articles found...')."</p>"; 
-                endif; wp_reset_query(); ?>
-			 
-		</div><!--/content-->	
-
-		<?php get_sidebar(); ?>
-
-	</div><!--/content-wrap-->
-*/ ?>
 <?php get_footer(); ?>

@@ -3,45 +3,32 @@
 function load_style_script(){
     global $is_IE;
 
+    wp_enqueue_style('jquery-ui.min', '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css', array(), null );
     wp_enqueue_style('swiper.min', '//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css', array(), null );
     wp_enqueue_style('screen', get_template_directory_uri() . '/assets/css/screen.css', array(), null );
     wp_enqueue_style('style', get_stylesheet_uri(), array(), null );
 
     wp_enqueue_script('modernizr.min', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.8.3', false );
     if ( !wp_script_is( 'jquery' ) ) {
-        wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', false  );
+        wp_enqueue_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', false );
     }
-
-    if (is_page(75) || is_page(72)) {
-        wp_enqueue_script('magnific', get_template_directory_uri() . '/assets/js/magnific.js', array('jquery'), '1.1.0', true );
-    }
-
-    if (is_page(72) || is_page(69)) {
-        wp_enqueue_script('magnific', get_template_directory_uri() . '/assets/js/magnific.js', array('jquery'), '1.1.0', true );
-        wp_enqueue_script('accessible-tabs', get_template_directory_uri() . '/assets/js/accessible-tabs.js', array('jquery'), '1.0.0', true );
-        wp_enqueue_script('accessible-tabs-ie9', get_template_directory_uri() . '/assets/js/accessible-tabs-ie9.js', array('jquery'), '1.0.0', true );
-        wp_script_add_data('accessible-tabs-ie9','conditional','IE 9');
-    }
-
+    wp_enqueue_script('jquery-ui', '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', array('jquery'), '1.12.1', false );
     wp_enqueue_script('fontawesome', '//kit.fontawesome.com/0d9005a90f.js', array(), '5.9.0', false );
+
+    wp_enqueue_script('html5shiv', '//html5shiv.googlecode.com/svn/trunk/html5.js', array(), null, false );
+    wp_script_add_data('html5shiv','conditional','IE 9');
+
+    wp_enqueue_script('magnific', get_template_directory_uri() . '/assets/js/magnific.js', array('jquery'), '1.1.0', true );
+    wp_enqueue_script('accessible-tabs', get_template_directory_uri() . '/assets/js/accessible-tabs.js', array('jquery'), '1.0.0', true );
+    wp_enqueue_script('accessible-tabs-ie9', get_template_directory_uri() . '/assets/js/accessible-tabs-ie9.js', array('jquery'), '1.0.0', true );
+    wp_script_add_data('accessible-tabs-ie9','conditional','IE 9');
+
     wp_enqueue_script('jquery.nicescroll.min', '//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js', array(), '3.7.6', true );
     wp_enqueue_script('swiper.min', '//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js', array(), '4.5.0', false );
     wp_enqueue_script('smooth-scroll.polyfills', get_template_directory_uri() . '/assets/js/smooth-scroll.polyfills.min.js', array(), '16.1.0', true );
     wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/js/custom/scripts.js', array('jquery'), null, true );
 }
 add_action('wp_enqueue_scripts', 'load_style_script');
-
-
-// add ie conditional html5 shiv to header
-function add_ie_html5_shiv () {
-    global $is_IE;
-    if ($is_IE) {
-        echo '<!--[if lt IE 9]>';
-        echo '<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>';
-        echo '<![endif]-->';
-    }
-}
-add_action('wp_head', 'add_ie_html5_shiv');
 
 
 // logo at the entrance to the admin panel

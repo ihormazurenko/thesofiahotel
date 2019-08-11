@@ -85,44 +85,45 @@
   outline: none;
   margin-bottom: 0;
   padding: 10px 45px 10px 0;
-  font-family: $font-secondary;
-  font-size: 32px;
-  font-weight: $light;
-  line-height: $line-height-heading;
   letter-spacing: -.02em;
   text-transform: uppercase;
-  color: $white;
   cursor: pointer;
-  @include transition($transition-other);
-  @media all and (max-width: 1024px) {
-    font-size: 26px;
-  }
-  @media all and (max-width: 1024px) {
-    font-size: 24px;
-  }
-  &:hover,
-  &:focus,
-  &:hover .fa,
-  &:focus .fa {
-    color: $color-text4;
-  }
-  .fa {
-    position: absolute;
-    right: 12px;
-    font-size: 24px;
-    top: 50%;
+  &, & > a {
+    @include font($light, $size-main, $font-secondary, $line-height-heading);
     color: $white;
-    @include transition('all 0.3s ease');
-    @include css3-prefix('transform-origin','50% 50%');
-    @include css3-prefix('transform','translateY(-50%)');
-    opacity: 0;
+    @include transition($transition-other);
+    @media all and (max-width: 1024px) {
+      font-size: 26px;
+    }
+    @media all and (max-width: 1024px) {
+      font-size: 24px;
+    }
+    &:hover,
+    &:focus,
+    &:hover .fa,
+    &:focus .fa {
+      color: $color-text4;
+    }
+    .fa {
+      position: absolute;
+      right: 12px;
+      font-size: 24px;
+      top: 50%;
+      color: $white;
+      @include transition('all '+$transition-other+' ease');
+      @include css3-prefix('transform-origin', '50% 50%');
+      @include css3-prefix('transform', 'translateY(-50%)');
+      opacity: 0;
+    }
   }
   &.active {
-    color: $color-text4;
-    .fa {
-      opacity: 1;
+    &, & > a {
       color: $color-text4;
-      @include css3-prefix('transform','translateY(-50%) rotate(180deg)');
+      .fa {
+        opacity: 1;
+        color: $color-text4;
+        @include css3-prefix('transform', 'translateY(-50%) rotate(180deg)');
+      }
     }
   }
 }

@@ -5,7 +5,14 @@
      }
     .link-sub-title {
       padding-left: 40px;
-      padding-right: 40px;
+      padding-right: 20px;
+      @media all and (max-width: 640px) {
+        padding-left: 30px;
+        padding-right: 0;
+      }
+      @media all and (max-width: 520px) {
+        padding-left: 20px;
+      }
     }
   }
   .content-box {
@@ -27,10 +34,20 @@
     text-align: left;
     letter-spacing: .03em;
     line-height: $line-height-heading;
-    + a.btn, .btn {
+    cursor: pointer;
+    + .btn {
       padding-left: 40px;
       padding-right: 40px;
       text-align: left;
+      cursor: pointer;
+      @media all and (max-width: 1160px) {
+        padding-left: 30px;
+        padding-right: 25px;
+      }
+      @media all and (max-width: 520px) {
+        padding-left: 20px;
+        padding-right: 15px;
+      }
     }
     .interesting-link-box & {
       position: relative;
@@ -52,7 +69,33 @@
     }
   }
   .top-link-box {
-    margin-bottom: 90px;
+    margin: 0 -20px 90px;
+    @media all and (max-width: 1024px) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .hero-links > li {
+      width: 32%;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0 16px;
+      @media all and (max-width: 1024px) {
+        padding-left: 11px;
+        padding-right: 11px;
+      }
+      @media all and (max-width: 860px) {
+        width: 49%;
+      }
+      @media all and (max-width: 420px) {
+        width: 100%;
+      }
+      .btn {
+        width: 100%;
+        @media all and (max-width: 1160px) {
+          min-width: auto;
+        }
+      }
+    }
     a.btn, .btn {
       &.transparent {
         padding-top: 15px;
@@ -116,54 +159,59 @@
 
 
 .subscribe-box {}
-  .subscribe-form-list {
-    display: table;
-    width: 100%;
+.subscribe-form-list {
+  display: table;
+  width: 100%;
+  > li {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 17px;
+    &:first-child {
+      padding-left: 0;
+      width: 180px;
+    }
+    &:last-child {
+      padding-right: 0;
+      width: 315px;
+      @media all and (max-width: 768px) {
+        width: 215px;
+      }
+    }
+    a.btn, .btn {
+      &.transparent {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        min-width: 100%;
+      }
+    }
+  }
+  @media all and (max-width: 768px) {
+    display: block;
     > li {
-      display: table-cell;
-      vertical-align: middle;
-      padding: 0 17px;
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 20px;
       &:first-child {
-        padding-left: 0;
-        width: 180px;
+        width: 100%;
+        text-align: center;
       }
       &:last-child {
-        padding-right: 0;
-        width: 315px;
-        @media all and (max-width: 768px) {
-          width: 215px;
-        }
-      }
-      a.btn, .btn {
-        &.transparent {
-          padding-top: 16px;
-          padding-bottom: 16px;
-          min-width: 100%;
-        }
-      }
-    }
-    @media all and (max-width: 768px) {
-      display: block;
-      > li {
-        display: block;
         width: 100%;
-        padding: 0;
-        margin-bottom: 20px;
-        &:first-child {
-          width: 100%;
-          text-align: center;
-        }
-        &:last-child {
-          width: 100%;
-          text-align: center;
-        }
+        text-align: center;
       }
     }
   }
-  .subscribe-title {
-    font-size: 16px;
-    font-weight: $normal;
-    letter-spacing: .02em;
-    text-transform: uppercase;
-    color: $white;
-  }
+}
+.subscribe-title {
+  font-size: 16px;
+  font-weight: $normal;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.ui-widget.ui-widget-content {
+  font-size: 0.7em;
+  z-index: 20 !important;
+}

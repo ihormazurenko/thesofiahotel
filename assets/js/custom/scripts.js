@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
             var scroll = new SmoothScroll('.smooth-js', {
                 speed: 750,
                 easing: 'easeInQuad',
-                offset: 130
+                offset: 150
             });
         }
     });
@@ -172,6 +172,35 @@ jQuery(document).ready(function($) {
             }
         });
 
+
+        //for Book datepickers
+        if (typeof jQuery.ui != 'undefined') {
+            $(function () {
+                $("#check-in").datepicker({
+                    defaultDate: "0",
+                    dateFormat: "mm/dd/yy",
+                    changeMonth: true,
+                    changeYear: true,
+                    numberOfMonths: 1,
+                    onSelect: function (selectedDate) {
+                        console.log(selectedDate);
+                        $("#check-out").datepicker("option", "minDate", selectedDate);
+                    }
+                });
+                $("#check-out").datepicker({
+                    defaultDate: "+1w",
+                    dateFormat: "mm/dd/yy",
+                    changeMonth: true,
+                    changeYear: true,
+                    numberOfMonths: 1,
+                    onSelect: function (selectedDate) {
+                        $("#check-in").datepicker("option", "maxDate", selectedDate);
+                    }
+                });
+            });
+        }
+
+
         //for nicescroll
         $(function () {
             if (typeof NiceScroll !== 'undefined') {
@@ -204,15 +233,17 @@ jQuery(document).ready(function($) {
 
         //for accordion
         $(function () {
-            if ($('.accordion-box .accordion').length && $('.accordion-box .panel').length) {
-                var accordion = $('.accordion-box .accordion');
+            var accordion = $('.accordion-box .accordion');
+
+            if (accordion.length && $('.accordion-box .panel').length) {
 
                 $(window).on('load', function () {
-                    accordion.eq(2).addClass('active');
-                    accordion.eq(2).next().slideDown();
+                    var hash = window.location.hash;
+                    $('.accordion-box .panel'+hash).slideDown().prev().addClass('active');
                 });
 
                 accordion.on('click', function() {
+
                     $(this).toggleClass('active');
                     var panel = $(this).next();
 

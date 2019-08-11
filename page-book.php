@@ -10,19 +10,25 @@ get_header(); ?>
             <div class="hero-box">
                 <div class="container">
                     <div class="top-link-box">
-                        <ul class="hero-links">
-                            <li>
-                                <span class="link-sub-title">Check in date</span>
-                                <a href="#" class="btn transparent" title="February 28">February 28</a>
-                            </li>
-                            <li>
-                                <span class="link-sub-title">Check in date</span>
-                                <a href="#" class="btn transparent" title="February 28">February 28</a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn" title="Find Rooms">Find Rooms</a>
-                            </li>
-                        </ul>
+                        <form action="https://gc.synxis.com/rez.aspx?" method="get">
+                            <ul class="hero-links">
+                                <li>
+                                    <label for="check-in" class="link-sub-title">Check in date</label>
+                                    <input type="text" id="check-in" name="arrive" class="btn transparent" value="<?php echo date('F d'); ?>">
+                                </li>
+                                <li>
+                                    <label for="check-out" class="link-sub-title">Check out date</label>
+                                    <input type="text" id="check-out" name="depart" class="btn transparent" value="<?php echo date('F d', strtotime("+7 day", strtotime(date('F d')))); ?>">
+                                </li>
+                                <li>
+                                    <button type="submit" class="btn" title="Find Rooms">Find Rooms</button>
+                                </li>
+                            </ul>
+                            <input name="Hotel" type="hidden" value="80547">
+                            <input name="Chain" type="hidden" value="17448">
+                            <input name="template" type="hidden" value="RBE">
+                            <input name="shell" type="hidden" value="RBE">
+                        </form>
                     </div>
 
                     <div class="content-box">
