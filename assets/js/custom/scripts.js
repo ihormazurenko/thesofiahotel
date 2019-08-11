@@ -239,7 +239,9 @@ jQuery(document).ready(function($) {
 
                 $(window).on('load', function () {
                     var hash = window.location.hash;
-                    $('.accordion-box .panel'+hash).slideDown().prev().addClass('active');
+                    if (hash.length) {
+                        $('.accordion-box .panel'+hash).slideDown().prev().addClass('active');
+                    }
                 });
 
                 accordion.on('click', function() {
@@ -257,23 +259,26 @@ jQuery(document).ready(function($) {
             }
         });
 
+
         //for popup
-        $(function () {
-            if (typeof $.fn.magnificPopup !== 'undefined') {
+        if (typeof $.fn.magnificPopup !== 'undefined') {
+            $(function () {
                 if ($('.popup-gallery a > img').length) {
-                    $('.popup-gallery').magnificPopup({
-                        delegate: 'a',
-                        type: 'image',
-                        tLoading: 'Loading image #%curr%...',
-                        mainClass: 'mfp-img-mobile',
-                        gallery: {
-                            enabled: true,
-                            navigateByImgClick: true,
-                            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-                        },
-                        image: {
-                            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                        }
+                    $('.popup-gallery').each(function() {
+                        $(this).magnificPopup({
+                            delegate: 'a',
+                            type: 'image',
+                            tLoading: 'Loading image #%curr%...',
+                            mainClass: 'mfp-img-mobile',
+                            gallery: {
+                                enabled: true,
+                                navigateByImgClick: true,
+                                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                            },
+                            image: {
+                                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                            }
+                        });
                     });
                 }
 
@@ -288,8 +293,9 @@ jQuery(document).ready(function($) {
                     e.preventDefault();
                     $.magnificPopup.close();
                 });
-            }
-        });
+            });
+        }
+
 
         //for parralax
         $(function () {

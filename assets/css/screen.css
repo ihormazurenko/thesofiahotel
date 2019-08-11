@@ -5,7 +5,7 @@
 /*line-height*/
 /*colors*/
 /*transition*/
-@font-face {
+@font-face { 
   font-family: 'Bentham';
   src: url("../fonts//bentham-regular.woff2") format("woff2"), url("../fonts//bentham-regular.woff") format("woff"), url("../fonts//bentham-regular.ttf") format("truetype");
   font-weight: normal;
@@ -880,6 +880,8 @@ div.wpcf7-acceptance-missing {
       margin-bottom: 10px; }
     .hero .hero-content:not(:last-child) {
       margin-bottom: 26px; }
+    .hero .hero-content img.aligncenter {
+      margin-bottom: -10px; }
   .hero .hero-links {
     text-align: center; }
     .hero .hero-links:last-child {
@@ -942,7 +944,6 @@ div.wpcf7-acceptance-missing {
     padding-bottom: 15px; }
     .hero.full header h1, .hero.full header h2, .hero.full header h3 {
       font-size: 144px;
-      font-weight: 700;
       line-height: 1;
       letter-spacing: 0;
       word-spacing: 0; }
@@ -3767,6 +3768,39 @@ a.read-more,
       margin-bottom: 11px; }
   #current-content .section-two-columns .content-box {
     max-height: 420px; }
+
+.img-shadow:after {
+  content: '';
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(33, 0, 28, 0.4) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(33, 0, 28, 0.4) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(33, 0, 28, 0.4) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#6621001c',GradientType=0 );
+  /* IE6-9 */
+  -webkit-transition: 0.35s;
+  -khtml-transition: 0.35s;
+  -moz-transition: 0.35s;
+  -ms-transition: 0.35s;
+  -o-transition: 0.35s;
+  transition: 0.35s;
+  opacity: 0; }
+.img-shadow:hover:after, .img-shadow:focus:after {
+  opacity: 1; }
+.img-shadow:hover img, .img-shadow:focus img {
+  -webkit-transform: scale(1.1);
+  -khtml-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1); }
 
 .section-contact-us {
   text-align: left;
