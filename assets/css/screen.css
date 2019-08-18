@@ -5,7 +5,7 @@
 /*line-height*/
 /*colors*/
 /*transition*/
-@font-face { 
+@font-face {
   font-family: 'Bentham';
   src: url("../fonts//bentham-regular.woff2") format("woff2"), url("../fonts//bentham-regular.woff") format("woff"), url("../fonts//bentham-regular.ttf") format("truetype");
   font-weight: normal;
@@ -15,7 +15,7 @@
   src: url("../fonts/lato-regular.woff2") format("woff2"), url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
-@font-face {
+@font-face { 
   font-family: 'Lato';
   src: url("../fonts/lato-bold.woff2") format("woff2"), url("../fonts/lato-bold.woff") format("woff"), url("../fonts/lato-bold.ttf") format("truetype");
   font-weight: 700;
@@ -338,7 +338,7 @@ img {
 .wrapper {
   position: relative;
   display: block;
-  max-width: 2560px;
+  max-width: 1980px;
   margin: 0 auto;
   min-height: 100%; }
 
@@ -3108,6 +3108,10 @@ a.load-more-btn,
   padding-bottom: 33.333%;
   width: 33.333%;
   float: left; }
+  .grid .grid-item.width-66 {
+    width: 66.666%; }
+  .grid .grid-item.width-50 {
+    width: 50%; }
   .grid .grid-item img {
     display: block;
     position: absolute;
@@ -3133,11 +3137,6 @@ a.load-more-btn,
     .grid .grid-item img.highest {
       max-height: initial;
       max-width: 100%; }
-.grid > :nth-child(7n - 3) {
-  width: 66.666%; }
-.grid > :nth-child(7n - 1),
-.grid > :nth-child(7n) {
-  width: 50%; }
 
 .tsh-icon {
   position: relative;
@@ -3769,7 +3768,7 @@ a.read-more,
   #current-content .section-two-columns .content-box {
     max-height: 420px; }
 
-.img-shadow:after {
+.img-shadow:before {
   content: '';
   position: absolute;
   z-index: 4;
@@ -3785,14 +3784,160 @@ a.read-more,
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#6621001c',GradientType=0 );
   /* IE6-9 */
-  -webkit-transition: 0.35s;
-  -khtml-transition: 0.35s;
-  -moz-transition: 0.35s;
-  -ms-transition: 0.35s;
-  -o-transition: 0.35s;
-  transition: 0.35s;
+  -webkit-transition: opacity 0.35s ease-out;
+  -khtml-transition: opacity 0.35s ease-out;
+  -moz-transition: opacity 0.35s ease-out;
+  -ms-transition: opacity 0.35s ease-out;
+  -o-transition: opacity 0.35s ease-out;
+  transition: opacity 0.35s ease-out;
+  opacity: 1; }
+.img-shadow:after {
+  content: '';
+  position: absolute;
+  z-index: 5;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin: -27px 0 0 -27px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: transparent;
+  -webkit-transition: opacity 0.05s ease-in;
+  -khtml-transition: opacity 0.05s ease-in;
+  -moz-transition: opacity 0.05s ease-in;
+  -ms-transition: opacity 0.05s ease-in;
+  -o-transition: opacity 0.05s ease-in;
+  transition: opacity 0.05s ease-in;
   opacity: 0; }
-.img-shadow:hover:after, .img-shadow:focus:after {
+  @media all and (max-width: 767px) {
+    .img-shadow:after {
+      display: none; } }
+.img-shadow .gallery-overlay {
+  content: '';
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -moz-linear-gradient(top, rgba(77, 79, 80, 0.3) 0%, #4d4f50 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(77, 79, 80, 0.3) 0%, #4d4f50 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(77, 79, 80, 0.3) 0%, #4d4f50 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d4d4f50', endColorstr='#4d4f50',GradientType=0 );
+  /* IE6-9 */
+  -webkit-transition: opacity 0.05s ease-in;
+  -khtml-transition: opacity 0.05s ease-in;
+  -moz-transition: opacity 0.05s ease-in;
+  -ms-transition: opacity 0.05s ease-in;
+  -o-transition: opacity 0.05s ease-in;
+  transition: opacity 0.05s ease-in;
+  opacity: 0; }
+  .img-shadow .gallery-overlay:before, .img-shadow .gallery-overlay:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    background: #ffffff; }
+    @media all and (max-width: 767px) {
+      .img-shadow .gallery-overlay:before, .img-shadow .gallery-overlay:after {
+        display: none; } }
+  .img-shadow .gallery-overlay:before {
+    height: 2px;
+    width: 32px;
+    margin: -1px 0 0 -16px; }
+  .img-shadow .gallery-overlay:after {
+    width: 2px;
+    height: 32px;
+    margin: -16px 0 0 -1px; }
+  .img-shadow .gallery-overlay.light-blue {
+    background: -moz-linear-gradient(top, rgba(100, 146, 148, 0.3) 0%, #649294 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(100, 146, 148, 0.3) 0%, #649294 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(100, 146, 148, 0.3) 0%, #649294 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d649294', endColorstr='#649294',GradientType=0 );
+    /* IE6-9 */ }
+  .img-shadow .gallery-overlay.gold {
+    background: -moz-linear-gradient(top, rgba(166, 128, 76, 0.3) 0%, #a6804c 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(166, 128, 76, 0.3) 0%, #a6804c 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(166, 128, 76, 0.3) 0%, #a6804c 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4da6804c', endColorstr='#a6804c',GradientType=0 );
+    /* IE6-9 */ }
+  .img-shadow .gallery-overlay.purple {
+    background: -moz-linear-gradient(top, rgba(124, 58, 80, 0.3) 0%, #7c3a50 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(124, 58, 80, 0.3) 0%, #7c3a50 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(124, 58, 80, 0.3) 0%, #7c3a50 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d7c3a50', endColorstr='#7c3a50',GradientType=0 );
+    /* IE6-9 */ }
+  .img-shadow .gallery-overlay.grey {
+    background: -moz-linear-gradient(top, rgba(147, 149, 152, 0.3) 0%, #939598 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(147, 149, 152, 0.3) 0%, #939598 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(147, 149, 152, 0.3) 0%, #939598 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d939598', endColorstr='#939598',GradientType=0 );
+    /* IE6-9 */ }
+  .img-shadow .gallery-overlay .gallery-cat {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font: 400 16px "Lato", "Arial", sans-serif;
+    line-height: 1.2; }
+    @media all and (max-width: 860px) {
+      .img-shadow .gallery-overlay .gallery-cat {
+        bottom: 20px;
+        left: 20px;
+        right: 20px; } }
+    @media all and (max-width: 480px) {
+      .img-shadow .gallery-overlay .gallery-cat {
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        font-size: 14px; } }
+    .img-shadow .gallery-overlay .gallery-cat svg {
+      display: inline-block;
+      max-width: 68px;
+      max-height: 54px;
+      margin-bottom: 6px;
+      fill: #ffffff; }
+      @media all and (max-width: 640px) {
+        .img-shadow .gallery-overlay .gallery-cat svg {
+          max-width: 50px;
+          max-height: 44px; } }
+.img-shadow:hover:before, .img-shadow:focus:before {
+  -webkit-transition: opacity 0.05s ease-in;
+  -khtml-transition: opacity 0.05s ease-in;
+  -moz-transition: opacity 0.05s ease-in;
+  -ms-transition: opacity 0.05s ease-in;
+  -o-transition: opacity 0.05s ease-in;
+  transition: opacity 0.05s ease-in;
+  opacity: 0; }
+.img-shadow:hover:after,
+.img-shadow:hover .gallery-overlay, .img-shadow:focus:after,
+.img-shadow:focus .gallery-overlay {
+  -webkit-transition: opacity 0.35s ease-out;
+  -khtml-transition: opacity 0.35s ease-out;
+  -moz-transition: opacity 0.35s ease-out;
+  -ms-transition: opacity 0.35s ease-out;
+  -o-transition: opacity 0.35s ease-out;
+  transition: opacity 0.35s ease-out;
   opacity: 1; }
 .img-shadow:hover img, .img-shadow:focus img {
   -webkit-transform: scale(1.1);
