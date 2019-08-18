@@ -11,7 +11,7 @@ get_header(); ?>
         <div class="container">
             <div class="tabs-box">
                 <div class="tabs-content tabs-on">
-                    <div class="tabs-nav">
+                    <div class="tabs-nav mobile-hidden">
                         <ul class="tab-list">
                             <li>
                                 <a href="#hotel" title="Coffee" class="color-light-blue  coffee">Coffee</a>

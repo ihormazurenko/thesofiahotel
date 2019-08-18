@@ -15,7 +15,7 @@
   src: url("../fonts/lato-regular.woff2") format("woff2"), url("../fonts/lato-regular.woff") format("woff"), url("../fonts/lato-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
-@font-face { 
+@font-face {
   font-family: 'Lato';
   src: url("../fonts/lato-bold.woff2") format("woff2"), url("../fonts/lato-bold.woff") format("woff"), url("../fonts/lato-bold.ttf") format("truetype");
   font-weight: 700;
@@ -25,7 +25,7 @@
   src: url("../fonts/lato-light.woff2") format("woff2"), url("../fonts/lato-light.woff") format("woff"), url("../fonts/lato-light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
-@font-face {
+@font-face { 
   font-family: 'Georgia';
   src: url("../fonts/Georgia.woff2") format("woff2"), url("../fonts/Georgia.woff") format("woff"), url("../fonts/Georgia.ttf") format("truetype");
   font-weight: normal;
@@ -2673,7 +2673,7 @@ a.load-more-btn,
 .section-tabs {
   padding: 45px 0 0; }
   @media all and (max-width: 768px) {
-    .section-tabs {
+    .section-tabs:not(.tablet-pad-0) {
       padding-bottom: 20px; } }
   .section-tabs .container {
     max-width: 100%;
@@ -2686,8 +2686,14 @@ a.load-more-btn,
   max-width: 1200px;
   margin: 0 auto 26px;
   padding: 0 20px; }
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 1120px) {
     .tabs-nav {
+      padding: 0 10px; } }
+  @media all and (max-width: 640px) {
+    .tabs-nav {
+      padding: 0 5px; } }
+  @media all and (max-width: 768px) {
+    .tabs-nav.mobile-hidden {
       display: none; } }
 
 .tab-list {
@@ -2703,21 +2709,6 @@ a.load-more-btn,
     width: -webkit-calc(20% - 6px);
     width: calc(20% - 6px);
     text-align: center; }
-    .tab-list > li:before {
-      position: absolute;
-      content: '';
-      top: -1px;
-      left: -2px;
-      width: 2px;
-      height: 4px;
-      border: 2px solid #FCF4EB;
-      border-left: none;
-      border-bottom: none;
-      -webkit-border-radius: 0 4px 0 0;
-      -moz-border-radius: 0 4px 0 0;
-      border-radius: 0 4px 0 0; }
-    .tab-list > li:first-child:before {
-      content: none; }
 
 @supports (display: flex) {
   .tab-list {
@@ -2744,7 +2735,7 @@ a.load-more-btn,
   -ms-transition: 0.35s;
   -o-transition: 0.35s;
   transition: 0.35s;
-  word-break: break-all; }
+  word-break: normal; }
   @media all and (max-width: 1024px) {
     .tab-box-btn a,
     .tab-list > li a {
@@ -2757,8 +2748,8 @@ a.load-more-btn,
     left: 18px;
     height: 100%;
     width: 100%;
-    background-size: contain;
     background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
     -webkit-transition: 0.35s;
     -khtml-transition: 0.35s;
@@ -2766,19 +2757,6 @@ a.load-more-btn,
     -ms-transition: 0.35s;
     -o-transition: 0.35s;
     transition: 0.35s; }
-    @media all and (max-width: 768px) {
-      .tab-box-btn a:before,
-      .tab-list > li a:before {
-        top: 50% !important;
-        left: 55px !important;
-        max-width: 80px;
-        max-height: 45px;
-        -webkit-transform: translate(-50%, -50%);
-        -khtml-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%); } }
   .tab-box-btn a:after,
   .tab-list > li a:after {
     position: absolute;
@@ -2795,7 +2773,7 @@ a.load-more-btn,
     -ms-transition: 0.35s;
     -o-transition: 0.35s;
     transition: 0.35s; }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: 640px) {
       .tab-box-btn a:after,
       .tab-list > li a:after {
         content: none; } }
@@ -2806,47 +2784,94 @@ a.load-more-btn,
     height: 40px;
     width: 50px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24.13 18.75'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%234D4F50;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-hotel%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M12.06,18.75c2.93,0,8.4-.62,11.31-2.21.56-.3.77-.57.76-1.09.07-1.84-1.57-2.57-2.56-4.44a.93.93,0,0,0-.71-.47,1.83,1.83,0,0,0,.62-.35c.16-4.47-3.19-7-7.73-7.42V2.4s0-.13-.19-.18a9,9,0,0,0-1.06-.13V1.47l-.12.09a.79.79,0,0,0,.52-.34c.24-.26.79-.22.76-.7C13.66.36,13,0,12.06,0s-1.59.36-1.59.52c0,.48.52.44.76.7a.79.79,0,0,0,.52.34l-.12-.09v.62a9,9,0,0,0-1.06.13c-.2,0-.19.18-.19.18v.37c-4.54.4-7.89,2.95-7.74,7.42a2,2,0,0,0,.63.35.93.93,0,0,0-.71.47c-1,1.87-2.63,2.6-2.56,4.44,0,.52.2.79.76,1.09C3.67,18.13,9.14,18.75,12.06,18.75Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    @media all and (max-width: 960px) {
+      .tab-box-btn a.hotel:before,
+      .tab-list > li a.hotel:before {
+        top: 22px;
+        height: 28px;
+        width: 36px; } }
   .tab-box-btn a.rooms:before,
   .tab-list > li a.rooms:before {
     height: 36px;
     width: 89px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44.29 17.75'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%234D4F50;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-rooms%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M35.28,7.25a7.73,7.73,0,0,1-.77-2A4,4,0,0,1,36.1,1a4.77,4.77,0,0,1,6.36.41A5.5,5.5,0,0,1,44.27,5a5.19,5.19,0,0,1-1,3.49c-.28.4-.29.4,0,.77a5.09,5.09,0,0,1-.15,6.34,5,5,0,0,1-5.16,2,4.61,4.61,0,0,1-3.38-2.71,3.86,3.86,0,0,1,0-2.7,9,9,0,0,1,.66-1.49c0-.06.12-.13,0-.19s-.19,0-.29,0a.11.11,0,0,0-.12.12.67.67,0,0,1-.31.65,1.78,1.78,0,0,1-1,.14c-.11,0-.15-.06-.09-.16a1.66,1.66,0,0,0,.13-.27c.07-.3-.06-.45-.36-.46a.63.63,0,0,0-.68.33,1.14,1.14,0,0,1-2-.15.42.42,0,0,0-.44-.25l-7.47,0-9,0-5.66,0c-.37,0-.37,0-.4.37v.14c0,.49,0,.49.43.57.15,0,.21.09.21.25,0,.59,0,1.18,0,1.77,0,.17-.05.22-.22.2-.47,0-.46,0-.47.42,0,.2.07.25.25.24.36,0,.36,0,.36.35,0,.86,0,1.71,0,2.56,0,.21-.06.29-.28.29a9.91,9.91,0,0,0-1.09,0c-.23,0-.28-.08-.27-.29s0-.56,0-.84-.05-.25-.23-.24l-1.86,0c-.16,0-.23.06-.23.21s0,.55,0,.82-.05.25-.24.25-.65,0-1,0-.23-.07-.23-.24l0-2.73c0-.19.07-.24.24-.21H3c.57.05.48.14.48-.45,0-.15,0-.22-.21-.23-.58,0-.58,0-.59-.62,0-.44,0-.89,0-1.33,0-.18,0-.24.23-.24.56,0,.56,0,.55-.59s0-.57-.59-.58l-1.44,0A1.47,1.47,0,0,1,0,8.56a1.46,1.46,0,0,1,1.59-1.5l9.54,0,5.45,0,11.67,0h1.94a.31.31,0,0,0,.33-.2,1.19,1.19,0,0,1,2.11,0,.5.5,0,0,0,.69.23c.21-.09.27-.27.13-.58s0-.28.2-.27a2.76,2.76,0,0,1,.7.11.69.69,0,0,1,.5.53C34.9,7.21,35,7.26,35.28,7.25Zm2.13,3.22a2.41,2.41,0,0,1,1.68.31,1.15,1.15,0,0,1,.48,1.62,2.35,2.35,0,0,1-1.07,1.09.56.56,0,0,1-.82-.21.63.63,0,0,1,.15-.85c.09-.08.19-.15.27-.23s.11-.3-.1-.37a.64.64,0,0,0-.43,0,1.45,1.45,0,0,0-.92.72,2.1,2.1,0,0,0,.3,2.58,3.33,3.33,0,0,0,4.45-.34,3.15,3.15,0,0,0,.78-2.9A6.44,6.44,0,0,0,41,9.26a.43.43,0,0,1,0-.62A6.92,6.92,0,0,0,42.21,6a3.24,3.24,0,0,0-.87-3.14A3.15,3.15,0,0,0,38,2.18a2.09,2.09,0,0,0-1.22,3.16,1.21,1.21,0,0,0,1,.65c.16,0,.32,0,.39-.18s-.09-.24-.18-.33l-.13-.1a.55.55,0,0,1-.19-.76.57.57,0,0,1,.74-.34,2,2,0,0,1,1.36,1.38,1.09,1.09,0,0,1-.36,1.2,1.83,1.83,0,0,1-1.66.41.45.45,0,0,0-.26,0A2.69,2.69,0,0,1,37.41,10.47Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    @media all and (max-width: 960px) {
+      .tab-box-btn a.rooms:before,
+      .tab-list > li a.rooms:before {
+        top: 22px;
+        height: 24px;
+        width: 60px; } }
   .tab-box-btn a.restaurant:before,
   .tab-list > li a.restaurant:before {
     top: 32px;
     height: 31px;
     width: 108px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 53.48 15.37'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%234D4F50;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-restaurant%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M2.53,2.44C6.71,4,13.1,5.84,23.64,5.84c.74,0,1-.12,1.21-.64,2.61-5.95,15.95-1.82,23-1.82,3.91,0,5.64-.8,5.64-1.79S50.75,0,48,0C40.43,0,25,1,2.89.05.36-.12.09.19,0,.58S-.07,1.45,2.53,2.44Z'/%3E%3Cpath class='cls-1' d='M53.4,11.18c-.33-.58-1.33-1.42-4.79-1.36-7.2.12-18.3,2-25,.53-1.84-.39-2.74-.62-3.43-2-.39-.74-.72-.85-3.91-.68-2.72.15-6.55.39-10.53,1l-.11,0a.09.09,0,0,0-.08.09v0a.09.09,0,0,0,.08.09h.11c.26,0,6.77,0,9.81,0,.29,0,.62.1.62.48a.51.51,0,0,1-.55.53c-3,.12-8.74.36-9.88.44h-.1a.11.11,0,0,0-.09.1v0a.09.09,0,0,0,.09.09h.1c1.15.08,7.08.32,10.09.44.27,0,.49.14.49.45s-.29.42-.53.42h0c-3,.12-8.91.35-10,.44h-.1a.09.09,0,0,0-.09.09v0a.1.1,0,0,0,.09.09h.1c1.13.09,6.8.32,9.83.44.32,0,.6.16.6.53s-.31.48-.6.49c-3,0-9.56,0-9.83,0H5.6a.11.11,0,0,0-.08.1v.05a.1.1,0,0,0,.08.09h.11c4,.59,7.81.83,10.53,1,3.19.17,3.52.07,3.91-.67.66-1.42,1.65-1.63,3.43-2,6.83-1.45,17.83.41,25,.53,3.46.06,4.46-.78,4.79-1.37a.61.61,0,0,0,.08-.3A.67.67,0,0,0,53.4,11.18Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    @media all and (max-width: 960px) {
+      .tab-box-btn a.restaurant:before,
+      .tab-list > li a.restaurant:before {
+        top: 25px;
+        height: 20px;
+        width: 70px; } }
   .tab-box-btn a.business:before,
   .tab-list > li a.business:before {
     top: 30px;
     height: 30px;
     width: 115px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56.97 14.65'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%234D4F50;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-bisiness%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cg id='_014WYs' data-name='014WYs'%3E%3Cpath class='cls-1' d='M19.47,3.84a2.4,2.4,0,0,0-2-1.13c-1.06-.13-2.12-.3-3.18-.46L9.65,1.51A.63.63,0,0,0,8.93,2L8.79,3c3,.48,31.33,5,35,5.58,2,.3,3.84,1.1,5.82,1.44a11.83,11.83,0,0,1,2.37.74c.47.19,1.26,0,1.15.94,0,.07.28.25.28.25l3.33,1.43a.31.31,0,0,1-.12.6l-3.57,0s-.21,0-.24.06c-.42.88-1.23.58-1.89.57-2.41,0-4.83,0-7.22-.27S8.47,8.81,7,8.54c-.76-.13-.75-.16-.63-1l.12-.79L.38,5.7h0A1.4,1.4,0,0,1,.9,3.45h0l6,.94L7.56.52A.62.62,0,0,1,8.28,0L21.21,2.08A1,1,0,0,1,22,3.24C21.75,4.6,19.47,3.84,19.47,3.84Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    @media all and (max-width: 960px) {
+      .tab-box-btn a.business:before,
+      .tab-list > li a.business:before {
+        top: 25px;
+        height: 18px;
+        width: 70px; } }
   .tab-box-btn a.area:before,
   .tab-list > li a.area:before {
     top: 14px;
     width: 34px;
     height: 58px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16.14 27.37'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%234D4F50;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-area_1%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M8.07,5.14a42.1,42.1,0,0,1,7,.55c1.17.24,1.31.72.7,1.54-1.48,2-5.09,6.78-6.34,8.53a4.37,4.37,0,0,0-.81,2.63,21.16,21.16,0,0,0,0,3.69A3.77,3.77,0,0,0,9,23.78c1.22.06,4.33.56,4.31,1.79s-2.77,1.8-5.26,1.8-5.24-.61-5.25-1.8,3.08-1.73,4.3-1.79a3.64,3.64,0,0,0,.41-1.7,21.53,21.53,0,0,0,0-3.69,4.38,4.38,0,0,0-.82-2.63C5.44,14,1.83,9.2.36,7.23c-.62-.82-.47-1.3.69-1.54A42.1,42.1,0,0,1,8.07,5.14Z'/%3E%3Cpolyline class='cls-1' points='6.44 10.12 13.99 0 14.32 0.3 9.09 7.84'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    @media all and (max-width: 960px) {
+      .tab-box-btn a.area:before,
+      .tab-list > li a.area:before {
+        top: 2px;
+        width: 30px;
+        height: 48px; } }
   .tab-box-btn a.coffee:before,
   .tab-list > li a.coffee:before {
     top: 21px;
     width: 60px;
     height: 44px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.02 20.05'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%234D4F50;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-coffe%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cg id='khhnPH'%3E%3Cpath class='cls-1' d='M21.12.85a9.67,9.67,0,0,1,2.2.8,2.72,2.72,0,0,1,1,.8c.33.45.3.7-.14,1a2.79,2.79,0,0,0-.75.82.48.48,0,0,0-.05.52A4.16,4.16,0,0,1,24.74,4a3.24,3.24,0,0,1,3.12.19.12.12,0,0,0,.19,0c.16-.19.3-.08.44,0A1.87,1.87,0,0,1,29,5V6.13C28.29,8,26.7,8.65,24.9,9a7.37,7.37,0,0,0-1.46.34,1.15,1.15,0,0,0-.48.3c-.17.2-.25.38,0,.6a.78.78,0,0,1,.22.7.71.71,0,0,1-.45.66.79.79,0,0,1-.83-.14,4.62,4.62,0,0,1-.48-.64c-.1.18-.2.34-.28.5a7,7,0,0,1-.66,1c-.08.11-.26.2-.19.34s.23.09.35.11a25.76,25.76,0,0,1,2.92.48,9.83,9.83,0,0,1,2.53.81,2.64,2.64,0,0,1,.46.27.75.75,0,0,1,0,1.37c-.38.24-.79.43-1.18.64a30,30,0,0,1-5.52,2.24c-.43.13-.89.19-1.1.68-.07.14-.26.15-.41.2a15.88,15.88,0,0,1-3.22.5,24.5,24.5,0,0,1-6.4-.36,5.68,5.68,0,0,1-1-.31c-.17-.07-.36-.15-.42-.32-.15-.43-.52-.54-.88-.66a36.06,36.06,0,0,1-4-1.62,12.52,12.52,0,0,1-2-1.28.69.69,0,0,1,0-1.19,3.6,3.6,0,0,1,1.29-.66,21.93,21.93,0,0,1,4.22-.85c.29,0,.35-.11.16-.34a10.19,10.19,0,0,1-1.75-4q-.39-1.53-.75-3.06A3.93,3.93,0,0,0,2.18,3.15c-.42-.34-.4-.71,0-1A7.87,7.87,0,0,1,4.94.87,23.36,23.36,0,0,1,10.57,0a44.11,44.11,0,0,1,8.67.42Zm1,7.73a3.56,3.56,0,0,1,2.09-.66,4.45,4.45,0,0,0,2.07-.76A1.65,1.65,0,0,0,27.13,6,1,1,0,0,0,26,4.78a1.2,1.2,0,0,0-1.07.7,1.67,1.67,0,0,1-.89.9.6.6,0,0,0-.34.39c-.18.58-.47.72-1,.49-.17-.07-.24,0-.27.13C22.34,7.75,22.26,8.11,22.16,8.58Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    @media all and (max-width: 960px) {
+      .tab-box-btn a.coffee:before,
+      .tab-list > li a.coffee:before {
+        width: 44px;
+        height: 30px; } }
   .tab-box-btn a.photo:before,
   .tab-list > li a.photo:before {
     top: 19px;
     width: 58px;
     height: 48px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28.82 21.63'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%234D4F50;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-photo%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M20.29,4.59c0-.2,0-.37,0-.54a.67.67,0,0,1,.76-.76H24.8a.65.65,0,0,1,.74.74V4.6c.62,0,1.2,0,1.79,0a1.4,1.4,0,0,1,1.46,1.09,2,2,0,0,1,0,.34V20.19a1.38,1.38,0,0,1-1.44,1.44h-26A1.38,1.38,0,0,1,0,20.21V6A1.36,1.36,0,0,1,1.42,4.6h2a.28.28,0,0,0,.33-.23C4.22,3,4.69,1.65,5.13.28A.34.34,0,0,1,5.51,0h6a.33.33,0,0,1,.38.28c.45,1.37.91,2.73,1.37,4.09.05.15.09.23.28.23h6.75Zm-11.76,2A6.58,6.58,0,0,0,2,13.13a6.65,6.65,0,0,0,6.38,6.53,6.66,6.66,0,0,0,6.73-6.44A6.6,6.6,0,0,0,8.53,6.57Zm14.4,0H20.39a.67.67,0,0,0-.74.75c0,.54,0,1.08,0,1.62s.23.9.89.9H25.3a1.23,1.23,0,0,0,.27,0,.65.65,0,0,0,.62-.7V7.31a.67.67,0,0,0-.75-.74Z'/%3E%3Cpath class='cls-1' d='M13.75,13.11A5.25,5.25,0,1,1,8.63,7.85,5.27,5.27,0,0,1,13.75,13.11Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    @media all and (max-width: 960px) {
+      .tab-box-btn a.photo:before,
+      .tab-list > li a.photo:before {
+        top: 16px;
+        height: 34px;
+        width: 45px; } }
   .tab-box-btn a.shop:before,
   .tab-list > li a.shop:before {
     top: 11px;
     width: 32px;
     height: 55px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.75 25.75'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%234D4F50;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-shop%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M15.75,5.7,12.1,5C11.77,2.09,10.7.1,9.32,0A1.64,1.64,0,0,0,8.06.49,3.15,3.15,0,0,0,7.61,1,1.58,1.58,0,0,0,7.19,1a1.62,1.62,0,0,0-1.25.49,4.57,4.57,0,0,0-1.12,2l-.9-.18C2.84,3.8,1.74,4.14,0,5L.4,17.64.25,21.4l12.09,4.35,3.23-2.24-.16-3.3ZM6.9,3.85a7.55,7.55,0,0,1,.81-2.46,4.61,4.61,0,0,1,1.72,3ZM8.25.69A1.36,1.36,0,0,1,9.3.28c1.22.08,2.19,2,2.52,4.61L9.73,4.45A5,5,0,0,0,7.86,1.16,2.63,2.63,0,0,1,8.25.69Zm-2.12,1a1.39,1.39,0,0,1,1-.42,1.36,1.36,0,0,1,.29.06A8,8,0,0,0,6.63,3.8L5.09,3.49A4.31,4.31,0,0,1,6.13,1.64Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    @media all and (max-width: 960px) {
+      .tab-box-btn a.shop:before,
+      .tab-list > li a.shop:before {
+        top: 7px;
+        height: 44px;
+        width: 27px; } }
   .tab-box-btn a.color-gold,
   .tab-list > li a.color-gold {
     color: #A6804C; }
@@ -2997,46 +3022,102 @@ a.load-more-btn,
     .tab-box-btn a.color-dark.shop:before,
     .tab-list > li a.color-dark.shop:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.75 25.75'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%234D4F50;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-shop%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M15.75,5.7,12.1,5C11.77,2.09,10.7.1,9.32,0A1.64,1.64,0,0,0,8.06.49,3.15,3.15,0,0,0,7.61,1,1.58,1.58,0,0,0,7.19,1a1.62,1.62,0,0,0-1.25.49,4.57,4.57,0,0,0-1.12,2l-.9-.18C2.84,3.8,1.74,4.14,0,5L.4,17.64.25,21.4l12.09,4.35,3.23-2.24-.16-3.3ZM6.9,3.85a7.55,7.55,0,0,1,.81-2.46,4.61,4.61,0,0,1,1.72,3ZM8.25.69A1.36,1.36,0,0,1,9.3.28c1.22.08,2.19,2,2.52,4.61L9.73,4.45A5,5,0,0,0,7.86,1.16,2.63,2.63,0,0,1,8.25.69Zm-2.12,1a1.39,1.39,0,0,1,1-.42,1.36,1.36,0,0,1,.29.06A8,8,0,0,0,6.63,3.8L5.09,3.49A4.31,4.31,0,0,1,6.13,1.64Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-  .tab-box-btn a:hover, .tab-box-btn a:focus,
+  .tab-box-btn a:hover, .tab-box-btn a:focus, .tab-box-btn a.active,
   .tab-list > li a:hover,
-  .tab-list > li a:focus {
+  .tab-list > li a:focus,
+  .tab-list > li a.active {
     color: #FBAD18; }
-    .tab-box-btn a:hover:after, .tab-box-btn a:focus:after,
+    .tab-box-btn a:hover:after, .tab-box-btn a:focus:after, .tab-box-btn a.active:after,
     .tab-list > li a:hover:after,
-    .tab-list > li a:focus:after {
+    .tab-list > li a:focus:after,
+    .tab-list > li a.active:after {
       background-color: #FBAD18; }
-    .tab-box-btn a:hover.hotel:before, .tab-box-btn a:focus.hotel:before,
+    .tab-box-btn a:hover.hotel:before, .tab-box-btn a:focus.hotel:before, .tab-box-btn a.active.hotel:before,
     .tab-list > li a:hover.hotel:before,
-    .tab-list > li a:focus.hotel:before {
+    .tab-list > li a:focus.hotel:before,
+    .tab-list > li a.active.hotel:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24.13 18.75'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23FBAD18;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-hotel%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M12.06,18.75c2.93,0,8.4-.62,11.31-2.21.56-.3.77-.57.76-1.09.07-1.84-1.57-2.57-2.56-4.44a.93.93,0,0,0-.71-.47,1.83,1.83,0,0,0,.62-.35c.16-4.47-3.19-7-7.73-7.42V2.4s0-.13-.19-.18a9,9,0,0,0-1.06-.13V1.47l-.12.09a.79.79,0,0,0,.52-.34c.24-.26.79-.22.76-.7C13.66.36,13,0,12.06,0s-1.59.36-1.59.52c0,.48.52.44.76.7a.79.79,0,0,0,.52.34l-.12-.09v.62a9,9,0,0,0-1.06.13c-.2,0-.19.18-.19.18v.37c-4.54.4-7.89,2.95-7.74,7.42a2,2,0,0,0,.63.35.93.93,0,0,0-.71.47c-1,1.87-2.63,2.6-2.56,4.44,0,.52.2.79.76,1.09C3.67,18.13,9.14,18.75,12.06,18.75Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .tab-box-btn a:hover.rooms:before, .tab-box-btn a:focus.rooms:before,
+    .tab-box-btn a:hover.rooms:before, .tab-box-btn a:focus.rooms:before, .tab-box-btn a.active.rooms:before,
     .tab-list > li a:hover.rooms:before,
-    .tab-list > li a:focus.rooms:before {
+    .tab-list > li a:focus.rooms:before,
+    .tab-list > li a.active.rooms:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44.29 17.75'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23FBAD18;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-rooms%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M35.28,7.25a7.73,7.73,0,0,1-.77-2A4,4,0,0,1,36.1,1a4.77,4.77,0,0,1,6.36.41A5.5,5.5,0,0,1,44.27,5a5.19,5.19,0,0,1-1,3.49c-.28.4-.29.4,0,.77a5.09,5.09,0,0,1-.15,6.34,5,5,0,0,1-5.16,2,4.61,4.61,0,0,1-3.38-2.71,3.86,3.86,0,0,1,0-2.7,9,9,0,0,1,.66-1.49c0-.06.12-.13,0-.19s-.19,0-.29,0a.11.11,0,0,0-.12.12.67.67,0,0,1-.31.65,1.78,1.78,0,0,1-1,.14c-.11,0-.15-.06-.09-.16a1.66,1.66,0,0,0,.13-.27c.07-.3-.06-.45-.36-.46a.63.63,0,0,0-.68.33,1.14,1.14,0,0,1-2-.15.42.42,0,0,0-.44-.25l-7.47,0-9,0-5.66,0c-.37,0-.37,0-.4.37v.14c0,.49,0,.49.43.57.15,0,.21.09.21.25,0,.59,0,1.18,0,1.77,0,.17-.05.22-.22.2-.47,0-.46,0-.47.42,0,.2.07.25.25.24.36,0,.36,0,.36.35,0,.86,0,1.71,0,2.56,0,.21-.06.29-.28.29a9.91,9.91,0,0,0-1.09,0c-.23,0-.28-.08-.27-.29s0-.56,0-.84-.05-.25-.23-.24l-1.86,0c-.16,0-.23.06-.23.21s0,.55,0,.82-.05.25-.24.25-.65,0-1,0-.23-.07-.23-.24l0-2.73c0-.19.07-.24.24-.21H3c.57.05.48.14.48-.45,0-.15,0-.22-.21-.23-.58,0-.58,0-.59-.62,0-.44,0-.89,0-1.33,0-.18,0-.24.23-.24.56,0,.56,0,.55-.59s0-.57-.59-.58l-1.44,0A1.47,1.47,0,0,1,0,8.56a1.46,1.46,0,0,1,1.59-1.5l9.54,0,5.45,0,11.67,0h1.94a.31.31,0,0,0,.33-.2,1.19,1.19,0,0,1,2.11,0,.5.5,0,0,0,.69.23c.21-.09.27-.27.13-.58s0-.28.2-.27a2.76,2.76,0,0,1,.7.11.69.69,0,0,1,.5.53C34.9,7.21,35,7.26,35.28,7.25Zm2.13,3.22a2.41,2.41,0,0,1,1.68.31,1.15,1.15,0,0,1,.48,1.62,2.35,2.35,0,0,1-1.07,1.09.56.56,0,0,1-.82-.21.63.63,0,0,1,.15-.85c.09-.08.19-.15.27-.23s.11-.3-.1-.37a.64.64,0,0,0-.43,0,1.45,1.45,0,0,0-.92.72,2.1,2.1,0,0,0,.3,2.58,3.33,3.33,0,0,0,4.45-.34,3.15,3.15,0,0,0,.78-2.9A6.44,6.44,0,0,0,41,9.26a.43.43,0,0,1,0-.62A6.92,6.92,0,0,0,42.21,6a3.24,3.24,0,0,0-.87-3.14A3.15,3.15,0,0,0,38,2.18a2.09,2.09,0,0,0-1.22,3.16,1.21,1.21,0,0,0,1,.65c.16,0,.32,0,.39-.18s-.09-.24-.18-.33l-.13-.1a.55.55,0,0,1-.19-.76.57.57,0,0,1,.74-.34,2,2,0,0,1,1.36,1.38,1.09,1.09,0,0,1-.36,1.2,1.83,1.83,0,0,1-1.66.41.45.45,0,0,0-.26,0A2.69,2.69,0,0,1,37.41,10.47Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .tab-box-btn a:hover.restaurant:before, .tab-box-btn a:focus.restaurant:before,
+    .tab-box-btn a:hover.restaurant:before, .tab-box-btn a:focus.restaurant:before, .tab-box-btn a.active.restaurant:before,
     .tab-list > li a:hover.restaurant:before,
-    .tab-list > li a:focus.restaurant:before {
+    .tab-list > li a:focus.restaurant:before,
+    .tab-list > li a.active.restaurant:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 53.48 15.37'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23FBAD18;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-restaurant%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M2.53,2.44C6.71,4,13.1,5.84,23.64,5.84c.74,0,1-.12,1.21-.64,2.61-5.95,15.95-1.82,23-1.82,3.91,0,5.64-.8,5.64-1.79S50.75,0,48,0C40.43,0,25,1,2.89.05.36-.12.09.19,0,.58S-.07,1.45,2.53,2.44Z'/%3E%3Cpath class='cls-1' d='M53.4,11.18c-.33-.58-1.33-1.42-4.79-1.36-7.2.12-18.3,2-25,.53-1.84-.39-2.74-.62-3.43-2-.39-.74-.72-.85-3.91-.68-2.72.15-6.55.39-10.53,1l-.11,0a.09.09,0,0,0-.08.09v0a.09.09,0,0,0,.08.09h.11c.26,0,6.77,0,9.81,0,.29,0,.62.1.62.48a.51.51,0,0,1-.55.53c-3,.12-8.74.36-9.88.44h-.1a.11.11,0,0,0-.09.1v0a.09.09,0,0,0,.09.09h.1c1.15.08,7.08.32,10.09.44.27,0,.49.14.49.45s-.29.42-.53.42h0c-3,.12-8.91.35-10,.44h-.1a.09.09,0,0,0-.09.09v0a.1.1,0,0,0,.09.09h.1c1.13.09,6.8.32,9.83.44.32,0,.6.16.6.53s-.31.48-.6.49c-3,0-9.56,0-9.83,0H5.6a.11.11,0,0,0-.08.1v.05a.1.1,0,0,0,.08.09h.11c4,.59,7.81.83,10.53,1,3.19.17,3.52.07,3.91-.67.66-1.42,1.65-1.63,3.43-2,6.83-1.45,17.83.41,25,.53,3.46.06,4.46-.78,4.79-1.37a.61.61,0,0,0,.08-.3A.67.67,0,0,0,53.4,11.18Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .tab-box-btn a:hover.business:before, .tab-box-btn a:focus.business:before,
+    .tab-box-btn a:hover.business:before, .tab-box-btn a:focus.business:before, .tab-box-btn a.active.business:before,
     .tab-list > li a:hover.business:before,
-    .tab-list > li a:focus.business:before {
+    .tab-list > li a:focus.business:before,
+    .tab-list > li a.active.business:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56.97 14.65'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23FBAD18;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-bisiness%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cg id='_014WYs' data-name='014WYs'%3E%3Cpath class='cls-1' d='M19.47,3.84a2.4,2.4,0,0,0-2-1.13c-1.06-.13-2.12-.3-3.18-.46L9.65,1.51A.63.63,0,0,0,8.93,2L8.79,3c3,.48,31.33,5,35,5.58,2,.3,3.84,1.1,5.82,1.44a11.83,11.83,0,0,1,2.37.74c.47.19,1.26,0,1.15.94,0,.07.28.25.28.25l3.33,1.43a.31.31,0,0,1-.12.6l-3.57,0s-.21,0-.24.06c-.42.88-1.23.58-1.89.57-2.41,0-4.83,0-7.22-.27S8.47,8.81,7,8.54c-.76-.13-.75-.16-.63-1l.12-.79L.38,5.7h0A1.4,1.4,0,0,1,.9,3.45h0l6,.94L7.56.52A.62.62,0,0,1,8.28,0L21.21,2.08A1,1,0,0,1,22,3.24C21.75,4.6,19.47,3.84,19.47,3.84Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .tab-box-btn a:hover.area:before, .tab-box-btn a:focus.area:before,
+    .tab-box-btn a:hover.area:before, .tab-box-btn a:focus.area:before, .tab-box-btn a.active.area:before,
     .tab-list > li a:hover.area:before,
-    .tab-list > li a:focus.area:before {
+    .tab-list > li a:focus.area:before,
+    .tab-list > li a.active.area:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16.14 27.37'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23FBAD18;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-area_1%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M8.07,5.14a42.1,42.1,0,0,1,7,.55c1.17.24,1.31.72.7,1.54-1.48,2-5.09,6.78-6.34,8.53a4.37,4.37,0,0,0-.81,2.63,21.16,21.16,0,0,0,0,3.69A3.77,3.77,0,0,0,9,23.78c1.22.06,4.33.56,4.31,1.79s-2.77,1.8-5.26,1.8-5.24-.61-5.25-1.8,3.08-1.73,4.3-1.79a3.64,3.64,0,0,0,.41-1.7,21.53,21.53,0,0,0,0-3.69,4.38,4.38,0,0,0-.82-2.63C5.44,14,1.83,9.2.36,7.23c-.62-.82-.47-1.3.69-1.54A42.1,42.1,0,0,1,8.07,5.14Z'/%3E%3Cpolyline class='cls-1' points='6.44 10.12 13.99 0 14.32 0.3 9.09 7.84'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .tab-box-btn a:hover.coffee:before, .tab-box-btn a:focus.coffee:before,
+    .tab-box-btn a:hover.coffee:before, .tab-box-btn a:focus.coffee:before, .tab-box-btn a.active.coffee:before,
     .tab-list > li a:hover.coffee:before,
-    .tab-list > li a:focus.coffee:before {
+    .tab-list > li a:focus.coffee:before,
+    .tab-list > li a.active.coffee:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.02 20.05'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23FBAD18;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-coffe%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cg id='khhnPH'%3E%3Cpath class='cls-1' d='M21.12.85a9.67,9.67,0,0,1,2.2.8,2.72,2.72,0,0,1,1,.8c.33.45.3.7-.14,1a2.79,2.79,0,0,0-.75.82.48.48,0,0,0-.05.52A4.16,4.16,0,0,1,24.74,4a3.24,3.24,0,0,1,3.12.19.12.12,0,0,0,.19,0c.16-.19.3-.08.44,0A1.87,1.87,0,0,1,29,5V6.13C28.29,8,26.7,8.65,24.9,9a7.37,7.37,0,0,0-1.46.34,1.15,1.15,0,0,0-.48.3c-.17.2-.25.38,0,.6a.78.78,0,0,1,.22.7.71.71,0,0,1-.45.66.79.79,0,0,1-.83-.14,4.62,4.62,0,0,1-.48-.64c-.1.18-.2.34-.28.5a7,7,0,0,1-.66,1c-.08.11-.26.2-.19.34s.23.09.35.11a25.76,25.76,0,0,1,2.92.48,9.83,9.83,0,0,1,2.53.81,2.64,2.64,0,0,1,.46.27.75.75,0,0,1,0,1.37c-.38.24-.79.43-1.18.64a30,30,0,0,1-5.52,2.24c-.43.13-.89.19-1.1.68-.07.14-.26.15-.41.2a15.88,15.88,0,0,1-3.22.5,24.5,24.5,0,0,1-6.4-.36,5.68,5.68,0,0,1-1-.31c-.17-.07-.36-.15-.42-.32-.15-.43-.52-.54-.88-.66a36.06,36.06,0,0,1-4-1.62,12.52,12.52,0,0,1-2-1.28.69.69,0,0,1,0-1.19,3.6,3.6,0,0,1,1.29-.66,21.93,21.93,0,0,1,4.22-.85c.29,0,.35-.11.16-.34a10.19,10.19,0,0,1-1.75-4q-.39-1.53-.75-3.06A3.93,3.93,0,0,0,2.18,3.15c-.42-.34-.4-.71,0-1A7.87,7.87,0,0,1,4.94.87,23.36,23.36,0,0,1,10.57,0a44.11,44.11,0,0,1,8.67.42Zm1,7.73a3.56,3.56,0,0,1,2.09-.66,4.45,4.45,0,0,0,2.07-.76A1.65,1.65,0,0,0,27.13,6,1,1,0,0,0,26,4.78a1.2,1.2,0,0,0-1.07.7,1.67,1.67,0,0,1-.89.9.6.6,0,0,0-.34.39c-.18.58-.47.72-1,.49-.17-.07-.24,0-.27.13C22.34,7.75,22.26,8.11,22.16,8.58Z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .tab-box-btn a:hover.photo:before, .tab-box-btn a:focus.photo:before,
+    .tab-box-btn a:hover.photo:before, .tab-box-btn a:focus.photo:before, .tab-box-btn a.active.photo:before,
     .tab-list > li a:hover.photo:before,
-    .tab-list > li a:focus.photo:before {
+    .tab-list > li a:focus.photo:before,
+    .tab-list > li a.active.photo:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28.82 21.63'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23FBAD18;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-photo%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M20.29,4.59c0-.2,0-.37,0-.54a.67.67,0,0,1,.76-.76H24.8a.65.65,0,0,1,.74.74V4.6c.62,0,1.2,0,1.79,0a1.4,1.4,0,0,1,1.46,1.09,2,2,0,0,1,0,.34V20.19a1.38,1.38,0,0,1-1.44,1.44h-26A1.38,1.38,0,0,1,0,20.21V6A1.36,1.36,0,0,1,1.42,4.6h2a.28.28,0,0,0,.33-.23C4.22,3,4.69,1.65,5.13.28A.34.34,0,0,1,5.51,0h6a.33.33,0,0,1,.38.28c.45,1.37.91,2.73,1.37,4.09.05.15.09.23.28.23h6.75Zm-11.76,2A6.58,6.58,0,0,0,2,13.13a6.65,6.65,0,0,0,6.38,6.53,6.66,6.66,0,0,0,6.73-6.44A6.6,6.6,0,0,0,8.53,6.57Zm14.4,0H20.39a.67.67,0,0,0-.74.75c0,.54,0,1.08,0,1.62s.23.9.89.9H25.3a1.23,1.23,0,0,0,.27,0,.65.65,0,0,0,.62-.7V7.31a.67.67,0,0,0-.75-.74Z'/%3E%3Cpath class='cls-1' d='M13.75,13.11A5.25,5.25,0,1,1,8.63,7.85,5.27,5.27,0,0,1,13.75,13.11Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-    .tab-box-btn a:hover.shop:before, .tab-box-btn a:focus.shop:before,
+    .tab-box-btn a:hover.shop:before, .tab-box-btn a:focus.shop:before, .tab-box-btn a.active.shop:before,
     .tab-list > li a:hover.shop:before,
-    .tab-list > li a:focus.shop:before {
+    .tab-list > li a:focus.shop:before,
+    .tab-list > li a.active.shop:before {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.75 25.75'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23FBAD18;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3Eicon-shop%3C/title%3E%3Cg id='╨б╨╗╨╛╨╣_2' data-name='╨б╨╗╨╛╨╣ 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M15.75,5.7,12.1,5C11.77,2.09,10.7.1,9.32,0A1.64,1.64,0,0,0,8.06.49,3.15,3.15,0,0,0,7.61,1,1.58,1.58,0,0,0,7.19,1a1.62,1.62,0,0,0-1.25.49,4.57,4.57,0,0,0-1.12,2l-.9-.18C2.84,3.8,1.74,4.14,0,5L.4,17.64.25,21.4l12.09,4.35,3.23-2.24-.16-3.3ZM6.9,3.85a7.55,7.55,0,0,1,.81-2.46,4.61,4.61,0,0,1,1.72,3ZM8.25.69A1.36,1.36,0,0,1,9.3.28c1.22.08,2.19,2,2.52,4.61L9.73,4.45A5,5,0,0,0,7.86,1.16,2.63,2.63,0,0,1,8.25.69Zm-2.12,1a1.39,1.39,0,0,1,1-.42,1.36,1.36,0,0,1,.29.06A8,8,0,0,0,6.63,3.8L5.09,3.49A4.31,4.31,0,0,1,6.13,1.64Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+
+@media all and (max-width: 640px) {
+  .tab-list {
+    margin-bottom: -15px; } }
+.tab-list > li {
+  vertical-align: middle; }
+  @media all and (max-width: 640px) {
+    .tab-list > li {
+      padding: 0 10px;
+      margin-bottom: 15px; } }
+  @media all and (max-width: 480px) {
+    .tab-list > li {
+      padding: 0 5px;
+      width: 25%; } }
+  @media all and (max-width: 960px) {
+    .tab-list > li a {
+      padding-top: 68px; } }
+  @media all and (max-width: 640px) {
+    .tab-list > li a {
+      padding: 10px 0;
+      font-size: 16px;
+      line-height: 1.2;
+      text-align: center; }
+      .tab-list > li a:not([data-filter="*"]) {
+        color: transparent;
+        font-size: 0;
+        line-height: 0; } }
+  @media all and (max-width: 960px) {
+    .tab-list > li a:before {
+      left: 14px; } }
+  @media all and (max-width: 640px) {
+    .tab-list > li a:before {
+      max-width: 90%;
+      top: 50% !important;
+      left: 50% !important;
+      -webkit-transform: translate(-50%, -50%);
+      -khtml-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); } }
+  @media all and (max-width: 960px) {
+    .tab-list > li a:after {
+      top: 60px;
+      height: 3px;
+      max-width: 80px; } }
 
 .tab-box-btn {
   display: none;
@@ -3052,7 +3133,22 @@ a.load-more-btn,
       .tab-box-btn a {
         font-size: 19px;
         padding-left: 110px;
-        text-align: left; } }
+        text-align: left; }
+        .tab-box-btn a:before {
+          top: 50% !important;
+          left: 55px !important;
+          max-width: 80px;
+          max-height: 45px;
+          -webkit-transform: translate(-50%, -50%);
+          -khtml-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -o-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+        .tab-box-btn a:after {
+          content: none; }
+        .tab-box-btn a.restaurant:before {
+          width: 64px; } }
   @media all and (max-width: 768px) {
     .tab-box-btn {
       display: block;
@@ -3112,6 +3208,10 @@ a.load-more-btn,
     width: 66.666%; }
   .grid .grid-item.width-50 {
     width: 50%; }
+  @media all and (max-width: 480px) {
+    .grid .grid-item {
+      width: 50% !important;
+      padding-bottom: 50%; } }
   .grid .grid-item img {
     display: block;
     position: absolute;
