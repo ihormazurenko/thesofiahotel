@@ -211,11 +211,19 @@
                         buttons.on('click touch', function () {
                             if ($(window).width() < 769) {
                                 var btn = $(this),
+                                    currentId = btn.attr('href'),
                                     currentTab = btn.closest('.tab-box-btn').next('.tab-section');
 
                                 if (btn.hasClass('active')) {
                                     btn.removeClass('active');
                                     currentTab.slideUp(350);
+
+                                    setTimeout(function () {
+                                        $('html, body').animate({
+                                            scrollTop: $(currentId).offset().top - 85
+                                        }, 350);
+                                    },400);
+
                                 } else {
                                     buttons.removeClass('active');
                                     tabs.slideUp(0);
@@ -224,6 +232,11 @@
                                         btn.addClass('active');
                                         currentTab.slideDown(350);
                                     }, 50);
+                                    setTimeout(function () {
+                                        $('html, body').animate({
+                                            scrollTop: $(currentId).offset().top - 66
+                                        }, 350);
+                                    },400);
                                 }
                             }
                         });
