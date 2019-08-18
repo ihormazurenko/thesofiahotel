@@ -306,6 +306,10 @@
     img.aligncenter {
       margin-bottom: -10px;
     }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
   .hero-links {
     text-align: center;

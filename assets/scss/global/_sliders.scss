@@ -9,6 +9,10 @@
     img {
       @include centered();
       max-height: 100%;
+      &.higher {
+        max-height: initial;
+        max-width: 100%;
+      }
     }
   }
   .tsh-icon-arrow {

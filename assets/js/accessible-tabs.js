@@ -217,8 +217,13 @@
                                     btn.removeClass('active');
                                     currentTab.slideUp(350);
                                 } else {
-                                    btn.addClass('active');
-                                    currentTab.slideDown(350);
+                                    buttons.removeClass('active');
+                                    tabs.slideUp(0);
+
+                                    setTimeout(function () {
+                                        btn.addClass('active');
+                                        currentTab.slideDown(350);
+                                    }, 50);
                                 }
                             }
                         });

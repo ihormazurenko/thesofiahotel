@@ -3,6 +3,7 @@
   background-color: $color-text2;
   .container {
     padding: 0 96px;
+    //max-width: 1980px;
     @media all and (max-width: 1024px) {
       padding-left: 30px;
       padding-right: 30px;

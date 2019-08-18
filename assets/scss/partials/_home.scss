@@ -223,6 +223,7 @@
         .img-wrap {
           img {
             @include centered();
+
           }
         }
       }
@@ -237,15 +238,28 @@
         text-align: center;
       }
       .inner-box {
-        max-width: 100%;
+        display: inline-block;
+        max-width: 496px;
+        text-align: left;
         > :last-child:not(.link-list) {
           margin-bottom: 0;
         }
         @media all and (max-width: 1024px) {
+          display: block;
+          max-width: 100%;
           padding: 52px 20px;
+        }
+        @media all and (max-width: 560px) {
+          text-align: center;
         }
       }
     }
+  }
+  > :first-child {
+    &:not(.image) {
+      text-align: right;
+    }
+
   }
   .content-box {
     overflow-y: auto;
@@ -319,7 +333,7 @@
   .container {
     position: relative;
     z-index: 3;
-    max-width: 1200px;
+    max-width: 1980px;
     padding: 0;
   }
   &.abstract-bg {

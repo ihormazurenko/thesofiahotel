@@ -1,6 +1,6 @@
 .section-blog {
   .container {
-    max-width: 1200px;
+    max-width: 1980px;
     padding: 0;
   }
   .section-title-box {
@@ -86,8 +86,19 @@
       &.text {
         padding: 70px 80px 45px 94px;
         border-bottom: 1px solid #c1c1c1;
+        .inner-box {
+          max-width: 425px;
+        }
         @media all and (max-width: 1024px) {
           border: none;
+          .inner-box {
+            max-width: 100%;
+          }
+        }
+        @media all and (max-width: 560px) {
+          .inner-box {
+            //text-align: left;
+          }
         }
       }
       &.image {

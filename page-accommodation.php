@@ -134,7 +134,7 @@ get_header(); ?>
                     <div class="inner-slider">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/accom.jpg" alt=""></div>
+                                <div class="swiper-slide"><img class="higher" src="<?php echo get_bloginfo('template_url'); ?>/img/accom.jpg" alt=""></div>
                                 <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/hero-home.jpg" alt=""></div>
                                 <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/prefooter-home.jpg" alt=""></div>
                             </div>
