@@ -2,9 +2,73 @@
 /**
  * Template Name: Explore
  */
-get_header(); ?>
+get_header();
+
+global $tsh_google_map_key;
+
+$tsh_coordinate = [];
+
+?>
 
     <?php get_template_part('inc/hero'); ?>
+
+<?php if (get_current_user_id() == 1) { ?>
+    <section class="section-tabs">
+        <div class="container">
+            <script src="//maps.googleapis.com/maps/api/js?key=<?php echo $tsh_google_map_key; ?>"></script>
+            <div class="map-wrap">
+                <div id="map"></div>
+            </div>
+            <?php
+            global $wp_query;
+
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+            $args = array(
+                'post_type'     => 'place',
+                'post_status'   => 'publish',
+                'posts_per_page' => -1,
+                'orderby'       => 'date',
+                'order'         => 'ASC',
+                'paged'         => $paged,
+            );
+            $new_query = new WP_Query( $args );
+
+            if ($new_query->have_posts()) {
+                while ( $new_query->have_posts() ) : $new_query->the_post();
+                    $map                = get_field('map');
+                    $title              = get_the_title();
+                    $short_description  = get_field('place_description');
+                    $types              = wp_get_post_terms( get_the_ID(), 'place_type' );
+                    $marker_description = $short_description ? preg_replace('/[\n\r]/', '', htmlentities($short_description)) : '';
+                    $place_types        = [];
+
+                    if ($types && is_array($types) && count($types) > 0) {
+                        foreach ($types as $type) {
+                            if ($types[0]->slug) {
+                                $place_types = $types[0]->slug;
+                            }
+                        }
+                    }
+
+                    if ($map && is_array($map) && count($map) > 0) {
+                        $lat = $map['lat'] ? (float)$map['lat'] : '';
+                        $lng = $map['lng'] ? (float)$map['lng'] : '';
+                    }
+
+                    $tsh_coordinate[] = [$title, $marker_description, $lat, $lng, $place_types];
+                endwhile;
+            }
+
+            wp_reset_query();
+
+            ?>
+            <script>
+                tsh_marker_url = "<?php echo get_bloginfo('template_url') . '/img/marker.png'; ?>";
+                tsh_arr = '<?php echo json_encode($tsh_coordinate); ?>';
+            </script>
+        </div>
+    </section>
+<?php } ?>
 
 
     <section class="section-tabs">
