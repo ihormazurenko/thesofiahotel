@@ -8,14 +8,68 @@ global $tsh_google_map_key;
 
 $tsh_coordinate = [];
 
+$icon_rel = [
+  'coffee'      => 'coffee',
+  'dining'      => 'restaurant',
+  'nightlife'   => 'area',
+  'shops'       => 'shop',
+  'sites'       => 'photo',
+];
+
+//The Sofia Hotel Coordinate
+$tsh_coordinate[] = [
+    'place_title' => __('The Sofia Hotel','the-sofia-hotel'),
+    'place_short_desc' => '',
+    'place_lat' => 32.7159711,
+    'place_lng' => -117.1666568,
+    'place_type' => 'tsh'
+];
+
 ?>
 
     <?php get_template_part('inc/hero'); ?>
 
-<?php if (get_current_user_id() == 1) { ?>
-    <section class="section-tabs">
+
+    <section class="section-tabs map-type">
         <div class="container">
             <script src="//maps.googleapis.com/maps/api/js?key=<?php echo $tsh_google_map_key; ?>"></script>
+
+            <?php
+                $cats = get_terms( array(
+                    'taxonomy'      => array( 'place_type' ),
+                    'orderby'       => 'id',
+                    'order'         => 'ASC',
+                    'hide_empty'    => true,
+                    'number'        => 10,
+                    'fields'        => 'all',
+                    'count'         => false,
+                    'parent'        => 0,
+                    'hierarchical'  => true,
+                    'cache_domain'  => 'core',
+                    'update_term_meta_cache' => true
+                ) );
+
+//                var_dump($cats);
+
+                if ($cats && is_array($cats) && count($cats) > 0) {
+                ?>
+                <div class="tabs-nav">
+                    <ul class="tab-list">
+                        <li>
+                            <a href="#" data-types="tsh, coffee, dining, nightlife, shops, sites" title="<?php esc_attr_e('Show all', 'the-sofia-hotel'); ?>" class="" data-filter="*"><?php _e('Show all', 'the-sofia-hotel'); ?></a>
+                        </li>
+                        <?php
+                        $colors = ['light-blue', 'gold', 'purple', 'grey', 'dark'];
+                        foreach ($cats as $cat) {
+                            echo "<li><a href='#{$cat->slug}' data-types=\"tsh, {$cat->slug}\" title='".esc_attr($cat->name)."' class='color-".current($colors)." {$icon_rel[$cat->slug]}' data-filter='.{$cat->slug}'>{$cat->name}</a></li>";
+//                            echo '<li><<a href="#'.$cat->slug.'" onclick="toggleGroup('[tsh, {$cat->slug}]')"></a></li>'
+                            next($colors);
+                        }
+                        ?>
+                    </ul>
+                </div>
+            <?php } ?>
+
             <div class="map-wrap">
                 <div id="map"></div>
             </div>
@@ -40,13 +94,11 @@ $tsh_coordinate = [];
                     $short_description  = get_field('place_description');
                     $types              = wp_get_post_terms( get_the_ID(), 'place_type' );
                     $marker_description = $short_description ? preg_replace('/[\n\r]/', '', htmlentities($short_description)) : '';
-                    $place_types        = [];
+                    $place_type         = '';
 
                     if ($types && is_array($types) && count($types) > 0) {
                         foreach ($types as $type) {
-                            if ($types[0]->slug) {
-                                $place_types = $types[0]->slug;
-                            }
+                            $place_type = (trim($types[0]->slug) && count($types[0]->count) > 0 ) ? $types[0]->slug : '';
                         }
                     }
 
@@ -55,7 +107,13 @@ $tsh_coordinate = [];
                         $lng = $map['lng'] ? (float)$map['lng'] : '';
                     }
 
-                    $tsh_coordinate[] = [$title, $marker_description, $lat, $lng, $place_types];
+                    $tsh_coordinate[] = [
+                        'place_title' => $title,
+                        'place_short_desc' => $marker_description,
+                        'place_lat' => $lat,
+                        'place_lng' => $lng,
+                        'place_type' => $place_type
+                    ];
                 endwhile;
             }
 
@@ -63,14 +121,14 @@ $tsh_coordinate = [];
 
             ?>
             <script>
-                tsh_marker_url = "<?php echo get_bloginfo('template_url') . '/img/marker.png'; ?>";
+                tsh_marker_base_url = "<?php echo get_bloginfo('template_url') . '/img/'; ?>";
                 tsh_arr = '<?php echo json_encode($tsh_coordinate); ?>';
             </script>
         </div>
     </section>
-<?php } ?>
 
 
+<?php /* ?>
     <section class="section-tabs">
         <div class="container">
             <div class="tabs-box">
@@ -153,7 +211,7 @@ $tsh_coordinate = [];
             </div>
         </div>
     </section>
-
+<?php */ ?>
     <section class="section section-interesting-info color-light-blue">
         <div class="container">
             <h2 class="section-title">Discover America's Finest City</h2>
@@ -181,7 +239,7 @@ $tsh_coordinate = [];
         </div>
     </section>
 
-    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/gallery_prefooter_bg.jpg);">
+    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/explore_prefooter_bg.jpg);">
         <div class="container">
             <div class="vertical-align-box">
                 <div class="inner-box">

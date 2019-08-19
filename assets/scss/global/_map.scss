@@ -1,14 +1,24 @@
-.map-wrap {
-  margin-bottom: 90px;
-  @media all and (max-width: 767px) {
-    margin-bottom: 60px;
-  }
-}
+.map-wrap {}
 #map {
   width: 100%;
-  height: 520px;
-  margin-bottom: 16px;
+  height: 690px;
   @media all and (max-width: 767px) {
-    height: 420px;
+    height: 560px;
+    max-height: 90vh;
+  }
+}
+.place-marker-box {
+  //background-color: #F1F2F2;
+}
+.place-marker-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: $bold;
+  color: #4F5051;
+}
+.place-marker-info {
+  &.content {
+    font-size: 16px;
+    color: #4F5051;
   }
 }

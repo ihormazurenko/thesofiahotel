@@ -12,10 +12,10 @@ get_header(); ?>
                 <li>
                     <div class="two-column-box">
                         <div class="column image">
-                            <a href="#" title="Mark the 4th of July in America’s Finest City">
+                            <a href="#" title="Craft Beer Tour">
                                 <div class="inner-box">
                                     <div class="img-wrap ">
-                                        <img src="https://acsdm.com/thesofiahotel/wp-content/themes/the-sofia-hotel/img/blog_1.jpg" alt="">
+                                        <img src="https://acsdm.com/thesofiahotel/wp-content/themes/the-sofia-hotel/img/special_1.jpg" alt="">
                                     </div>
                                 </div>
                             </a>
@@ -23,21 +23,18 @@ get_header(); ?>
                         <div class="column text">
                             <div class="inner-box">
                                 <div class="section-title-box">
-                                    <a href="#" title="Mark the 4th of July in America’s Finest City">
-                                        <h2 class="section-title">Mark the 4th of July in America’s Finest City</h2>
+                                    <a href="#" title="Craft Beer Tour">
+                                        <h2 class="section-title">Craft Beer Tour</h2>
                                     </a>
                                 </div>
                                 <div class="content-box">
                                     <div class="content">
-                                        <p>San Diego will be observing the 243rd birthday of the old Stars and
-                                            Stripes with plenty of revelry and skyrocketing flair, and you can
-                                            enjoy the festivities to the fullest with a guest room here at the
-                                            Sofia Hotel on West Broadway!</p>
+                                        <p>When you’re in the craft brew capital of America, you’ve got to check out the scene. What better way than on a guided tour with San Diego Beer Tour.</p>
                                     </div>
                                 </div>
                                 <ul class="link-list">
                                     <li>
-                                        <a href="#" class="btn" title="Read More">Read More</a>
+                                        <a href="#" class="btn" title="CRAFT BEER TOUR">CRAFT BEER TOUR</a>
                                     </li>
                                 </ul>
                             </div>
@@ -47,10 +44,10 @@ get_header(); ?>
                 <li>
                     <div class="two-column-box">
                         <div class="column image">
-                            <a href="#" title="A Long-Running San Diego Tradition">
+                            <a href="#" title="Dinning Cruise Package">
                                 <div class="inner-box">
                                     <div class="img-wrap ">
-                                        <img src="https://acsdm.com/thesofiahotel/wp-content/themes/the-sofia-hotel/img/blog_2.jpg" alt="">
+                                        <img src="https://acsdm.com/thesofiahotel/wp-content/themes/the-sofia-hotel/img/special_2.jpg" alt="">
                                     </div>
                                 </div>
                             </a>
@@ -58,20 +55,18 @@ get_header(); ?>
                         <div class="column text">
                             <div class="inner-box">
                                 <div class="section-title-box">
-                                    <a href="#" title="A Long-Running San Diego Tradition">
-                                        <h2 class="section-title">A Long-Running San Diego Tradition</h2>
+                                    <a href="#" title="Dinning Cruise Package">
+                                        <h2 class="section-title">Dinning Cruise Package</h2>
                                     </a>
                                 </div>
                                 <div class="content-box">
                                     <div class="content">
-                                        <p>Watch Law Enforcement Officers & Firefighters From Across the Country
-                                            Square Off in Everything From Paintball to Archery at the U.S.
-                                            Police & Fire... </p>
+                                        <p>One of the best ways to see the spectacular skyline of downtown San Diego is via a sightseeing or dinner cruise.</p>
                                     </div>
                                 </div>
                                 <ul class="link-list">
                                     <li>
-                                        <a href="#" class="btn" title="Read More">Read More</a>
+                                        <a href="#" class="btn" title="CRUISE PACKAGE">CRUISE PACKAGE</a>
                                     </li>
                                 </ul>
                             </div>
@@ -81,10 +76,10 @@ get_header(); ?>
                 <li>
                     <div class="two-column-box">
                         <div class="column image">
-                            <a href="#" title="Take an Epicurean Safari Through the Gaslamp Quarter">
+                            <a href="#" title="Lions, Tigers and Dolphins">
                                 <div class="inner-box">
                                     <div class="img-wrap ">
-                                        <img src="https://acsdm.com/thesofiahotel/wp-content/themes/the-sofia-hotel/img/blog_3.jpg" alt="">
+                                        <img src="https://acsdm.com/thesofiahotel/wp-content/themes/the-sofia-hotel/img/special_3.jpg" alt="">
                                     </div>
                                 </div>
                             </a>
@@ -92,19 +87,18 @@ get_header(); ?>
                         <div class="column text">
                             <div class="inner-box">
                                 <div class="section-title-box">
-                                    <a href="#" title="Take an Epicurean Safari Through the Gaslamp Quarter">
-                                        <h2 class="section-title">Take an Epicurean Safari Through the Gaslamp Quarter</h2>
+                                    <a href="#" title="Lions, Tigers and Dolphins">
+                                        <h2 class="section-title">Lions, Tigers and Dolphins</h2>
                                     </a>
                                 </div>
                                 <div class="content-box">
                                     <div class="content">
-                                        <p>San Diego Bay’s a vision of beauty anytime, but it’s about to get
-                                            downright dramatic overhead...</p>
+                                        <p>From the USS Midway tour to Sea World and the world-famous San Diego Zoo, there is a tour package for you. </p>
                                     </div>
                                 </div>
                                 <ul class="link-list">
                                     <li>
-                                        <a href="#" class="btn" title="Read More">Read More</a>
+                                        <a href="#" class="btn" title="SIGHTSEEING PACKAGE">SIGHTSEEING PACKAGE</a>
                                     </li>
                                 </ul>
                             </div>

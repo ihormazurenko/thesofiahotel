@@ -10,6 +10,7 @@
     .date-box {
       margin-top: 16px;
       margin-bottom: -16px;
+      color: $color-text3;
     }
   }
   .section-title {
@@ -88,6 +89,11 @@
         border-bottom: 1px solid #c1c1c1;
         .inner-box {
           max-width: 425px;
+        }
+        &:only-child {
+          .inner-box {
+            max-width: none;
+          }
         }
         @media all and (max-width: 1024px) {
           border: none;

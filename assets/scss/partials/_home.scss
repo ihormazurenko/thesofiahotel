@@ -259,7 +259,11 @@
     &:not(.image) {
       text-align: right;
     }
-
+  }
+  > :only-child {
+    &:not(.image) {
+      text-align: left;
+    }
   }
   .content-box {
     overflow-y: auto;
@@ -268,8 +272,12 @@
     .small & {
       max-height: 380px;
     }
+    .high-block & {
+      max-height: 466px;
+    }
     @media all and (max-width: 1024px) {
       max-height: 100%;
+      .high-block &,
       .small & {
         max-height: 100%;
       }

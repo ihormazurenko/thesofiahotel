@@ -202,23 +202,23 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Luna</h3>
+                            <h3 class="service-title">Shiva Shakti</h3>
                         </div>
                         <div class="service-desc">
                             <div class="content">
-                                <p>A special session for mothers to be. Promotes circulation and relaxation, easing aching joints and muscles. Great for both mama and baby.</p>
+                                <p>Our Fusion massage session for two.</p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
                         <ul class="price-list">
                             <li>
                                 <div class="price-box">
-                                    <p>50 min: <span class="price">$110</span></p>
+                                    <p>50 min: <span class="price">$220</span></p>
                                 </div>
                             </li>
                             <li>
                                 <div class="price-box">
-                                    <p>80 min: <span class="price">$150</span></p>
+                                    <p>80 min: <span class="price">$300</span></p>
                                 </div>
                             </li>
                         </ul>
@@ -227,18 +227,23 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Sublime Thigh Treatment</h3>
+                            <h3 class="service-title">Earth + Sky</h3>
                         </div>
                         <div class="service-desc">
                             <div class="content">
-                                <p>A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty accumulations in the thighs and buttocks. A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty</p>
+                                <p>A combination of circulatory and pressure point massage performed on the hands and feet using healing treatment oil.</p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
                         <ul class="price-list">
                             <li>
                                 <div class="price-box">
-                                    <p>50 min: <span class="price">$120</span></p>
+                                    <p>50 min: <span class="price">$105</span></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="price-box">
+                                    <p>80 min: <span class="price">$145</span></p>
                                 </div>
                             </li>
                         </ul>
@@ -247,29 +252,14 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Crowning Chakra</h3>
+                            <h3 class="service-title">Gharsana</h3>
                         </div>
                         <div class="service-desc show-more">
                             <div class="content">
-                                <p>A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
-                                    shoulders. Great for dry tresses as well! A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
-                                    shoulders. Great for dry tresses as well!</p>
+                                <p>A dry brush treatment that removes dead skin and encourages lymph flow in the body. (Complimentary with all body treatments)</p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>30 min: <span class="price">$80</span></p>
-                                    <div class="additional-info">(add-on to any treatment)</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$150</span></p>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                 </li>
             </ul>
@@ -299,23 +289,18 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Luna</h3>
+                            <h3 class="service-title">Sea Tonic</h3>
                         </div>
                         <div class="service-desc">
                             <div class="content">
-                                <p>A special session for mothers to be. Promotes circulation and relaxation, easing aching joints and muscles. Great for both mama and baby.</p>
+                                <p>This warm seaweed based mud mask enhances blood circulation, detoxifies, and enriches the skin with its high mineral content.</p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
                         <ul class="price-list">
                             <li>
                                 <div class="price-box">
-                                    <p>50 min: <span class="price">$110</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$150</span></p>
+                                    <p>75 min: <span class="price">$160</span></p>
                                 </div>
                             </li>
                         </ul>
@@ -324,18 +309,23 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Sublime Thigh Treatment</h3>
+                            <h3 class="service-title">Divine Glow</h3>
                         </div>
                         <div class="service-desc">
                             <div class="content">
-                                <p>A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty accumulations in the thighs and buttocks. A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty</p>
+                                <p>Exfoliates skin and encourages new cell growth, guiding your skin back to its divine nature. Your glowing new skin will then be
+                                    nourished with a moisture treatment.</p>
+                                   <p> Choose from:<br>
+                                    Mung Bean – normal skin<br>
+                                    Sea Salt – coarse skin<br>
+                                    Brown sugar – sensitive skin</p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
                         <ul class="price-list">
                             <li>
                                 <div class="price-box">
-                                    <p>50 min: <span class="price">$120</span></p>
+                                    <p>50 min: <span class="price">$130</span></p>
                                 </div>
                             </li>
                         </ul>
@@ -344,26 +334,18 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Crowning Chakra</h3>
+                            <h3 class="service-title">Milk + Honey Hydration Wrap</h3>
                         </div>
                         <div class="service-desc show-more">
                             <div class="content">
-                                <p>A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
-                                    shoulders. Great for dry tresses as well! A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
-                                    shoulders. Great for dry tresses as well!</p>
+                                <p>Allow our alchemical mixture of protein rich milk and humectant honey to nourish and moisturize your skin, while our therapist treats you to a stress relieving head and facial massage.</p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
                         <ul class="price-list">
                             <li>
                                 <div class="price-box">
-                                    <p>30 min: <span class="price">$80</span></p>
-                                    <div class="additional-info">(add-on to any treatment)</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$150</span></p>
+                                    <p>75 min: <span class="price">$160</span></p>
                                 </div>
                             </li>
                         </ul>
@@ -373,17 +355,12 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/banner_img.jpg);">
+    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/spa_2.jpg);">
         <div class="container">
             <div class="vertical-align-box">
                 <div class="inner-box">
                     <div class="banner-title-box">
-                        <h2 class="banner-title">Body Treatments</h2>
-                    </div>
-                    <div class="banner-desc-box">
-                        <div class="content">
-                            <p>All body treatments include a gharsana treatment.</p>
-                        </div>
+                        <h2 class="banner-title">Facials</h2>
                     </div>
                 </div>
             </div>
@@ -396,23 +373,18 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Circulatory</h3>
+                            <h3 class="service-title">Rose</h3>
                         </div>
                         <div class="service-desc">
                             <div class="content">
-                                <p>Circulates blood, lymph and breath so that you can get in touch with your flow.</p>
+                                <p>Deep cleansing, gentle exfoliation, skin specific mask, and vitamin hydration. (add-on to any treatment)/p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
                         <ul class="price-list">
                             <li>
                                 <div class="price-box">
-                                    <p>50 min: <span class="price">$98</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$80</span></p>
+                                    <p>Starting at: <span class="price">$65</span></p>
                                 </div>
                             </li>
                         </ul>
@@ -421,224 +393,11 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Deep Tissue</h3>
+                            <h3 class="service-title">Angelicae</h3>
                         </div>
                         <div class="service-desc">
                             <div class="content">
-                                <p>Release into your deep tissue therapeutic massage. Soften the tissue, strengthen the spirit and soothe the soul.</p>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$115</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$155</span></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <h3 class="service-title">Fusion</h3>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>A blend of circulatory and deep tissue techniques specifically customized for your session.</p>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$110</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$150</span></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section-services">
-        <div class="container">
-            <ul class="service-list">
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <h3 class="service-title">Luna</h3>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>A special session for mothers to be. Promotes circulation and relaxation, easing aching joints and muscles. Great for both mama and baby.</p>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$110</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$150</span></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/banner_img.jpg);">
-        <div class="container">
-            <div class="vertical-align-box">
-                <div class="inner-box">
-                    <div class="banner-title-box">
-                        <h2 class="banner-title">Body Treatments</h2>
-                    </div>
-                    <div class="banner-desc-box">
-                        <div class="content">
-                            <p>All body treatments include a gharsana treatment.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-services">
-        <div class="container">
-            <ul class="service-list">
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <h3 class="service-title">Circulatory</h3>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>Circulates blood, lymph and breath so that you can get in touch with your flow.</p>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$98</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$80</span></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <h3 class="service-title">Deep Tissue</h3>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>Release into your deep tissue therapeutic massage. Soften the tissue, strengthen the spirit and soothe the soul.</p>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$115</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$155</span></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <h3 class="service-title">Fusion</h3>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>A blend of circulatory and deep tissue techniques specifically customized for your session.</p>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$110</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$150</span></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="section-services">
-        <div class="container">
-            <ul class="service-list">
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <h3 class="service-title">Luna</h3>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>A special session for mothers to be. Promotes circulation and relaxation, easing aching joints and muscles. Great for both mama and baby.</p>
-                            </div>
-                        </div>
-                        <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$110</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$150</span></p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <h3 class="service-title">Sublime Thigh Treatment</h3>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty accumulations in the thighs and buttocks. A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty</p>
+                                <p>Deep cleansing, fruit enzyme peel, pore cleansing extractions, skin specific mask, and vitamin hydration.</p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
@@ -646,6 +405,179 @@ get_header(); ?>
                             <li>
                                 <div class="price-box">
                                     <p>50 min: <span class="price">$120</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <h3 class="service-title">Juniper</h3>
+                        </div>
+                        <div class="service-desc">
+                            <div class="content">
+                                <p>Our Angelica facial enhanced with a hand and foot massage.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read More</a>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p>65 min: <span class="price">$140</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-services">
+        <div class="container">
+            <ul class="service-list">
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <h3 class="service-title">Saffron</h3>
+                        </div>
+                        <div class="service-desc">
+                            <div class="content">
+                                <p>Our men’s facial. Everything to get you glowing, plus acupressure massage to the head, neck and face.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read More</a>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p>65 min: <span class="price">$140</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/spa_3.jpg);">
+        <div class="container">
+            <div class="vertical-align-box">
+                <div class="inner-box">
+                    <div class="banner-title-box">
+                        <h2 class="banner-title">Spa Packages</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-services">
+        <div class="container">
+            <ul class="service-list">
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <h3 class="service-title">Awaken</h3>
+                        </div>
+                        <div class="service-desc">
+                            <div class="content">
+                                <p>50 minute Fusion massage and 30 minute facial.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read More</a>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p><span class="price">$170</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <h3 class="service-title">Solace</h3>
+                        </div>
+                        <div class="service-desc">
+                            <div class="content">
+                                <p>50 minute Fusion massage and 50 minute Angelica facial.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read More</a>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p><span class="price">$220</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <h3 class="service-title">White Gold</h3>
+                        </div>
+                        <div class="service-desc">
+                            <div class="content">
+                                <p>50 minute Fusion massage, 50 minute Angelica facial, 30 minute Scrub.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read More</a>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p><span class="price">$285</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-services">
+        <div class="container">
+            <ul class="service-list">
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <h3 class="service-title">Moonstone</h3>
+                        </div>
+                        <div class="service-desc">
+                            <div class="content">
+                                <p>30 minute facial, 30 minute Crowning Chakra, and our Milk and Honey Hydration Wrap.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read More</a>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p><span class="price">$290</span></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-box">
+                        <div class="title-box">
+                            <h3 class="service-title">Sweet Surrender</h3>
+                        </div>
+                        <div class="service-desc">
+                            <div class="content">
+                                <p>80 minute Fusion massage, 65 minute facial, 60 minute Sea Tonic Wrap.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read More</a>
+                        <ul class="price-list">
+                            <li>
+                                <div class="price-box">
+                                    <p><span class="price">$415</span></p>
                                 </div>
                             </li>
                         </ul>
@@ -737,7 +669,7 @@ get_header(); ?>
     </div>
 </section>
 
-    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/gallery_prefooter_bg.jpg);">
+    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/yoga_prefooter.jpg);">
         <div class="container">
             <div class="vertical-align-box">
                 <div class="inner-box">

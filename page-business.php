@@ -34,7 +34,7 @@ get_header(); ?>
         </section>
     <?php } */ ?>
 
-    <section class="section section-two-columns small color-gold abstract-bg">
+    <section class="section section-two-columns  high-block small color-gold abstract-bg">
         <div class="container">
             <div class="two-column-box">
                 <div class="column image">
@@ -42,7 +42,7 @@ get_header(); ?>
                         <div class="inner-slider">
                             <div class="swiper-container">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img class="higher" src="<?php echo get_bloginfo('template_url'); ?>/img/accom.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img class="higher" src="<?php echo get_bloginfo('template_url'); ?>/img/business-1.jpg" alt=""></div>
                                     <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/hero-home.jpg" alt=""></div>
                                     <div class="swiper-slide"><img src="<?php echo get_bloginfo('template_url'); ?>/img/prefooter-home.jpg" alt=""></div>
                                 </div>
@@ -56,33 +56,28 @@ get_header(); ?>
                 <div class="column text">
                     <div class="inner-box">
                         <div class="section-title-box">
-                            <h2 class="section-title">Spa Services</h2>
+                            <h2 class="section-title">Conference <br> & Business Centers</h2>
                         </div>
                         <div class="content-box">
                             <div class="content">
-                                <p>For guests who require special accommodations the hotel offers special suites
-                                    featuring all the standard guest room amenities and additional touches.</p>
-                                <h3>FEATURES AND AMENITIES:</h3>
+                                <p>Life on the road doesn't have to be hard for business travelers. Sofia's event space
+                                    accommodates up to 24 individuals in a variety of ways, including conferences,
+                                    lectures, private events and training sessions.</p>
+                                <h3>OFFERINGS INCLUDED:</h3>
                                 <ul>
-                                    <li>Soaking spa tub with jets</li>
-                                    <li>Fine art, decorative wallpaper, plumped cushions  and accessories</li>
-                                    <li>Wide selection of Free Television Channels including HBO</li>
-                                    <li>Universal Docking station alarm clock/radio</li>
-                                    <li>Illuminating, adjustable bedside lamps</li>
-                                    <li>Fine linens with white down comforters, plush pillows and pillow-top mattresses</li>
-                                    <li>Updated, modern bathroom with sparkling, contemporary bath and vanity fixtures</li>
-                                    <li>Separate vanities with lighted cosmetic mirrors</li>
-                                    <li>Pro Terra products and toiletries</li>
-                                    <li>In-room refreshment center with coffeemaker, mini-fridge and microwave</li>
-                                    <li>Hair dryer and iron with board</li>
-                                    <li>Electronic in-room laptop safe</li>
-                                    <li>Pet-friendly rooms</li>
+                                    <li>State-of-the-art audio technology.</li>
+                                    <li>Broadband internet accessibility.</li>
+                                    <li>Global video conferencing.</li>
+                                    <li>24-hour business center</li>
+                                    <li>Multilingual guest service</li>
+                                    <li>24-hour concierge</li>
+                                    <li>Wi-Fi accessibility</li>
                                 </ul>
                             </div>
                         </div>
                         <ul class="link-list">
                             <li>
-                                <a href="#" class="btn" title="View services">View services</a>
+                                <a href="#" class="btn" title="MORE INFO">MORE INFO</a>
                             </li>
                         </ul>
                     </div>
@@ -97,27 +92,22 @@ get_header(); ?>
                 <div class="column text">
                     <div class="inner-box">
                         <div class="section-title-box">
-                            <h2 class="section-title">VIP Suites</h2>
+                            <h2 class="section-title">Features & Amenities</h2>
                         </div>
                         <div class="content-box">
                             <div class="content">
-                                <p>For guests who require special accommodations the hotel offers special suites
-                                    featuring all the standard guest room amenities and additional touches.</p>
-                                <h3>FEATURES AND AMENITIES:</h3>
+                                <p>The Sofia offers modern, stylish suites, double-double, queen and king rooms with an armchair and ottoman.</p>
+                                <h3>ALL rooms feature:</h3>
                                 <ul>
-                                    <li>Soaking spa tub with jets</li>
-                                    <li>Fine art, decorative wallpaper, plumped cushions  and accessories</li>
-                                    <li>Wide selection of Free Television Channels including HBO</li>
-                                    <li>Universal Docking station alarm clock/radio</li>
-                                    <li>Illuminating, adjustable bedside lamps</li>
-                                    <li>Fine linens with white down comforters, plush pillows and pillow-top mattresses</li>
-                                    <li>Updated, modern bathroom with sparkling, contemporary bath and vanity fixtures</li>
-                                    <li>Separate vanities with lighted cosmetic mirrors</li>
-                                    <li>Pro Terra products and toiletries</li>
-                                    <li>In-room refreshment center with coffeemaker, mini-fridge and microwave</li>
-                                    <li>Hair dryer and iron with board</li>
-                                    <li>Electronic in-room laptop safe</li>
-                                    <li>Pet-friendly rooms</li>
+                                    <li>Ergonomic work station</li>
+                                    <li>32" & 42" Flat-screens with HBO</li>
+                                    <li>WiFi & Wired Internet available</li>
+                                    <li>Alarm clock with universal docking station</li>
+                                    <li>Adjustable, ambient bedside lamps</li>
+                                    <li>Fine linens and down comforters</li>
+                                    <li>Plush pillows and pillow-top mattresses</li>
+                                    <li>Relaxing armchair and ottoman</li>
+                                    <li>Wi-Fi and Wired Internet available</li>
                                 </ul>
                             </div>
                         </div>
@@ -134,7 +124,7 @@ get_header(); ?>
                 <div class="column image">
                     <div class="inner-box">
                         <div class="img-wrap ">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/world-class-accommodations.jpg" alt="">
+                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/business-2.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -182,16 +172,14 @@ get_header(); ?>
 
     <section class="section section-interesting-info color-gold">
         <div class="container">
-            <h2 class="section-title">A Room For Every Occasion</h2>
+            <h2 class="section-title">Business with Pleasure</h2>
             <div class="content">
-                <p>Sofia is a sensible hostess who has thought of everything from a laptop safe to a mini-fridge.
-                    Her responsiveness and ability to anticipate her guests' needs will resonate with visitors for
-                    years to come.</p>
+                <p>Working near or far, plan your next event,<br> meeting or business travel plans with Sofia.</p>
             </div>
         </div>
     </section>
 
-    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/gallery_prefooter_bg.jpg);">
+    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/business-prefooter.jpg);">
         <div class="container">
             <div class="vertical-align-box">
                 <div class="inner-box">

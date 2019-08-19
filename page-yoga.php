@@ -40,40 +40,27 @@ get_header(); ?>
                 <div class="column image">
                     <div class="inner-box">
                         <div class="img-wrap ">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/world-class-accommodations.jpg" alt="">
+                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/yoga_1.jpg" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="column text">
                     <div class="inner-box">
                         <div class="section-title-box">
-                            <h2 class="section-title">Spa Services</h2>
+                            <h2 class="section-title">To your health - The Harkishan Yoga Studio & Sofia Health Center</h2>
                         </div>
                         <div class="content-box">
                             <div class="content">
                                 <div class="content">
-                                    <p>For guests who require special accommodations the hotel offers special suites
-                                        featuring all the standard guest room amenities and additional touches.</p>
-                                    <h3>FEATURES AND AMENITIES:</h3>
-                                    <ul>
-                                        <li>Soaking spa tub with jets</li>
-                                        <li>Fine art, decorative wallpaper, plumped cushions  and accessories</li>
-                                        <li>Wide selection of Free Television Channels including HBO</li>
-                                        <li>Universal Docking station alarm clock/radio</li>
-                                        <li>Illuminating, adjustable bedside lamps</li>
-                                        <li>Fine linens with white down comforters, plush pillows and pillow-top mattresses</li>
-                                        <li>Updated, modern bathroom with sparkling, contemporary bath and vanity fixtures</li>
-                                        <li>Separate vanities with lighted cosmetic mirrors</li>
-                                        <li>Pro Terra products and toiletries</li>
-                                        <li>In-room refreshment center with coffeemaker, mini-fridge and microwave</li>
-                                        <li>Hair dryer and iron with board</li>
-                                        <li>Electronic in-room laptop safe</li>
-                                        <li>Pet-friendly rooms</li>
-                                    </ul>
+                                    <p>After your muscles have relaxed from a night's sleep in one of our plush rooms,
+                                        the urban retreat continues inside The Sofia's 24-hour yoga studio and Health Center.
+                                        The Harkishan Yoga Studio features audio and video surround sound, yoga mats and
+                                        an on-call yoga instructor. Guests looking to get their hearts pumping may spend
+                                        time with an on-call personal trainer, top-line Star Trac cardio equipment, free
+                                        weights and Hoist strength training equipment inside the 24-hour health center.</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -86,36 +73,29 @@ get_header(); ?>
                 <div class="column text">
                     <div class="inner-box">
                         <div class="section-title-box">
-                            <h2 class="section-title">VIP Suites</h2>
+                            <h2 class="section-title">Cindy Aaker - Issa Certified Fitness Center</h2>
                         </div>
                         <div class="content-box">
                             <div class="content">
-                                <p>For guests who require special accommodations the hotel offers special suites
-                                    featuring all the standard guest room amenities and additional touches.</p>
-                                <h3>FEATURES AND AMENITIES:</h3>
-                                <ul>
-                                    <li>Soaking spa tub with jets</li>
-                                    <li>Fine art, decorative wallpaper, plumped cushions  and accessories</li>
-                                    <li>Wide selection of Free Television Channels including HBO</li>
-                                    <li>Universal Docking station alarm clock/radio</li>
-                                    <li>Illuminating, adjustable bedside lamps</li>
-                                    <li>Fine linens with white down comforters, plush pillows and pillow-top mattresses</li>
-                                    <li>Updated, modern bathroom with sparkling, contemporary bath and vanity fixtures</li>
-                                    <li>Separate vanities with lighted cosmetic mirrors</li>
-                                    <li>Pro Terra products and toiletries</li>
-                                    <li>In-room refreshment center with coffeemaker, mini-fridge and microwave</li>
-                                    <li>Hair dryer and iron with board</li>
-                                    <li>Electronic in-room laptop safe</li>
-                                    <li>Pet-friendly rooms</li>
-                                </ul>
+                                <p>Because fitness had always played a huge part in Cindy's passion for a healthy life,
+                                    it seemed like a natural career choice. Six years ago, after moving to San Diego,
+                                    she started her career in the fitness industry. Cindy is certified by the International
+                                    Sports Science Association as a Certified Fitness Trainer and is well versed in a number
+                                    of different training techniques including: Kwondo-Strike, Boxing, BOSU, Body Weight Training and Stretch.
+                                    Cindy has worked as the Fitness Director at an award winning amenities gym in downtown
+                                    San Diego, does in-home fitness training throughout San Diego and also works as a fitness
+                                    model and spokesperson on television.</p>
+                                <p>Cindy now runs her own fitness company "Inertia Fitness". She has not only adopted Newton's
+                                    First Law as the name of her company, but as her life philosophy as well.</p>
+                                <p>"A body in motion tends to stay in motion, a body at rest tends to stay at rest".</p>
+
+                                <p>For more information or to schedule an appointment contact Inertia
+                                    Fitness by e-mail. inertiafitness@gmail.com »</p>
                             </div>
                         </div>
                         <ul class="link-list">
                             <li>
-                                <a href="#" class="btn grey" title="Floor Plans">Floor Plans</a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn grey" title="Book Now">Book Now</a>
+                                <a href="#" class="btn grey" title="Call">Call</a>
                             </li>
                         </ul>
                     </div>
@@ -123,7 +103,7 @@ get_header(); ?>
                 <div class="column image">
                     <div class="inner-box">
                         <div class="img-wrap ">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/world-class-accommodations.jpg" alt="">
+                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/yoga_2.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -131,16 +111,16 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/banner_img.jpg);">
+    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/yoga_3.jpg);">
         <div class="container">
             <div class="vertical-align-box">
                 <div class="inner-box">
                     <div class="banner-title-box">
-                        <h2 class="banner-title">Body Treatments</h2>
+                        <h2 class="banner-title">Fitness + Pilates + Yoga</h2>
                     </div>
                     <div class="banner-desc-box">
                         <div class="content">
-                            <p>All body treatments include a gharsana treatment.</p>
+                            <p>Couple and group sessions available for an extra $25 per person, per hour.</p>
                         </div>
                     </div>
                 </div>
@@ -154,23 +134,18 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Luna</h3>
+                            <h3 class="service-title">Personal Fitness Coach</h3>
                         </div>
                         <div class="service-desc">
                             <div class="content">
-                                <p>A special session for mothers to be. Promotes circulation and relaxation, easing aching joints and muscles. Great for both mama and baby.</p>
+                                <p>Away from your usual routine and need a little help staying on track while in San Diego? One of our talented, capable and inspiring fitness coaches would be excited to meet with you for some one-on-one exercise in the Sofia's innovative fitness room. Whether you are a beginner, intermediate or competitive athlete, we can help you maintain and even improve your fitness level while away from home.</p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
                         <ul class="price-list">
                             <li>
                                 <div class="price-box">
-                                    <p>50 min: <span class="price">$110</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$150</span></p>
+                                    <p>60 min: <span class="price">$110</span> (Individual)</p>
                                 </div>
                             </li>
                         </ul>
@@ -179,18 +154,18 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Sublime Thigh Treatment</h3>
+                            <h3 class="service-title">Mat Pilates</h3>
                         </div>
                         <div class="service-desc">
                             <div class="content">
-                                <p>A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty accumulations in the thighs and buttocks. A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty</p>
+                                <p>The Pilates method refers to a series of conditioning exercises that combine stretching, elongating, strengthening and breathing. This form of exercise has become popular for its low stress approach to building strength, increasing flexibility and its emphasis on balance and posture. These carefully executed movements can help you to become more aware of strengths and weaknesses in your body, achieve greater balance, coordination and symmetry and help you to avoid injury in day-to-day activities. Enjoy one-on-one instruction or group instruction by appointment only.</p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
                         <ul class="price-list">
                             <li>
                                 <div class="price-box">
-                                    <p>50 min: <span class="price">$120</span></p>
+                                    <p>60 min: <span class="price">$110</span> (Individual)</p>
                                 </div>
                             </li>
                         </ul>
@@ -199,45 +174,35 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Crowning Chakra</h3>
+                            <h3 class="service-title">Yoga</h3>
                         </div>
                         <div class="service-desc show-more">
                             <div class="content">
-                                <p>A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
-                                    shoulders. Great for dry tresses as well! A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
-                                    shoulders. Great for dry tresses as well!</p>
+                                <p>We offer one-hour Yoga classes in the Harkishan Yoga Studio located on the second floor of the hotel. </p>
+                                <p>Current classes are Monday, Wednesday, <br>
+                                Friday, and Sundays <br>
+                                    from 8 am to 9 am.  </p>
+                                <p>Saturday mornings are at 9 am to 10 am and 10:30 am to 11:30 am. </p>
+                                <p>These classes are included in the guests stay. </p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>30 min: <span class="price">$80</span></p>
-                                    <div class="additional-info">(add-on to any treatment)</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$150</span></p>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
 
-    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/banner_img.jpg);">
+    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/yoga_4.jpg);">
         <div class="container">
             <div class="vertical-align-box">
                 <div class="inner-box">
                     <div class="banner-title-box">
-                        <h2 class="banner-title">Body Treatments</h2>
+                        <h2 class="banner-title">Walk + Fitness Equipment</h2>
                     </div>
                     <div class="banner-desc-box">
                         <div class="content">
-                            <p>All body treatments include a gharsana treatment.</p>
+                            <p>Join us for a Gaslamp Walkabout every Saturday and Sunday at 9 am.</p>
                         </div>
                     </div>
                 </div>
@@ -251,74 +216,42 @@ get_header(); ?>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Luna</h3>
+                            <h3 class="service-title">Gaslamp Walkabout</h3>
                         </div>
                         <div class="service-desc">
                             <div class="content">
-                                <p>A special session for mothers to be. Promotes circulation and relaxation, easing aching joints and muscles. Great for both mama and baby.</p>
+                                <p>Available Saturdays and Sundays, the Sofia offers a guided walkabout through the Historic Gaslamp Quarter and Bayfront. This is included in their stay.  The tour leaves from the hotel lobby at 9 am sharp. </p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$110</span></p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>80 min: <span class="price">$150</span></p>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                 </li>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Sublime Thigh Treatment</h3>
+                            <h3 class="service-title">Fitness Equipment</h3>
                         </div>
                         <div class="service-desc">
                             <div class="content">
-                                <p>A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty accumulations in the thighs and buttocks. A brisk gharsana treatment followed by deep, kneading massage strokes to break up fatty</p>
+                                <p>The facility boasts top of the line "Hoist" fitness equipment. A Four stack composed of: Chest press and Fly, Seated Row, Lat Pull Down, Leg Press and Standing Leg Curl.  As well as pulley systems with grip change-outs for multiple arm and shoulder exercises.</p>
+                                <p>Excellent cardio equipment available. Medicine balls of multiple weights, Dumbbells up to 50 lbs each, and Curl bars with adjustable weights. BOSU's are available for balance training, and Balance balls are available for core work.</p>
+                                <p>Jump ropes and Exercise bands are also available for guest use. And of course we have mats available for stretching. If Yoga is more your speed, our Yoga Studio is equipped with Mats, Straps, Blocks, Bolsters and Blankets. Great sound system and music available.</p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$120</span></p>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                 </li>
                 <li>
                     <div class="service-box">
                         <div class="title-box">
-                            <h3 class="service-title">Crowning Chakra</h3>
+                            <h3 class="service-title">Bicycles</h3>
                         </div>
                         <div class="service-desc show-more">
                             <div class="content">
-                                <p>A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
-                                    shoulders. Great for dry tresses as well! A blend of aromatherapy infused oil is used in pressure point massage to the head, neck and
-                                    shoulders. Great for dry tresses as well!</p>
+                                <p>As part of the guests stay, The Sofia offers Urban Cruisers along with helmets and locks on a first come basis.  Available between 7 am and 7 pm.  Maximum of 3 hours only.</p>
                             </div>
                         </div>
                         <a href="#" class="read-more">Read More</a>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>30 min: <span class="price">$80</span></p>
-                                    <div class="additional-info">(add-on to any treatment)</div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="price-box">
-                                    <p>50 min: <span class="price">$150</span></p>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                 </li>
             </ul>
@@ -406,7 +339,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/gallery_prefooter_bg.jpg);">
+    <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/yoga_prefooter.jpg);">
         <div class="container">
             <div class="vertical-align-box">
                 <div class="inner-box">
