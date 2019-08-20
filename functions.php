@@ -32,6 +32,11 @@ function load_style_script(){
     if ( is_page(69) ) {
         wp_enqueue_script('custom-map', get_template_directory_uri() . '/assets/js/custom/map.js', array('jquery'), '1.0.0', true );
     }
+
+    wp_localize_script('scripts', 'load_posts_var', array(
+            'load_post_ajaxurl' => admin_url('admin-ajax.php'),
+        )
+    );
 }
 add_action('wp_enqueue_scripts', 'load_style_script');
 
@@ -102,13 +107,13 @@ if ( function_exists( 'register_nav_menus' ) ) {
 
 // for excerpts
 function new_excerpt_more( $more ) {
-    return '&nbsp;&hellip;';
+    return '&hellip;';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 
 function new_excerpt_length($length) {
-  return 30;
+  return 40;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 
@@ -135,6 +140,9 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 
+// for Ajax funcs
+get_template_part('inc/func/ajax');
+
 
 // get current URL
 function current_url() {
@@ -158,7 +166,5 @@ if (class_exists('acf')) {
         global $tsh_google_map_key;
         acf_update_setting( 'google_api_key', $tsh_google_map_key );
     }
-
-
     add_action('acf/init', 'my_acf_init');
 }

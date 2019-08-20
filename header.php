@@ -24,7 +24,7 @@
                     <span></span>
                 </a>
 
-                <div class="weather-box">65◦C<span class="icon">&#x26C5;</span></div>
+                <div class="weather-box">45◦C<span class="icon">&#x26C5;</span></div>
 
                 <a href="#" class="btn btn-sm btn-find-rooms" title="<?php _e('Find Rooms', 'the-sofia-hotel'); ?>"><?php _e('Find Rooms', 'the-sofia-hotel'); ?></a>
             </div>
@@ -137,7 +137,7 @@
                     <span></span>
                 </a>
 
-                <div class="weather-box">65◦C<span class="icon">&#x26C5;</span></div>
+                <div class="weather-box">45◦C<span class="icon">&#x26C5;</span></div>
 
                 <a href="#" class="btn btn-sm btn-find-rooms" title="<?php _e('Find Rooms', 'the-sofia-hotel'); ?>"><?php _e('Find Rooms', 'the-sofia-hotel'); ?></a>
             </div>
