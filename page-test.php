@@ -5,6 +5,38 @@
 get_header(); ?>
 
     <?php get_template_part('inc/hero'); ?>
+<?php
+/*
+Секція section-two-columns
+bg:
+1. light-blue-bg
+2. purple-translucency-bg - https://acsdm.com/thesofiahotel/dining/
+3. abstract-bg (абстракція на фоні)
+
+colors: (кольори заголовків)
+1. color-purple
+2. color-gold
+3. color-light-blue
+4. inverse  - https://acsdm.com/thesofiahotel/dining/
+
+висота блока (мінімальна висота 600)
+1. high-block (мінімальна висота 830) (приклад перша секція на головній)
+
+заголовки (а головній 76пх)
+1. small (48пх) - https://acsdm.com/thesofiahotel/accommodations/
+
+Секція section-interesting-info
+colors: (кольори заголовків і контенту)
+1. color-purple
+2. color-gold
+3. color-light-blue
+4. inverse
+
+Секція section-banner
+її не вийде обєднати з section-interesting-info тому що в банера є ще варіант зі слайдером https://acsdm.com/thesofiahotel/press/
+
+*/
+?>
 
     <?php /* if (get_current_user_id() == 1) { ?>
         <section class="section-banner" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/banner_img.jpg);">

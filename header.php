@@ -20,13 +20,23 @@
                     </a>
                 </div>
 
-                <a href="#burger-menu" title="<?php esc_attr_e('Navigation Menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup" data-open="">
+                <a href="#burger-menu" title="<?php esc_attr_e('Navigation menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup" data-open="">
                     <span></span>
                 </a>
 
                 <div class="weather-box">45◦C<span class="icon">&#x26C5;</span></div>
 
-                <a href="#" class="btn btn-sm btn-find-rooms" title="<?php _e('Find Rooms', 'the-sofia-hotel'); ?>"><?php _e('Find Rooms', 'the-sofia-hotel'); ?></a>
+                <?php
+                    $header_btn = get_field('header_btn', 'option');
+
+                    if ($header_btn && is_array($header_btn) && $header_btn['show']) {
+                        if ( trim($header_btn['url']) ) {
+                            $label  = trim($header_btn['label']) ? $header_btn['label'] : __('Find Rooms', 'the-sofia-hotel');
+                            $target = $header_btn['target'] ? 'target="_blank" rel="nofollow noopener"' : 'target="_self"';
+                            echo "<a href='".esc_url($header_btn['url'])."' class='btn btn-sm btn-find-rooms' title='".esc_attr($label)."' {$target}>{$label}</a>";
+                        }
+                    }
+                ?>
             </div>
             <div class="burger-box" id="burger-menu">
                 <div class="hero">
@@ -78,7 +88,7 @@
                                             <ul class="contact-list">
                                                 <?php if (trim($contacts['toll_free'])) { ?>
                                                     <li>
-                                                        <p>Toll Free: <?php echo $contacts['toll_free']; ?></p>
+                                                        <p><?php _e('Toll Free:', 'the-sofia-hotel'); ?> <?php echo $contacts['toll_free']; ?></p>
                                                     </li>
                                                 <?php }
                                                 if (trim($contacts['tel'])) { ?>
@@ -139,7 +149,15 @@
 
                 <div class="weather-box">45◦C<span class="icon">&#x26C5;</span></div>
 
-                <a href="#" class="btn btn-sm btn-find-rooms" title="<?php _e('Find Rooms', 'the-sofia-hotel'); ?>"><?php _e('Find Rooms', 'the-sofia-hotel'); ?></a>
+                <?php
+                    if ($header_btn && is_array($header_btn) && $header_btn['show']) {
+                        if ( trim($header_btn['url']) ) {
+                            $label  = trim($header_btn['label']) ? $header_btn['label'] : __('Find Rooms', 'the-sofia-hotel');
+                            $target = $header_btn['target'] ? 'target="_blank" rel="nofollow noopener"' : 'target="_self"';
+                            echo "<a href='".esc_url($header_btn['url'])."' class='btn btn-sm btn-find-rooms' title='".esc_attr($label)."' {$target}>{$label}</a>";
+                        }
+                    }
+                ?>
             </div>
         </header>
 

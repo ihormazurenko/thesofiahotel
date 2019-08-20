@@ -34,7 +34,7 @@
                             <?php if (trim($contacts['toll_free'])) { ?>
                                 <li>
                                     <i class="fas fa-mobile-alt"></i>
-                                    <p>Toll Free: <?php echo $contacts['toll_free']; ?></p>
+                                    <p><?php _e('Toll Free:', 'the-sofia-hotel'); ?> <?php echo $contacts['toll_free']; ?></p>
                                 </li>
                             <?php }
                             if (trim($contacts['address'])) { ?>

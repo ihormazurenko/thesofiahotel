@@ -6,29 +6,25 @@ get_header();
 
 global $tsh_google_map_key;
 
-$tsh_coordinate = [];
+//The Sofia Hotel Coordinate
+$tsh_coordinate_base = get_field('contacts', 'option')['map'] ? get_field('contacts', 'option')['map'] : [];
+
+$base_lat = $tsh_coordinate_base['lat'] ? (float)$tsh_coordinate_base['lat'] : 32.715946087492;
+$base_lng = $tsh_coordinate_base['lng'] ? (float)$tsh_coordinate_base['lng'] : -117.16446876526;
 
 $icon_rel = [
-  'coffee'      => 'coffee',
-  'dining'      => 'restaurant',
-  'nightlife'   => 'area',
-  'shops'       => 'shop',
-  'sites'       => 'photo',
+    'coffee'      => 'coffee',
+    'dining'      => 'restaurant',
+    'nightlife'   => 'area',
+    'shops'       => 'shop',
+    'sites'       => 'photo',
 ];
 
-//The Sofia Hotel Coordinate
-$tsh_coordinate[] = [
-    'place_title' => __('The Sofia Hotel','the-sofia-hotel'),
-    'place_short_desc' => '',
-    'place_lat' => 32.7159711,
-    'place_lng' => -117.1666568,
-    'place_type' => 'tsh'
-];
-
+$url         = get_template_directory_uri() . '/inc/func/places_data.json';
+$places_data = json_decode(file_get_contents($url),true);
 ?>
 
     <?php get_template_part('inc/hero'); ?>
-
 
     <section class="section-tabs map-type">
         <div class="container">
@@ -49,20 +45,18 @@ $tsh_coordinate[] = [
                     'update_term_meta_cache' => true
                 ) );
 
-//                var_dump($cats);
-
                 if ($cats && is_array($cats) && count($cats) > 0) {
                 ?>
+
                 <div class="tabs-nav">
                     <ul class="tab-list">
                         <li>
-                            <a href="#" data-types="tsh, coffee, dining, nightlife, shops, sites" title="<?php esc_attr_e('Show all', 'the-sofia-hotel'); ?>" class="" data-filter="*"><?php _e('Show all', 'the-sofia-hotel'); ?></a>
+                            <a href="#all" data-types="tsh, coffee, dining, nightlife, shops, sites" title="<?php esc_attr_e('Show all', 'the-sofia-hotel'); ?>" class="" data-filter="*"><?php _e('Show all', 'the-sofia-hotel'); ?></a>
                         </li>
                         <?php
                         $colors = ['light-blue', 'gold', 'purple', 'grey', 'dark'];
                         foreach ($cats as $cat) {
                             echo "<li><a href='#{$cat->slug}' data-types=\"tsh, {$cat->slug}\" title='".esc_attr($cat->name)."' class='color-".current($colors)." {$icon_rel[$cat->slug]}' data-filter='.{$cat->slug}'>{$cat->name}</a></li>";
-//                            echo '<li><<a href="#'.$cat->slug.'" onclick="toggleGroup('[tsh, {$cat->slug}]')"></a></li>'
                             next($colors);
                         }
                         ?>
@@ -73,145 +67,16 @@ $tsh_coordinate[] = [
             <div class="map-wrap">
                 <div id="map"></div>
             </div>
-            <?php
-            global $wp_query;
 
-            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-            $args = array(
-                'post_type'     => 'place',
-                'post_status'   => 'publish',
-                'posts_per_page' => -1,
-                'orderby'       => 'date',
-                'order'         => 'ASC',
-                'paged'         => $paged,
-            );
-            $new_query = new WP_Query( $args );
-
-            if ($new_query->have_posts()) {
-                while ( $new_query->have_posts() ) : $new_query->the_post();
-                    $map                = get_field('map');
-                    $title              = get_the_title();
-                    $short_description  = get_field('place_description');
-                    $types              = wp_get_post_terms( get_the_ID(), 'place_type' );
-                    $marker_description = $short_description ? preg_replace('/[\n\r]/', '', htmlentities($short_description)) : '';
-                    $place_type         = '';
-
-                    if ($types && is_array($types) && count($types) > 0) {
-                        foreach ($types as $type) {
-                            $place_type = (trim($types[0]->slug) && count($types[0]->count) > 0 ) ? $types[0]->slug : '';
-                        }
-                    }
-
-                    if ($map && is_array($map) && count($map) > 0) {
-                        $lat = $map['lat'] ? (float)$map['lat'] : '';
-                        $lng = $map['lng'] ? (float)$map['lng'] : '';
-                    }
-
-                    $tsh_coordinate[] = [
-                        'place_title' => $title,
-                        'place_short_desc' => $marker_description,
-                        'place_lat' => $lat,
-                        'place_lng' => $lng,
-                        'place_type' => $place_type
-                    ];
-                endwhile;
-            }
-
-            wp_reset_query();
-
-            ?>
             <script>
                 tsh_marker_base_url = "<?php echo get_bloginfo('template_url') . '/img/'; ?>";
-                tsh_arr = '<?php echo json_encode($tsh_coordinate); ?>';
+                tsh_arr = '<?php echo json_encode($places_data); ?>';
+                tsh_base_lat = <?php echo $base_lat; ?>;
+                tsh_base_lng = <?php echo $base_lng; ?>;
             </script>
         </div>
     </section>
 
-
-<?php /* ?>
-    <section class="section-tabs">
-        <div class="container">
-            <div class="tabs-box">
-                <div class="tabs-content tabs-on">
-                    <div class="tabs-nav mobile-hidden">
-                        <ul class="tab-list">
-                            <li>
-                                <a href="#hotel" title="Coffee" class="color-light-blue  coffee">Coffee</a>
-                            </li>
-                            <li>
-                                <a href="#rooms" title="Sites" class="color-gold  photo">Sites</a>
-                            </li>
-                            <li>
-                                <a href="#restaurant" title="Dining" class="color-purple  restaurant">Dining</a>
-                            </li>
-                            <li>
-                                <a href="#business" title="Shops" class="color-grey  shop">Shops</a>
-                            </li>
-                            <li>
-                                <a href="#area" title="Nightlife" class="color-dark  area">Nightlife</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-box-btn">
-                        <a href="#hotel" class="color-light-blue coffee" title="Coffee">Coffee</a>
-                    </div>
-                    <div id="hotel" class="tab-section">
-                        <div class="tab-inner-box">
-                            <div class="temp-box centered-img">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/map.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-box-btn">
-                        <a href="#rooms" class="color-gold photo" title="Sites">Sites</a>
-                    </div>
-                    <div id="rooms" class="tab-section">
-                        <div class="tab-inner-box">
-                            <div class="temp-box centered-img">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/map.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-box-btn">
-                        <a href="#restaurant" class="color-purple restaurant" title="ResDiningtaurant">Dining</a>
-                    </div>
-                    <div id="restaurant" class="tab-section">
-                        <div class="tab-inner-box">
-                            <div class="temp-box centered-img">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/map.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-box-btn">
-                        <a href="#business" class="color-grey shop" title="Shops">Shops</a>
-                    </div>
-                    <div id="business" class="tab-section">
-                        <div class="tab-inner-box">
-                            <div class="temp-box centered-img">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/map.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-box-btn">
-                        <a href="#area" class="color-dark area" title="Nightlife">Nightlife</a>
-                    </div>
-                    <div id="area" class="tab-section">
-                        <div class="tab-inner-box">
-                            <div class="temp-box centered-img">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/map.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<?php */ ?>
     <section class="section section-interesting-info color-light-blue">
         <div class="container">
             <h2 class="section-title">Discover America's Finest City</h2>

@@ -143,6 +143,8 @@ if( function_exists('acf_add_options_page') ) {
 // for Ajax funcs
 get_template_part('inc/func/ajax');
 
+// for Cron Job
+get_template_part('inc/func/cron');
 
 // get current URL
 function current_url() {
@@ -168,3 +170,6 @@ if (class_exists('acf')) {
     }
     add_action('acf/init', 'my_acf_init');
 }
+
+//update Places date
+add_action( 'save_post_place', 'places_cron_job', 10, 3 );

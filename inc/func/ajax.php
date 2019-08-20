@@ -4,6 +4,7 @@
 function load_more(){
     $args           = unserialize(stripslashes($_POST['query']));
     $args['paged']  = $_POST['page'] + 1;
+    if ($args['offset']) $args['offset'] = false;
 
     $q = new WP_Query($args);
     if( $q->have_posts() ):

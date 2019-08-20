@@ -104,7 +104,9 @@ jQuery(document).ready(function($) {
                             loop: true,
                             pagination: {
                                 el: '.swiper-pagination',
+                                clickable: true
                             },
+
                         });
                     });
                 }
@@ -426,6 +428,16 @@ jQuery(document).ready(function($) {
         }
 
 
+        // $(window).on('load resize', function(){
+        //     var body = $('body');
+        //     if ($(this).scrollTop() > 0) {
+        //         body.addClass('scrolling');
+        //     } else {
+        //         body.removeClass('scrolling');
+        //     }
+        // });
+
+
         //header scroll effect
         function scrollEffects() {
             var $window = $(window),
@@ -537,7 +549,7 @@ jQuery(document).ready(function($) {
                             lastScrollTop = top;
                         });
                     }
-                }, 50);
+                }, 10);
             });
         }
 

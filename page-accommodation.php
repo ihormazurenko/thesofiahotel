@@ -261,7 +261,7 @@ get_header(); ?>
                                 <p>Purchase your fare onboard or at ticket vending machines located near the customer service desk at either terminal. For maps and trip, visit www.sdmts.com or call 619202333004.</p>
 
                                 <p>UBER DISCOUNT CODE: <br>
-                                    First time users get free ride up to $20. Promo code is: SOFIAHOTEL</p>
+                                    First time users get free ride up to $20. Promo code is: SOFIAHOTEL</p>
 
                                 <p>FRED SAN DIEGO <br>
                                     Free Ride Everywhere Downtown.</p>

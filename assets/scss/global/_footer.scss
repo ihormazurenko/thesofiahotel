@@ -8,6 +8,10 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+  @media all and (max-width: 480px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .top {
     overflow: hidden;
     padding: 5px 15px 25px;

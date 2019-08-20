@@ -351,10 +351,6 @@ img {
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.home {
-  letter-spacing: 1px;
-  word-spacing: 1px; }
-
 .wrapper {
   position: relative;
   display: block;
@@ -709,26 +705,42 @@ div.wpcf7-acceptance-missing {
     .header.show-burger .btn-find-rooms {
       display: block;
       position: absolute;
-      right: 150px;
-      top: 70px; }
+      left: 42px;
+      right: auto;
+      top: 72px; }
       .admin-bar .header.show-burger .btn-find-rooms {
-        top: 120px; }
+        top: 122px; }
     .header.show-burger .weather-box {
       display: block;
       position: absolute;
-      top: 73px;
+      top: 72px;
       right: 45px; }
       .admin-bar .header.show-burger .weather-box {
-        top: 120px; } }
+        top: 122px; } }
 
-.admin-bar .header.show-burger .container {
+.admin-bar .header.show-burger > .container {
   padding-top: 92px; }
   @media all and (max-width: 782px) {
-    .admin-bar .header.show-burger .container {
+    .admin-bar .header.show-burger > .container {
       padding-top: 106px; } }
   @media all and (max-width: 768px) {
-    .admin-bar .header.show-burger .container {
+    .admin-bar .header.show-burger > .container {
       padding-top: 76px; } }
+@media all and (max-width: 1024px) {
+  .admin-bar .header.show-burger .burger-inner-box .container {
+    padding-top: 10px; } }
+@media all and (max-width: 640px) {
+  .admin-bar .header.show-burger .burger-inner-box .container {
+    padding-top: 0; } }
+@media all and (max-width: 600px) {
+  .admin-bar.direction-down .header.show-burger .container, .admin-bar.direction-up .header.show-burger .container {
+    padding-top: 30px; }
+  .admin-bar.direction-down .header.show-burger .burger-inner-box .container, .admin-bar.direction-up .header.show-burger .burger-inner-box .container {
+    padding-top: 0; }
+  .admin-bar.direction-down .header.show-burger .btn-find-rooms,
+  .admin-bar.direction-down .header.show-burger .weather-box, .admin-bar.direction-up .header.show-burger .btn-find-rooms,
+  .admin-bar.direction-up .header.show-burger .weather-box {
+    top: 72px; } }
 
 #header-scrolling {
   visibility: hidden;
@@ -1066,6 +1078,9 @@ div.wpcf7-acceptance-missing {
     @media all and (max-width: 782px) {
       .admin-bar .burger-box {
         top: 46px; } }
+  @media all and (max-width: 600px) {
+    .admin-bar.direction-up .burger-box, .admin-bar.direction-down .burger-box {
+      top: 0; } }
 
 .burger-box .burger-inner-wrap {
   margin-top: 90px;
@@ -1080,7 +1095,7 @@ div.wpcf7-acceptance-missing {
       padding-top: 30px; } }
   @media all and (max-width: 640px) {
     .burger-box .burger-inner-wrap {
-      margin-top: 100px; } }
+      margin-top: 110px; } }
 .burger-box .burger-inner-box {
   display: block;
   width: 100%; }
@@ -1978,6 +1993,9 @@ uncomment this part if you haven't added this code anywhere else
     .burger-box .container {
       padding-left: 20px;
       padding-right: 20px; } }
+  @media all and (max-width: 640px) {
+    .burger-box .container {
+      padding-top: 0; } }
 .burger-box.has-sticky-message .hero {
   padding-bottom: 110px; }
 
@@ -2023,15 +2041,104 @@ uncomment this part if you haven't added this code anywhere else
       height: 560px;
       max-height: 90vh; } }
 
+.gm-style .gm-style-iw-c {
+  padding: 20px;
+  width: 100%;
+  background-color: #F1F2F2; }
+.gm-style .gm-style-iw-d {
+  overflow: visible !important;
+  padding: 0 20px 20px 0;
+  max-width: 100% !important; }
+.gm-style .gm-style-iw-t:after {
+  background-color: #F1F2F2; }
+
+.place-marker-box {
+  overflow: hidden; }
+
+.place-icon-box {
+  max-width: 60px;
+  width: 100%;
+  float: right;
+  font-family: "Lato", "Arial", sans-serif;
+  text-align: right; }
+  .place-icon-box .place-icon-coffee {
+    width: 35px; }
+  .place-icon-box .place-icon-nightlife {
+    width: 21px; }
+  .place-icon-box .place-icon-shops {
+    width: 21px; }
+  .place-icon-box .place-icon-sites {
+    width: 30px; }
+
 .place-marker-title {
-  margin-bottom: 20px;
+  padding-top: 10px;
+  margin-bottom: 5px;
   font-size: 22px;
   font-weight: 700;
   color: #4F5051; }
 
-.place-marker-info.content {
+.place-marker-info {
+  overflow: hidden;
+  clear: both;
+  margin-bottom: 5px; }
+  .place-marker-info.content {
+    font-size: 16px;
+    color: #4F5051;
+    letter-spacing: .015em; }
+
+.place-ratings-wrap {
+  color: #9B7F50;
   font-size: 16px;
-  color: #4F5051; }
+  font-weight: 400; }
+  .place-ratings-wrap .rating-count {
+    margin-right: 10px; }
+  .place-ratings-wrap .rating-box {
+    margin-right: 10px; }
+
+a.plan-review-link,
+.plan-review-link {
+  width: 100%;
+  font-family: "Lato", "Arial", sans-serif;
+  color: #9B7F50;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: .03em; }
+  a.plan-review-link span,
+  .plan-review-link span {
+    padding-bottom: 2px;
+    vertical-align: bottom; }
+  a.plan-review-link > :last-child,
+  .plan-review-link > :last-child {
+    text-align: right;
+    float: right; }
+  a.plan-review-link:hover, a.plan-review-link:focus,
+  .plan-review-link:hover,
+  .plan-review-link:focus {
+    color: #6E3D50; }
+
+.rating-box .stars-outer {
+  display: inline-block;
+  position: relative;
+  font-family: "Font Awesome 5 Pro";
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-weight: 700;
+  line-height: 1; }
+  .rating-box .stars-outer:before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #939598; }
+.rating-box .stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0; }
+  .rating-box .stars-inner:before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #9B7F50; }
 
 .footer {
   position: relative;
@@ -2043,6 +2150,10 @@ uncomment this part if you haven't added this code anywhere else
     .footer {
       padding-left: 10px;
       padding-right: 10px; } }
+  @media all and (max-width: 480px) {
+    .footer {
+      padding-left: 0;
+      padding-right: 0; } }
   .footer .top {
     overflow: hidden;
     padding: 5px 15px 25px;
@@ -2692,8 +2803,6 @@ uncomment this part if you haven't added this code anywhere else
       border: none; }
       .blog-list > li .column.text .inner-box {
         max-width: 100%; } }
-.blog-list > li .column.image .inner-box .img-wrap img {
-  max-height: 100%; }
 @media all and (max-width: 1024px) {
   .blog-list {
     border-bottom: 1px solid #c1c1c1; } }
@@ -2744,7 +2853,7 @@ a.load-more-btn,
 .sk-double-bounce {
   width: 64px;
   height: 64px;
-  position: relative; 
+  position: relative;
   margin: 3px auto 4px; }
   .sk-double-bounce .sk-child {
     width: 100%;
@@ -4490,7 +4599,7 @@ a.read-more,
       width: calc(50% - 6px); } }
   @media all and (max-width: 460px) {
     .interesting-link-list > li {
-      width: 100%; } }
+      width: 100%; } } 
 
 .subscribe-form-list {
   display: table;

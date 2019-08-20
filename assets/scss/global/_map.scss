@@ -7,18 +7,125 @@
     max-height: 90vh;
   }
 }
-.place-marker-box {
-  //background-color: #F1F2F2;
-}
-.place-marker-title {
-  margin-bottom: 20px;
-  font-size: 22px;
-  font-weight: $bold;
-  color: #4F5051;
-}
-.place-marker-info {
-  &.content {
-    font-size: 16px;
-    color: #4F5051;
+.gm-style {
+  .gm-style-iw-c {
+    padding: 20px;
+    width: 100%;
+    background-color: #F1F2F2;
+  }
+  .gm-style-iw-d {
+    overflow: visible !important;
+    padding: 0 20px 20px 0;
+    max-width: 100% !important;
+  }
+  .gm-style-iw-t {
+    &:after {
+      background-color: #F1F2F2;
+    }
   }
 }
+  .place-marker-box {
+    overflow: hidden;
+  }
+  .place-icon-box {
+    max-width: 60px;
+    width: 100%;
+    float: right;
+    font-family: $font-secondary;
+    text-align: right;
+    .place-icon {
+      &-coffee {
+        width: 35px;
+      }
+      &-dining {}
+      &-nightlife {
+        width: 21px;
+      }
+      &-shops {
+        width: 21px;
+      }
+      &-sites {
+        width: 30px;
+      }
+    }
+  }
+
+  .place-marker-title {
+    padding-top: 10px;
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: $bold;
+    color: #4F5051;
+  }
+  .place-marker-info {
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 5px;
+    &.content {
+      font-size: 16px;
+      color: #4F5051;
+      letter-spacing: .015em;
+    }
+  }
+  .place-ratings-wrap {
+    color: #9B7F50;
+    font-size: 16px;
+    font-weight: $normal;
+    .rating-count {
+      margin-right: 10px;
+    }
+    .rating-box {
+      margin-right: 10px;
+    }
+  }
+  a.plan-review-link,
+  .plan-review-link {
+    width: 100%;
+    font-family: $font-secondary;
+    color: #9B7F50;
+    font-size: 16px;
+    font-weight: $normal;
+    letter-spacing: .03em;
+    span {
+      padding-bottom: 2px;
+      vertical-align: bottom;
+    }
+    > :last-child {
+      text-align: right;
+      float: right;
+    }
+    &:hover, &:focus {
+      color: $color-text6;
+    }
+  }
+
+.rating-box {
+  .stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: "Font Awesome 5 Pro";
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-weight: 700;
+    line-height: 1;
+    &:before {
+      content: "\f005 \f005 \f005 \f005 \f005";
+      color: #939598;
+    }
+  }
+  .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    &:before {
+      content: "\f005 \f005 \f005 \f005 \f005";
+      color: #9B7F50;
+    }
+  }
+}
+
