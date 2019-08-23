@@ -169,7 +169,8 @@ a, .btn {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  background-color: rgba(75, 41, 54, 0.7); }
+  background-color: rgba(75, 41, 54, 0.7);
+  letter-spacing : 0.9px; }
   .btn:before, a.btn:before {
     content: '';
     position: absolute;
@@ -892,7 +893,8 @@ div.wpcf7-acceptance-missing {
     .hero header h1, .hero header h2, .hero header h3 {
       font-size: 64px;
       font-weight: 400;
-      line-height: 1; }
+      line-height: 1;
+      letter-spacing: -1.28px; }
     .hero header:after {
       content: '';
       position: absolute;
@@ -908,6 +910,9 @@ div.wpcf7-acceptance-missing {
     line-height: 1.2; }
     .hero .hero-content.wide {
       max-width: 980px; }
+    .hero .hero-content p {
+    	letter-spacing: -0.3px;
+    }
     .hero .hero-content p:not(:last-child) {
       margin-bottom: 10px; }
     .hero .hero-content:not(:last-child) {
@@ -981,7 +986,8 @@ div.wpcf7-acceptance-missing {
       font-size: 144px;
       line-height: 1;
       letter-spacing: 0;
-      word-spacing: 0; }
+      word-spacing: 0;
+      letter-spacing: -2.88px; }
       @media all and (max-width: 1024px) {
         .hero.full header h1, .hero.full header h2, .hero.full header h3 {
           font-size: 120px; } }

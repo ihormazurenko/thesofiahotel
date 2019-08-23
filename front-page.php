@@ -32,7 +32,7 @@ get_header(); ?>
                         </div>
                         <ul class="link-list">
                             <li>
-                                <a href="#" class="btn" title="Accommodations">Accommodations</a>
+                                <a href="https://acsdm.com/thesofiahotel/accommodations/" class="btn" title="Accommodations">Accommodations</a>
                             </li>
                         </ul>
                     </div>

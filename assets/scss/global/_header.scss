@@ -309,6 +309,7 @@
       font-size: 64px;
       font-weight: $normal;
       line-height: 1;
+      letter-spacing: -1.28px;
     }
     &:after {
       content: '';
@@ -327,6 +328,9 @@
     line-height: 1.2;
     &.wide {
       max-width: 980px;
+    }
+    p {
+      letter-spacing: -0.3px;
     }
     p:not(:last-child) {
       margin-bottom: 10px;
@@ -408,6 +412,7 @@
       h1, h2, h3 {
         font-size: $size-heading1;
         line-height: 1;
+        letter-spacing: -2.88px;
         @include spacing-break();
         @media all and (max-width: 1024px) {
           font-size: 120px;
