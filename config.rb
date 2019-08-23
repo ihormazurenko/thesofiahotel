@@ -16,6 +16,7 @@ images_dir = "assets/images"
 #fonts_dir = "assets/fonts"
 javascripts_dir = "assets/js"
 extensions_dir = "extensions"
+sourcemap = true
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

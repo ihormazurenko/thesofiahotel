@@ -80,7 +80,7 @@ get_header(); ?>
                         <div class="tabs-nav">
                             <ul class="tab-list">
                                 <li>
-                                    <a href="#" title="<?php esc_attr_e('Show all', 'the-sofia-hotel'); ?>" class="" data-filter="*"><?php _e('Show all', 'the-sofia-hotel'); ?></a>
+                                    <a href="#" title="<?php esc_attr_e('View all', 'the-sofia-hotel'); ?>" class="view-all" data-filter="*"><?php _e('View all', 'the-sofia-hotel'); ?></a>
                                 </li>
                                 <?php
                                     $colors = ['light-blue', 'gold', 'purple', 'grey', 'dark'];

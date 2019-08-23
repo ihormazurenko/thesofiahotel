@@ -252,13 +252,13 @@ get_header(); ?>
 
                                 <p>Download Compass Cloud, the free mobile ticketing app, to buy a 1-Day pass for only $5, and get unlimited rides all day on MTS Bus and Trolleys. All MTS trolleys and buses are wheelchair accessible.</p>
 
-                                <p>For maps and trip planning information about MTS Bus and Trolley, visit www.sdmts.com or call 619202333004.</p>
+                                <p>For maps and trip planning information about MTS Bus and Trolley, visit www.sdmts.com or call 619-233-3004.</p>
 
                                 <p>Directions from Airport</p>
 
                                 <p>Catch MTS Bus Route 992 right outside Airport Terminals 1 or 2. Get off on Broadway & Front St, and The Sofia Hotel is just steps away. Service on the 992 is every 15 minutes for most of the day, 7 days a week.</p>
 
-                                <p>Purchase your fare onboard or at ticket vending machines located near the customer service desk at either terminal. For maps and trip, visit www.sdmts.com or call 619202333004.</p>
+                                <p>Purchase your fare onboard or at ticket vending machines located near the customer service desk at either terminal. For maps and trip, visit www.sdmts.com or call 619-233-3004.</p>
 
                                 <p>UBER DISCOUNT CODE: <br>
                                     First time users get free ride up to $20. Promo code is: SOFIAHOTEL</p>

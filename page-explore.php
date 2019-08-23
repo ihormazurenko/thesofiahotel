@@ -51,7 +51,7 @@ $places_data = json_decode(file_get_contents($url),true);
                 <div class="tabs-nav">
                     <ul class="tab-list">
                         <li>
-                            <a href="#all" data-types="tsh, coffee, dining, nightlife, shops, sites" title="<?php esc_attr_e('Show all', 'the-sofia-hotel'); ?>" class="" data-filter="*"><?php _e('Show all', 'the-sofia-hotel'); ?></a>
+                            <a href="#all" data-types="tsh, coffee, dining, nightlife, shops, sites" title="<?php esc_attr_e('View all', 'the-sofia-hotel'); ?>" class="view-all" data-filter="*"><?php _e('View all', 'the-sofia-hotel'); ?></a>
                         </li>
                         <?php
                         $colors = ['light-blue', 'gold', 'purple', 'grey', 'dark'];
