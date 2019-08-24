@@ -15,7 +15,7 @@ get_header(); ?>
                             <a href="#" title="Craft Beer Tour">
                                 <div class="inner-box">
                                     <div class="img-wrap ">
-                                        <img src="https://acsdm.com/thesofiahotel/wp-content/themes/the-sofia-hotel/img/special_1.jpg" alt="">
+                                        <img src="https://acsdm.com/thesofiahotel/wp-content/themes/the-sofia-hotel/img/special_craft_beer.jpg" alt="">
                                     </div>
                                 </div>
                             </a>

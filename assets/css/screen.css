@@ -4039,54 +4039,60 @@ a.plan-review-link:hover, a.plan-review-link:focus,
 .section-blog .two-column-box {
   height: 600px;
 }
-/* line 34, ../scss/partials/_blog.scss */
+@media all and (min-width: 1600px) {
+  /* line 31, ../scss/partials/_blog.scss */
+  .section-blog .two-column-box {
+    height: 700px;
+  }
+}
+/* line 37, ../scss/partials/_blog.scss */
 .section-blog .content-box {
   margin-bottom: 38px;
   max-height: 235px;
 }
 @media all and (max-width: 1024px) {
-  /* line 34, ../scss/partials/_blog.scss */
+  /* line 37, ../scss/partials/_blog.scss */
   .section-blog .content-box {
     max-height: 100%;
   }
 }
-/* line 41, ../scss/partials/_blog.scss */
+/* line 44, ../scss/partials/_blog.scss */
 .section-blog .content {
   font-size: 27px;
 }
-/* line 45, ../scss/partials/_blog.scss */
+/* line 48, ../scss/partials/_blog.scss */
 .section-blog .two-column-box .link-list {
   margin-left: 0;
 }
-/* line 48, ../scss/partials/_blog.scss */
+/* line 51, ../scss/partials/_blog.scss */
 .section-blog .two-column-box a.brn, .section-blog .two-column-box .btn {
   min-width: 250px;
 }
 
-/* line 53, ../scss/partials/_blog.scss */
+/* line 56, ../scss/partials/_blog.scss */
 .date-box {
   display: block;
   font-size: 21px;
   letter-spacing: -.05em;
 }
 
-/* line 62, ../scss/partials/_blog.scss */
+/* line 65, ../scss/partials/_blog.scss */
 .color-gold .blog-list > li a:not(.btn):hover, .color-gold .blog-list > li a:not(.btn):focus {
   color: #6E3D50;
 }
-/* line 64, ../scss/partials/_blog.scss */
+/* line 67, ../scss/partials/_blog.scss */
 .color-gold .blog-list > li a:not(.btn):hover .section-title, .color-gold .blog-list > li a:not(.btn):focus .section-title {
   color: #6E3D50;
 }
-/* line 73, ../scss/partials/_blog.scss */
+/* line 76, ../scss/partials/_blog.scss */
 .color-purple .blog-list > li a:not(.btn):hover, .color-purple .blog-list > li a:not(.btn):focus, .color-light-blue .blog-list > li a:not(.btn):hover, .color-light-blue .blog-list > li a:not(.btn):focus, .inverse .blog-list > li a:not(.btn):hover, .inverse .blog-list > li a:not(.btn):focus, .blog-list > li a:not(.btn):hover, .blog-list > li a:not(.btn):focus {
   color: #8b7f50;
 }
-/* line 75, ../scss/partials/_blog.scss */
+/* line 78, ../scss/partials/_blog.scss */
 .color-purple .blog-list > li a:not(.btn):hover .section-title, .color-purple .blog-list > li a:not(.btn):focus .section-title, .color-light-blue .blog-list > li a:not(.btn):hover .section-title, .color-light-blue .blog-list > li a:not(.btn):focus .section-title, .inverse .blog-list > li a:not(.btn):hover .section-title, .inverse .blog-list > li a:not(.btn):focus .section-title, .blog-list > li a:not(.btn):hover .section-title, .blog-list > li a:not(.btn):focus .section-title {
   color: #8b7f50;
 }
-/* line 81, ../scss/partials/_blog.scss */
+/* line 84, ../scss/partials/_blog.scss */
 .blog-list > li a:not(.btn):hover img, .blog-list > li a:not(.btn):focus img {
   -webkit-transform: scale(1.1);
   -khtml-transform: scale(1.1);
@@ -4095,54 +4101,54 @@ a.plan-review-link:hover, a.plan-review-link:focus,
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
-/* line 87, ../scss/partials/_blog.scss */
+/* line 90, ../scss/partials/_blog.scss */
 .blog-list > li .column.text {
   padding: 65px 80px 65px 94px;
   border-bottom: 1px solid #c1c1c1;
 }
-/* line 90, ../scss/partials/_blog.scss */
+/* line 93, ../scss/partials/_blog.scss */
 .blog-list > li .column.text .inner-box {
   max-width: 425px;
 }
-/* line 94, ../scss/partials/_blog.scss */
+/* line 97, ../scss/partials/_blog.scss */
 .blog-list > li .column.text:only-child .inner-box {
   max-width: none;
 }
 @media all and (max-width: 1024px) {
-  /* line 87, ../scss/partials/_blog.scss */
+  /* line 90, ../scss/partials/_blog.scss */
   .blog-list > li .column.text {
     border: none;
   }
-  /* line 100, ../scss/partials/_blog.scss */
+  /* line 103, ../scss/partials/_blog.scss */
   .blog-list > li .column.text .inner-box {
     max-width: 100%;
   }
 }
 @media all and (max-width: 1024px) {
-  /* line 58, ../scss/partials/_blog.scss */
+  /* line 61, ../scss/partials/_blog.scss */
   .blog-list {
     border-bottom: 1px solid #c1c1c1;
   }
 }
 
-/* line 125, ../scss/partials/_blog.scss */
+/* line 128, ../scss/partials/_blog.scss */
 .load-more-box {
   padding: 46px 0 66px;
 }
-/* line 127, ../scss/partials/_blog.scss */
+/* line 130, ../scss/partials/_blog.scss */
 .load-more-box .sk-double-bounce {
   display: none;
 }
-/* line 131, ../scss/partials/_blog.scss */
+/* line 134, ../scss/partials/_blog.scss */
 .load-more-box.loading .sk-double-bounce {
   display: block;
 }
-/* line 134, ../scss/partials/_blog.scss */
+/* line 137, ../scss/partials/_blog.scss */
 .load-more-box.loading .load-more-btn {
   display: none;
 }
 
-/* line 139, ../scss/partials/_blog.scss */
+/* line 142, ../scss/partials/_blog.scss */
 a.load-more-btn,
 .load-more-btn {
   font-family: "Lato", "Arial", sans-serif;
@@ -4152,12 +4158,12 @@ a.load-more-btn,
   text-transform: uppercase;
   text-align: center;
 }
-/* line 147, ../scss/partials/_blog.scss */
+/* line 150, ../scss/partials/_blog.scss */
 a.load-more-btn .tsh-icon-arrow,
 .load-more-btn .tsh-icon-arrow {
   margin: 0 auto 12px;
 }
-/* line 149, ../scss/partials/_blog.scss */
+/* line 152, ../scss/partials/_blog.scss */
 a.load-more-btn .tsh-icon-arrow:before,
 .load-more-btn .tsh-icon-arrow:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.22 11.73'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23532433;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EРесурс 2%3C/title%3E%3Cg id='Слой_2' data-name='Слой 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M9.61,3.35C7.4,1.14,3,.09,0,0A28.82,28.82,0,0,1,9.61,11.73C11.52,7,15.28,3.2,19.22,0,16,.26,12,1.05,9.61,3.35Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -4168,19 +4174,19 @@ a.load-more-btn .tsh-icon-arrow:before,
   -o-transition: 0.35s;
   transition: 0.35s;
 }
-/* line 154, ../scss/partials/_blog.scss */
+/* line 157, ../scss/partials/_blog.scss */
 a.load-more-btn .btn-text,
 .load-more-btn .btn-text {
   display: block;
   margin: 0 auto;
 }
-/* line 158, ../scss/partials/_blog.scss */
+/* line 161, ../scss/partials/_blog.scss */
 a.load-more-btn:hover, a.load-more-btn:focus,
 .load-more-btn:hover,
 .load-more-btn:focus {
   color: #739193;
 }
-/* line 161, ../scss/partials/_blog.scss */
+/* line 164, ../scss/partials/_blog.scss */
 a.load-more-btn:hover .tsh-icon-arrow:before, a.load-more-btn:focus .tsh-icon-arrow:before,
 .load-more-btn:hover .tsh-icon-arrow:before,
 .load-more-btn:focus .tsh-icon-arrow:before {
@@ -4188,14 +4194,14 @@ a.load-more-btn:hover .tsh-icon-arrow:before, a.load-more-btn:focus .tsh-icon-ar
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19.22 11.73'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23739193;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EРесурс 2%3C/title%3E%3Cg id='Слой_2' data-name='Слой 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M9.61,3.35C7.4,1.14,3,.09,0,0A28.82,28.82,0,0,1,9.61,11.73C11.52,7,15.28,3.2,19.22,0,16,.26,12,1.05,9.61,3.35Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* line 170, ../scss/partials/_blog.scss */
+/* line 173, ../scss/partials/_blog.scss */
 .sk-double-bounce {
   width: 64px;
   height: 64px;
   position: relative;
   margin: 3px auto 4px;
 }
-/* line 176, ../scss/partials/_blog.scss */
+/* line 179, ../scss/partials/_blog.scss */
 .sk-double-bounce .sk-child {
   width: 100%;
   height: 100%;
@@ -4207,7 +4213,7 @@ a.load-more-btn:hover .tsh-icon-arrow:before, a.load-more-btn:focus .tsh-icon-ar
   left: 0;
   animation: sk-double-bounce 2.0s infinite ease-in-out;
 }
-/* line 188, ../scss/partials/_blog.scss */
+/* line 191, ../scss/partials/_blog.scss */
 .sk-double-bounce .sk-double-bounce-2 {
   animation-delay: -1.0s;
 }
@@ -6571,20 +6577,29 @@ a.read-more:hover, a.read-more:focus,
 }
 
 /* line 213, ../scss/partials/_contact-us.scss */
+.panel .wpcf7 {
+  margin-top: 40px;
+}
+/* line 216, ../scss/partials/_contact-us.scss */
+.panel .wpcf7 select {
+  font-size: 24px;
+}
+
+/* line 220, ../scss/partials/_contact-us.scss */
 .modal-form-btn-box {
   margin-top: 22px;
 }
 
-/* line 217, ../scss/partials/_contact-us.scss */
+/* line 224, ../scss/partials/_contact-us.scss */
 #thank-box {
   display: none;
 }
 
-/* line 223, ../scss/partials/_contact-us.scss */
+/* line 230, ../scss/partials/_contact-us.scss */
 .show-thank #form-box {
   display: none;
 }
-/* line 226, ../scss/partials/_contact-us.scss */
+/* line 233, ../scss/partials/_contact-us.scss */
 .show-thank #thank-box {
   display: block;
 }

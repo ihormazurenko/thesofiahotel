@@ -30,6 +30,9 @@
   }
   .two-column-box {
     height: 600px;
+    @media all and (min-width: 1600px) {
+      height: 700px;
+    }
   }
   .content-box {
     margin-bottom: 38px;
