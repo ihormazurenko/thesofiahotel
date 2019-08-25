@@ -18,7 +18,11 @@
   @include border-radius(0);
   @include transition($transition-other);
 }
-
+select.input-style {
+  option {
+    color: black;
+  }
+}
 textarea.input-style {
   overflow-y: auto;
   resize: none;

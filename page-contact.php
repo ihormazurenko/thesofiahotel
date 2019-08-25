@@ -59,8 +59,8 @@ get_header(); ?>
                                 <a href="#tab5" class="smooth-js" title="">Restaurant questions <i class="fa fa-chevron-down"></i></a>
                             </h3>
                             <div class="panel" id="tab5">
-                                <p>[Need Full Form Here]</p>
-                                <?php echo do_shortcode('[contact-form-7 id="174" title="HOW WAS YOUR STAY?"]'); ?>
+                                
+                                <?php echo do_shortcode('[contact-form-7 id="283" title="Restaurant Questions"]'); ?>
                             </div>
 
                             <h3 class="accordion">
