@@ -255,6 +255,7 @@ jQuery(document).ready(function($) {
                         panel.slideUp();
                     } else {
                         panel.slideDown();
+                        $('.panel').not(panel).slideUp().prev().removeClass('active');
                     }
 
                 });
