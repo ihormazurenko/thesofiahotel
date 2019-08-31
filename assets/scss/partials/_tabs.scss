@@ -66,7 +66,7 @@
     text-align: left;
     color: #4D4F50;
     cursor: pointer;
-    @include transition($transition-other);
+    @include transition(0s);
     word-break: normal;
     @media all and (max-width: 1024px) {
       font-size: 19px;
@@ -79,7 +79,7 @@
       height: 100%;
       width: 100%;
       @include bg(center, contain, no-repeat);
-      @include transition($transition-other);
+      // @include transition($transition-other);
     }
     &:after {
       position: absolute;
@@ -90,7 +90,7 @@
       max-width: 115px;
       height: 4px;
       background-color: #4D4F50;
-      @include transition($transition-other);
+      // @include transition($transition-other);
       @media all and (max-width: 640px) {
         content: none;
       }

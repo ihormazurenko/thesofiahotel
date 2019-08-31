@@ -6,242 +6,51 @@ get_header(); ?>
 
     <?php get_template_part('inc/hero'); ?>
 
-    <section class="section-services">
-        <div class="container">
-            <ul class="service-list press">
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <a href="#" class="service-logo-box">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_smaggle@2x.png" alt="">
-                            </a>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>"9 Things To Do In San Diego"</p>
-                            </div>
-                        </div>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>January 2017</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <a href="#" class="service-logo-box">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_traveller@2x.png" alt="">
-                            </a>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>"Hotel Review: The Sofia Hotel, San Diego, California"</p>
-                            </div>
-                        </div>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>September 2016</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <a href="#" class="service-logo-box">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_go@2x.png" alt="">
-                            </a>
-                        </div>
-                        <div class="service-desc show-more">
-                            <div class="content">
-                                <p>Comic Con, San Diego: The world's biggest pop culture convention"</p>
-                            </div>
-                        </div>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>March 2016</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
+    <?php get_template_part('inc/flexible-content'); ?>
 
-    <section class="section-banner banner-slider" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/banner_img.jpg);">
-        <div class="container">
-            <div class="banner-slider-box">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/press_slider-100.jpg" alt="">
-                            <div class="banner-slider-content-box">
-                                <div class="vertical-align-box">
-                                    <div class="inner-box">
-                                        <div class="banner-title-box">
-                                            <h2 class="banner-title">The Travel Magazine</h2>
-                                        </div>
-                                        <div class="banner-desc-box">
-                                            <div class="content">
-                                                <p>"Hotel Review: The Sofia Hotel, San Diego, California"</p>
-                                            </div>
-                                        </div>
-                                        <ul class="banner-link">
-                                            <li>
-                                                <a href="#" title="" class="btn">Read More</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/hero-home.jpg" alt="">
-                            <div class="banner-slider-content-box">
-                                <div class="vertical-align-box">
-                                    <div class="inner-box">
-                                        <div class="banner-title-box">
-                                            <h2 class="banner-title">The Travel Magazine</h2>
-                                        </div>
-                                        <div class="banner-desc-box">
-                                            <div class="content">
-                                                <p>"Hotel Review: The Sofia Hotel, San Diego, California"</p>
-                                            </div>
-                                        </div>
-                                        <ul class="banner-link">
-                                            <li>
-                                                <a href="#" title="" class="btn">Read More</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="<?php echo get_bloginfo('template_url'); ?>/img/prefooter-home.jpg" alt="">
-                            <div class="banner-slider-content-box">
-                                <div class="vertical-align-box">
-                                    <div class="inner-box">
-                                        <div class="banner-title-box">
-                                            <h2 class="banner-title">The Travel Magazine</h2>
-                                        </div>
-                                        <div class="banner-desc-box">
-                                            <div class="content">
-                                                <p>"Hotel Review: The Sofia Hotel, San Diego, California"</p>
-                                            </div>
-                                        </div>
-                                        <ul class="banner-link">
-                                            <li>
-                                                <a href="#" title="" class="btn">Read More</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
+    <?php /*
+        $args = array(
+            'post_type'     => 'news',
+            'post_status'   => 'publish',
+            'orderby'       => 'meta_value_num menu_order',
+            'order'         => 'DESC',
+            'meta_key'      => 'details_date',
+            'posts_per_page'=> 6,
+        );
+        $news_query = new WP_Query( $args );
+
+        if ( $news_query->have_posts() ) :
+    ?>
+        <section class="section-services">
+            <div class="container">
+                <ul class="service-list press" id="insert-list">
+
+                    <?php while ( $news_query->have_posts() ) : $news_query->the_post();
+                         get_template_part('loop', 'news');
+                    endwhile; ?>
+
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section-services">
-        <div class="container">
-            <ul class="service-list press">
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <a href="#" class="service-logo-box">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_smaggle@2x.png" alt="">
-                            </a>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>"9 Things To Do In San Diego"</p>
-                            </div>
-                        </div>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>January 2017</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <a href="#" class="service-logo-box">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_traveller@2x.png" alt="">
-                            </a>
-                        </div>
-                        <div class="service-desc">
-                            <div class="content">
-                                <p>"Hotel Review: The Sofia Hotel, San Diego, California"</p>
-                            </div>
-                        </div>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>September 2016</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="service-box">
-                        <div class="title-box">
-                            <a href="#" class="service-logo-box">
-                                <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_go@2x.png" alt="">
-                            </a>
-                        </div>
-                        <div class="service-desc show-more">
-                            <div class="content">
-                                <p>Comic Con, San Diego: The world's biggest pop culture convention"</p>
-                            </div>
-                        </div>
-                        <ul class="price-list">
-                            <li>
-                                <div class="price-box">
-                                    <p>March 2016</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="#" class="btn">Read More</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
+        <?php if ( $news_query->max_num_pages > 1 ) :
+            wp_reset_query();
 
-    <section class="section-load-more">
-        <div class="container">
+            $args['offset'] = 6;
+            $args['posts_per_page'] = 9;
+            $news_ajax_query = new WP_Query( $args );
+        ?>
+            <script>
+                var newQuery     = '<?php echo serialize($news_ajax_query->query_vars); ?>',
+                    current_page = '1',
+                    max_pages    = '<?php echo $news_ajax_query->max_num_pages; ?>';
+            </script>
+
             <?php get_template_part('inc/load-more'); ?>
-        </div>
-    </section>
+        <?php endif; ?>
 
-<?php /*
-<!--style for maps-->
-<script type="text/javascript">
-    var gmb_data = {"2885":{"id":"2885","ajax_url":"https:\/\/thesofiahotel.com\/wp-admin\/admin-ajax.php","map_params":{"title":"Nightlife","width":"100","height":"600","latitude":"32.7159428","longitude":"-117.1644647","zoom":"15","default_marker":"https:\/\/thesofiahotel.com\/wp-content\/plugins\/google-maps-builder-pro\/assets\/img\/spotlight-poi.png"},"map_controls":{"zoom_control":"DEFAULT","pan_control":"true","map_type_control":"horizontal_bar","draggable":"true","double_click_zoom":"true","wheel_zoom":"true","street_view":"true"},"map_theme":{"map_type":"RoadMap","map_theme_json":"[\r\n    {\r\n        \"featureType\": \"administrative\",\r\n        \"elementType\": \"labels.text.fill\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#444444\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"landscape\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#f2f2f2\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"landscape.natural\",\r\n        \"elementType\": \"geometry\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"poi\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"saturation\": -100\r\n            },\r\n            {\r\n                \"lightness\": 45\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.highway\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"simplified\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.arterial\",\r\n        \"elementType\": \"labels.icon\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"transit\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"water\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#c6abb5\"\r\n            },\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    }\r\n]"},"marker_centered":"yes","marker_cluster":"","plugin_url":"https:\/\/thesofiahotel.com\/wp-content\/plugins\/google-maps-builder-pro\/","site_name":"The Sofia Hotel","site_url":"https:\/\/thesofiahotel.com","mashup_markers":[{"post_type":"post","taxonomy":"none","latitude":"_edit_lock","longitude":"_edit_lock","featured_img":"yes","marker_img_id":0}],"map_markers":[{"place_id":"ChIJbQ_kUahU2YARc-JtJkbuqRc","lat":"32.7159428","lng":"-117.1644647","marker_img_id":128,"marker_img":"https:\/\/thesofiahotel.com\/wp-content\/uploads\/2017\/09\/MAP-e1504435739422.png","infowindow_open":"closed"}],"destination_markers":[{"travel_mode":"DRIVING","point":[]}],"text_directions":"overlay","layers":"","places_search":"","places_api":{"show_places":"yes","search_radius":"15000","search_places":["night_club"]},"map_markers_icon":"none"},"2884":{"id":"2884","ajax_url":"https:\/\/thesofiahotel.com\/wp-admin\/admin-ajax.php","map_params":{"title":"Shopping","width":"100","height":"600","latitude":"32.7159428","longitude":"-117.1644647","zoom":"15","default_marker":"https:\/\/thesofiahotel.com\/wp-content\/plugins\/google-maps-builder-pro\/assets\/img\/spotlight-poi.png"},"map_controls":{"zoom_control":"DEFAULT","pan_control":"true","map_type_control":"horizontal_bar","draggable":"true","double_click_zoom":"true","wheel_zoom":"true","street_view":"true"},"map_theme":{"map_type":"RoadMap","map_theme_json":"[\r\n    {\r\n        \"featureType\": \"administrative\",\r\n        \"elementType\": \"labels.text.fill\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#444444\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"landscape\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#f2f2f2\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"landscape.natural\",\r\n        \"elementType\": \"geometry\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"poi\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"saturation\": -100\r\n            },\r\n            {\r\n                \"lightness\": 45\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.highway\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"simplified\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.arterial\",\r\n        \"elementType\": \"labels.icon\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"transit\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"water\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#c6abb5\"\r\n            },\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    }\r\n]"},"marker_centered":"yes","marker_cluster":"","plugin_url":"https:\/\/thesofiahotel.com\/wp-content\/plugins\/google-maps-builder-pro\/","site_name":"The Sofia Hotel","site_url":"https:\/\/thesofiahotel.com","mashup_markers":[{"post_type":"post","taxonomy":"none","latitude":"_edit_lock","longitude":"_edit_lock","featured_img":"yes","marker_img_id":0}],"map_markers":[{"place_id":"ChIJbQ_kUahU2YARc-JtJkbuqRc","lat":"32.7159428","lng":"-117.1644647","marker_img_id":128,"marker_img":"https:\/\/thesofiahotel.com\/wp-content\/uploads\/2017\/09\/MAP-e1504435739422.png","infowindow_open":"closed"}],"destination_markers":[{"travel_mode":"DRIVING","point":[]}],"text_directions":"overlay","layers":"","places_search":"","places_api":{"show_places":"yes","search_radius":"3000","search_places":["atm","bank","beauty_salon","book_store","clothing_store","florist","grocery_or_supermarket","hair_care","jewelry_store","pharmacy","shoe_store","shopping_mall","store"]},"map_markers_icon":"none"},"2881":{"id":"2881","ajax_url":"https:\/\/thesofiahotel.com\/wp-admin\/admin-ajax.php","map_params":{"title":"Dining","width":"100","height":"600","latitude":"32.7159273","longitude":"-117.164289","zoom":"15","default_marker":"https:\/\/thesofiahotel.com\/wp-content\/plugins\/google-maps-builder-pro\/assets\/img\/spotlight-poi.png"},"map_controls":{"zoom_control":"DEFAULT","pan_control":"true","map_type_control":"horizontal_bar","draggable":"true","double_click_zoom":"true","wheel_zoom":"true","street_view":"true"},"map_theme":{"map_type":"RoadMap","map_theme_json":"[\r\n    {\r\n        \"featureType\": \"administrative\",\r\n        \"elementType\": \"labels.text.fill\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#444444\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"landscape\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#f2f2f2\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"landscape.natural\",\r\n        \"elementType\": \"geometry\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"poi\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"saturation\": -100\r\n            },\r\n            {\r\n                \"lightness\": 45\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.highway\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"simplified\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.arterial\",\r\n        \"elementType\": \"labels.icon\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"transit\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"water\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#c6abb5\"\r\n            },\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    }\r\n]"},"marker_centered":"yes","marker_cluster":"","plugin_url":"https:\/\/thesofiahotel.com\/wp-content\/plugins\/google-maps-builder-pro\/","site_name":"The Sofia Hotel","site_url":"https:\/\/thesofiahotel.com","mashup_markers":[{"post_type":"post","taxonomy":"none","latitude":"_edit_lock","longitude":"_edit_lock","featured_img":"yes","marker_img_id":0}],"map_markers":[{"title":"The Sofia Hotel","description":"","reference":"","place_id":"ChIJbQ_kUahU2YARc-JtJkbuqRc","hide_details":false,"lat":"32.7159428","lng":"-117.1644647","marker_img_id":128,"marker_img":"https:\/\/thesofiahotel.com\/wp-content\/uploads\/2017\/09\/MAP-e1504435739422.png","marker_included_img":"","marker":"","label":"","infowindow_open":"closed"},{"place_id":"ChIJI7PyTqhU2YAREoGQkmb7IXY","lat":"32.7159273","lng":"-117.164289","marker_img_id":2883,"marker_img":"https:\/\/thesofiahotel.com\/wp-content\/uploads\/2018\/01\/MAP-Currant-copy.png","infowindow_open":"closed"}],"destination_markers":[{"travel_mode":"DRIVING","point":[]}],"text_directions":"overlay","layers":"","places_search":"","places_api":{"show_places":"yes","search_radius":"15000","search_places":["bar","restaurant"]},"map_markers_icon":"none"},"2880":{"id":"2880","ajax_url":"https:\/\/thesofiahotel.com\/wp-admin\/admin-ajax.php","map_params":{"title":"Sites","width":"100","height":"600","latitude":"32.7159428","longitude":"-117.1644647","zoom":"14","default_marker":"https:\/\/thesofiahotel.com\/wp-content\/plugins\/google-maps-builder-pro\/assets\/img\/spotlight-poi.png"},"map_controls":{"zoom_control":"DEFAULT","pan_control":"true","map_type_control":"horizontal_bar","draggable":"true","double_click_zoom":"true","wheel_zoom":"true","street_view":"true"},"map_theme":{"map_type":"RoadMap","map_theme_json":"[\r\n    {\r\n        \"featureType\": \"administrative\",\r\n        \"elementType\": \"labels.text.fill\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#444444\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"landscape\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#f2f2f2\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"landscape.natural\",\r\n        \"elementType\": \"geometry\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"poi\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"poi.attraction\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"poi.attraction\",\r\n        \"elementType\": \"labels.text.fill\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#ff00e9\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"poi.park\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"poi.park\",\r\n        \"elementType\": \"geometry\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#c393c0\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"poi.park\",\r\n        \"elementType\": \"labels.text.fill\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#ee00d9\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"saturation\": -100\r\n            },\r\n            {\r\n                \"lightness\": 45\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.highway\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"simplified\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.arterial\",\r\n        \"elementType\": \"labels.icon\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"transit\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"water\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#c6abb5\"\r\n            },\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    }\r\n]"},"marker_centered":"yes","marker_cluster":"","plugin_url":"https:\/\/thesofiahotel.com\/wp-content\/plugins\/google-maps-builder-pro\/","site_name":"The Sofia Hotel","site_url":"https:\/\/thesofiahotel.com","mashup_markers":[{"post_type":"post","taxonomy":"none","latitude":"_edit_lock","longitude":"_edit_lock","featured_img":"yes","marker_img_id":0}],"map_markers":[{"title":"Taffy 3 Memorial","description":"","reference":"","place_id":"ChIJ_bLPSFWr3oARNFIMMcjESnA","hide_details":false,"lat":"32.7127149","lng":"-117.17413690000001","marker_img_id":0,"marker_img":false,"marker_included_img":"assets\/img\/maps-icons-collection\/information.png","marker":"","label":"","infowindow_open":"closed"},{"title":"Ernest Hahn Statue","description":"","reference":"","place_id":"ChIJWZi6AahU2YARI2OoPW7_Ybg","hide_details":false,"lat":"32.7146533","lng":"-117.16200049999998","marker_img_id":0,"marker_img":false,"marker_included_img":"assets\/img\/maps-icons-collection\/information.png","marker":"","label":"","infowindow_open":"closed"},{"title":"Visit the Gaslamp Museum at the Davis-Horton House","description":"","reference":"","place_id":"ChIJP_hB71lT2YAR8zwNVdBewng","hide_details":false,"lat":"32.7105762","lng":"-117.16068869999998","marker_img_id":0,"marker_img":false,"marker_included_img":"assets\/img\/maps-icons-collection\/information.png","marker":"","label":"","infowindow_open":"closed"},{"title":"The Sofia Hotel","place_id":"ChIJbQ_kUahU2YARc-JtJkbuqRc","lat":"32.7159428","lng":"-117.1644647","marker_img_id":128,"marker_img":"https:\/\/thesofiahotel.com\/wp-content\/uploads\/2017\/09\/MAP-e1504435739422.png","infowindow_open":"closed"}],"destination_markers":[{"travel_mode":"DRIVING","point":[]}],"text_directions":"overlay","layers":"","places_search":"","places_api":{"show_places":"yes","search_radius":"15000","search_places":["amusement_park","aquarium","art_gallery","casino","embassy","movie_theater","stadium","university"]},"map_markers_icon":"none"},"2878":{"id":"2878","ajax_url":"https:\/\/thesofiahotel.com\/wp-admin\/admin-ajax.php","map_params":{"title":"Coffee","width":"100","height":"600","latitude":"32.7159428","longitude":"-117.1644647","zoom":"15","default_marker":"https:\/\/thesofiahotel.com\/wp-content\/plugins\/google-maps-builder-pro\/assets\/img\/spotlight-poi.png"},"map_controls":{"zoom_control":"DEFAULT","pan_control":"true","map_type_control":"horizontal_bar","draggable":"true","double_click_zoom":"true","wheel_zoom":"true","street_view":"true"},"map_theme":{"map_type":"RoadMap","map_theme_json":"[\r\n    {\r\n        \"featureType\": \"administrative\",\r\n        \"elementType\": \"labels.text.fill\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#444444\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"landscape\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#f2f2f2\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"landscape.natural\",\r\n        \"elementType\": \"geometry\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"poi\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"saturation\": -100\r\n            },\r\n            {\r\n                \"lightness\": 45\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.highway\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"simplified\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"road.arterial\",\r\n        \"elementType\": \"labels.icon\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"transit\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"visibility\": \"off\"\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"featureType\": \"water\",\r\n        \"elementType\": \"all\",\r\n        \"stylers\": [\r\n            {\r\n                \"color\": \"#c6abb5\"\r\n            },\r\n            {\r\n                \"visibility\": \"on\"\r\n            }\r\n        ]\r\n    }\r\n]\r\n"},"marker_centered":"yes","marker_cluster":"","plugin_url":"https:\/\/thesofiahotel.com\/wp-content\/plugins\/google-maps-builder-pro\/","site_name":"The Sofia Hotel","site_url":"https:\/\/thesofiahotel.com","mashup_markers":[{"post_type":"post","taxonomy":"none","latitude":"_edit_lock","longitude":"_edit_lock","featured_img":"yes","marker_img_id":0}],"map_markers":[{"title":"The Sofia Hotel","description":"The Sofia Hotel is a proud member of a National Trust Historic Hotels of America. Find out more on our History page.","lat":"32.7159428","lng":"-117.1644647","marker_img_id":128,"marker_img":"https:\/\/thesofiahotel.com\/wp-content\/uploads\/2017\/09\/MAP-e1504435739422.png","infowindow_open":"closed"}],"destination_markers":[{"travel_mode":"DRIVING","point":[]}],"text_directions":"overlay","layers":"","places_search":"","places_api":{"show_places":"yes","search_radius":"8000","search_places":["cafe"]},"map_markers_icon":"none"},"i18n":{"get_directions":"Get Directions","visit_website":"Visit Website"},"infobubble_args":{"shadowStyle":0,"padding":12,"backgroundColor":"rgb(255, 255, 255)","borderRadius":3,"arrowSize":15,"minHeight":20,"maxHeight":450,"minWidth":200,"maxWidth":350,"borderWidth":0,"disableAutoPan":true,"disableAnimation":true,"backgroundClassName":"gmb-infobubble","closeSrc":"https:\/\/www.google.com\/intl\/en_us\/mapfiles\/close.gif"}};
-</script>
-*/ ?>
+    <?php else: echo "<div class='container'><p class='no-results'>".__('Sorry, no news found...', 'the-sofia-hotel')."</p></div>";
+        endif; wp_reset_query(); */ ?>
+
 
 <?php get_footer(); ?>

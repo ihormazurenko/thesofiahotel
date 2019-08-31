@@ -118,6 +118,9 @@
   margin-top: -32px;
   background-color: rgba(0, 0, 0, .7);
   background-image: none;
+  &.swiper-button-disabled {
+    display: none;
+  }
   &:after {
     position: absolute;
     content: '';

@@ -43,7 +43,7 @@ get_header(); ?>
                     <?php get_template_part('inc/load-more'); ?>
                 <?php endif; ?>
 
-            <?php else: echo "<p class='no-results'>".__('Sorry, no posts found...', 'the-sofia-hotel')."</p>";
+            <?php else: echo "<div class='container'><p class='no-results'>".__('Sorry, no posts found...', 'the-sofia-hotel')."</p></div>";
                 endif; wp_reset_query(); ?>
 
         </div>

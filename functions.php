@@ -171,5 +171,18 @@ if (class_exists('acf')) {
     add_action('acf/init', 'my_acf_init');
 }
 
+
+// to make ID of element
+function element_id($text = '') {
+    $output = '';
+
+    if(trim($text)){
+        $output  = preg_replace('/[^\w]/','-', strtolower(strip_tags(trim($text))) );
+        $output  = preg_replace('/(-)\1+/','-', $output );
+    }
+
+    return $output;
+}
+
 //update Places date
 add_action( 'save_post_place', 'places_cron_job', 10, 3 );

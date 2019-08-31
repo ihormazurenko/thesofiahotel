@@ -25,16 +25,6 @@
     padding-bottom: 0;
     letter-spacing: -.05em;
   }
-  //.color-purple & {
-  //  .section-title {
-  //    color: $color-text6;
-  //  }
-  //}
-  //.color-gold & {
-  //  .section-title {
-  //    color: $color-text2;
-  //  }
-  //}
   > :last-child {
     margin-bottom: 0;
   }
@@ -57,11 +47,6 @@
     }
   }
   .content {
-    //letter-spacing: -.05em;
-    //word-spacing: .05em;
-    //* {
-    //  line-height: 1.25;
-    //}
     > * {
       margin-bottom: 10px;
       &:last-child {
@@ -69,87 +54,101 @@
       }
     }
   }
-  .section-title {
-    position: relative;
-    &:after {
-      position: absolute;
-      content: '';
-      bottom: 0;
-      left: 50%;
-      width: 100%;
-      max-width: 120px;
-      height: 4px;
-      background-color: $color-text;
-      @include css3-prefix('transform', 'translateX(-50%)');
-    }
-  }
 
   &.transparent-bg {
     background-color: transparent;
   }
 }
-
-
-.link-list {
-  text-align: center;
-  &:last-child {
-    margin-bottom: -26px;
-  }
-  li {
-    display: inline-block;
-    margin: 0 20px 26px;
-    a {
-    }
-  }
-}
-
-.section-banner {
-  text-align: center;
-  background-color: $color-bg3;
-  @include bg();
-  &.transparent-bg {
-    background-color: transparent;
-  }
-  .vertical-align-box {
-    .inner-box {
-      >:last-child:not(.banner-link) {
-        margin-bottom: 0;
+.section {
+  &-interesting-info,
+  &-more-ways {
+    .section-title {
+      position: relative;
+      text-align: center;
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        max-width: 120px;
+        height: 4px;
+        background-color: $color-text;
+        @include css3-prefix('transform', 'translateX(-50%)');
       }
     }
   }
-  .banner-link {
-    //text-align: center;
+  &-more-ways {
+    .section-title {
+      margin-top: 74px;
+      margin-bottom: 80px;
+      .section-interesting-info + & {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+  .link-list {
+    text-align: center;
     &:last-child {
       margin-bottom: -26px;
-      @media all and (max-width: 560px) {
-        margin-bottom: -20px;
-      }
     }
     li {
       display: inline-block;
       margin: 0 20px 26px;
-      @media all and (max-width: 768px) {
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 20px;
+      a {
       }
-      a {}
     }
   }
-  //&.pre-footer {
-  //  .vertical-align-box {
-  //    height: 414px;
-  //  }
-  //}
-  &.banner-slider {
-    position: relative;
-    min-height: 410px;
-    .container {
-      max-width: 100%;
-      padding: 0;
+
+  .section-banner {
+    text-align: center;
+    background-color: $color-bg3;
+    @include bg();
+    &.transparent-bg {
+      background-color: transparent;
+    }
+    .vertical-align-box {
+      .inner-box {
+        >:last-child:not(.banner-link) {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .banner-link {
+      //text-align: center;
+      &:last-child {
+        margin-bottom: -26px;
+        @media all and (max-width: 560px) {
+          margin-bottom: -20px;
+        }
+      }
+      li {
+        display: inline-block;
+        margin: 0 20px 26px;
+        @media all and (max-width: 768px) {
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-bottom: 20px;
+        }
+        a {}
+      }
+    }
+    //&.pre-footer {
+    //  .vertical-align-box {
+    //    height: 414px;
+    //  }
+    //}
+    &.banner-slider {
+      position: relative;
+      min-height: 410px;
+      .container {
+        max-width: 100%;
+        padding: 0;
+      }
     }
   }
-}
 
   .banner-title-box {
     position: relative;
@@ -170,14 +169,14 @@
       margin-bottom: 0;
     }
   }
-    .banner-title {
-      margin-bottom: 32px;
-      font-size: 64px;
-      font-weight: $normal;
-      line-height: $line-height-heading;
-      color: $white;
-      letter-spacing: -.04em;
-    }
+  .banner-title {
+    margin-bottom: 32px;
+    font-size: 64px;
+    font-weight: $normal;
+    line-height: $line-height-heading;
+    color: $white;
+    letter-spacing: -.04em;
+  }
   .banner-desc-box {
     margin-bottom: 32px;
     .content {
@@ -196,177 +195,189 @@
     }
   }
 
-.two-column-box {
-  display: table;
-  width: 100%;
-  height: 600px;
-  .column {
-    display: table-cell;
-    position: relative;
-    width: 50%;
-    height: 100%;
-    vertical-align: top;
-    &.image {
-      @media all and (max-width: 1024px) {
-        height: 600px;
-      }
-      @media all and (max-width: 560px) {
-        height: 400px;
-      }
-      .inner-box {
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        .img-wrap {
-          img {
-            @include centered();
-
+  .two-column-box {
+    display: table;
+    width: 100%;
+    height: 600px;
+    .column {
+      display: table-cell;
+      position: relative;
+      width: 50%;
+      height: 100%;
+      vertical-align: top;
+      &.image {
+        @media all and (max-width: 1024px) {
+          height: 600px;
+        }
+        @media all and (max-width: 560px) {
+          height: 400px;
+        }
+        .inner-box {
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          .img-wrap {
+            img {
+              @include centered();
+              //max-height: 100%;
+              //&.higher {
+              //  max-height: initial;
+              //  max-width: 100%;
+              //}
+            }
           }
         }
       }
-    }
-    &.text {
-      padding: 52px;
-      @media all and (max-width: 1024px) {
-        display: table-footer-group;
-        padding: 0;
-      }
-      @media all and (max-width: 560px) {
-        text-align: center;
-      }
-      .inner-box {
-        display: inline-block;
-        max-width: 496px;
-        text-align: left;
-        > :last-child:not(.link-list) {
-          margin-bottom: 0;
-        }
+      &.text {
+        padding: 52px;
         @media all and (max-width: 1024px) {
-          display: block;
-          max-width: 100%;
-          padding: 52px 20px;
+          display: table-footer-group;
+          padding: 0;
         }
         @media all and (max-width: 560px) {
           text-align: center;
         }
+        .inner-box {
+          display: inline-block;
+          max-width: 496px;
+          text-align: left;
+          > :last-child:not(.link-list) {
+            margin-bottom: 0;
+          }
+          @media all and (max-width: 1024px) {
+            display: block;
+            max-width: 100%;
+            padding: 52px 20px;
+          }
+          @media all and (max-width: 560px) {
+            text-align: center;
+          }
+        }
+      }
+      .content {
+        ul, ol {
+          padding-left: 20px;
+        }
+        li {
+          margin-bottom: 0;
+        }
       }
     }
-  }
-  > :first-child {
-    &:not(.image) {
-      text-align: right;
+    > :first-child {
+      &:not(.image) {
+        text-align: right;
+      }
     }
-  }
-  > :only-child {
-    &:not(.image) {
+    > :only-child {
+      &:not(.image) {
+        text-align: left;
+      }
+    }
+    .content-box {
+      overflow-y: auto;
+      max-height: 400px;
+      margin-bottom: 32px;
+      .small & {
+        max-height: 380px;
+      }
+      .high-block & {
+        max-height: 466px;
+      }
+      @media all and (max-width: 1024px) {
+        max-height: 100%;
+        .high-block &,
+        .small & {
+          max-height: 100%;
+        }
+      }
+    }
+    .link-list {
+      //margin-left: -10px;
       text-align: left;
+      > li {
+        margin-left: 0;
+        margin-right: 5px;
+      }
+      @media all and (max-width: 1024px) {
+        margin-left: auto;
+      }
+      @media all and (max-width: 560px) {
+        text-align: center;
+        > li {
+          margin: 0 10px 20px;
+        }
+      }
+      + .section-title-box {
+        margin-top: 37px;
+      }
     }
-  }
-  .content-box {
-    overflow-y: auto;
-    max-height: 400px;
-    margin-bottom: 32px;
-    .small & {
-      max-height: 380px;
+    .btn, a.btn {
+      min-width: 220px;
     }
     .high-block & {
-      max-height: 466px;
-    }
-    @media all and (max-width: 1024px) {
-      max-height: 100%;
-      .high-block &,
-      .small & {
-        max-height: 100%;
-      }
-    }
-  }
-  .link-list {
-    //margin-left: -10px;
-    text-align: left;
-    > li {
-      margin-left: 0;
-      margin-right: 5px;
-    }
-    @media all and (max-width: 1024px) {
-      margin-left: auto;
-    }
-    @media all and (max-width: 560px) {
-      text-align: center;
-      > li {
-        margin: 0 10px 20px;
-      }
-    }
-    + .section-title-box {
-      margin-top: 37px;
-    }
-  }
-  .btn, a.btn {
-    min-width: 220px;
-  }
-  .high-block & {
-    //.two-column-box {
+      //.two-column-box {
       height: 830px;
-    //}
-  }
-  .vertical-middle & {
-    //.two-column-box {
+      //}
+    }
+    .vertical-middle & {
+      //.two-column-box {
       .column {
         vertical-align: middle;
       }
-    //}
-  }
-  .small & {
-    .content {
-      font-size: 26px;
-      @media all and (max-width: 1024px) {
-        font-size: 22px;
+      //}
+    }
+    .small & {
+      .content {
+        font-size: 26px;
+        @media all and (max-width: 1024px) {
+          font-size: 22px;
+        }
       }
     }
   }
-}
 
 
-.section-two-columns {
-  overflow: hidden;
-  background-color: $white;
-  &.light-blue-bg {
-    background-color: $color-bg3;
-  }
-  &.purple-translucency-bg {
-    background-color: rgba(99, 23, 59, .8);
-  }
-  .container {
-    position: relative;
-    z-index: 3;
-    max-width: 1980px;
-    padding: 0;
-  }
-  &.abstract-bg {
-    position: relative;
-    &:after {
-      position: absolute;
-      z-index: 1;
-      content: '';
-      left: 30%;
-      left: -webkit-calc(50% - 623px);
-      left: calc(50% - 623px);
-      bottom: -90px;
-      width: 2440px;
-      height: 368px;
-      background-position: bottom left;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1213.23 183'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23828487;opacity:0.2;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EResource 2%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M1213.23,113.81c0,32-17.89,49.17-45,49.17-10.18,0-19-2.46-26.33-7.72s-10.89-10.89-10.89-16.87c0-13,11.24-19,24.24-19a26.58,26.58,0,0,0-8.78,5.62,19.09,19.09,0,0,0-3.88,12.29c0,12.64,12.66,21.08,27.07,21.08,11.57,0,20.72-3.16,27.38-9.84q11.58-11.06,11.61-34.77c0-17.92-8.43-33.72-25-47.78-17.92-15.09-40.73-22.82-68.49-22.82-19,0-34.78,2.11-47.42,6,7.38,9.83,12.29,20.72,12.29,33.72a31.24,31.24,0,0,1-7,20.38c-6,7-14.38,10.53-26,10.53-8.43,0-15.81-3.16-22.13-9.13-4.92-4.58-7.72-9.49-8.43-14.41l1.4-.7c1.06,6,13,14.41,23.9,14.41a26.57,26.57,0,0,0,17.89-6.34c6.35-5.26,9.49-13,9.49-22.48s-3.86-20.36-8.43-24.58c-8.43,2.12-22.81,7-42.85,14.41s-38.65,15.1-56.2,23.18l-65.69,30.56a64.14,64.14,0,0,1,1.78,14.4c0,13-3.18,24.23-9.15,33C881,177.38,869.73,183,854.61,183a30.32,30.32,0,0,1-15.81-4.56c-6.66-3.86-10.18-9.13-10.18-15.46,0-9.84,8.78-14.4,17.55-14.4a12.22,12.22,0,0,0,3.18.35l.68,1.75a13.39,13.39,0,0,0-7.71,2.12c-3.87,2.46-5.64,6.67-5.64,11.93,0,9.49,7.41,15.47,19,15.47,10.89,0,20-4.57,27.39-13.35,7.4-9.13,11.26-20,11.26-33,0-3.16,0-4.92-1.77-13.71-26.7,11.59-46,17.56-60.06,17.56-13.69,0-21.44-1.4-29.5-4.21-12.29,6.31-25,12.65-37.24,18.62-15.1,5.26-29.51,8.08-43.91,8.08a153,153,0,0,0,38.3-12.65c6-3.16,16.5-9.48,32-19a52.22,52.22,0,0,1-17.58-9.83c-22.81,14-35.82,21.78-39.33,23.52-26.33,13-52,19.33-76.21,19.33a94,94,0,0,1-52.34-15.81,92.31,92.31,0,0,1-52.34,15.81c-24.24,0-49.88-6.32-76.24-19.33-3.51-1.74-16.49-9.47-39.33-23.52-3.86,3.16-13.69,8.77-17.55,9.83q24.74,15.28,31.62,19a130.29,130.29,0,0,0,38.62,12.29c-17.9.36-36.54-3.86-55.15-12.29-8.77-4.56-17.2-9.48-26-14.05a113.22,113.22,0,0,1-29.5,4.21c-14.06,0-34.07-6-60.08-17.56A75.81,75.81,0,0,0,319,134.18c0,25.64,15.81,46,38.65,46,12.63,0,18.95-5.27,18.95-15.47,0-8.41-4.92-14-13.35-14l.72-1.75c9.83-1.4,20.72,2.81,20.72,14,0,6.67-3.17,11.6-9.83,15.46A30.63,30.63,0,0,1,358.63,183c-14.75,0-26-5.62-33.7-16.51-6.32-9.13-9.49-20.36-9.49-33.36a65.92,65.92,0,0,1,1.74-14.4L251.52,88.17C234.66,80.44,216,72.71,196,65.33c-20-7.72-34.79-12.63-43.57-14.75-5.6,5.27-8.43,13.35-8.43,24.58,0,9.49,3.17,16.87,9.15,22.14A26.68,26.68,0,0,0,171.42,104c11.24,0,22.84-7.73,23.87-14.41l1.43.7c-.71,4.92-3.51,9.83-8.43,14.41-6.35,6-13.72,9.13-22.12,9.13-11.27,0-19.7-3.51-25.67-10.19a31.22,31.22,0,0,1-7.38-20.72c0-7.38,1.06-13.69,3.52-19.33a79.34,79.34,0,0,1,8.8-14.39c-12.66-3.86-28.47-6-47.42-6C70.6,43.21,47.76,50.94,29.5,66,13,79.74,4.57,95.89,4.57,113.81c0,15.11,3.86,26.7,11.61,34.42,6.66,6.67,15.78,10.19,27.38,10.19,15.1,0,27-8.08,27-21.08,0-10.18-3.85-14-12.63-17.91,13,0,24.24,6,24.24,19C82.21,150,66,163,45,163c-27,0-45-17.21-45-49.17,0-22.12,10.55-40.39,31.62-54.1q32.14-21.08,73.77-21.06c20.73,0,32.65,1.4,45.65,4.2C162.65,32,177,24.24,194.61,19.67c13-3.16,28.44-4.92,46.36-4.92,42.14,0,87.81,14.41,126.81,40.75Q387.28,45,404.65,40.75a226.25,226.25,0,0,1,52.68-6c13.72,0,30.21,1.76,41.11,7C509.67,15.45,536,0,565.87,0c15.47,0,29.53,3.87,40.76,10.53,12-7,25.64-10.53,40.73-10.53,30.56,0,55.86,15.11,67.44,41.8,4.57-2.11,10.89-3.87,19.32-4.91a139,139,0,0,1,21.78-2.12c19.33,0,36.88,1.76,52,5.62,11.57,2.82,23.87,7.73,37.59,15.11,37.93-25.64,85-40.75,126.8-40.75,23.87,0,43.19,2.82,57.94,8.09a97.68,97.68,0,0,1,32,20c8.43-1.74,28.81-4.2,45.68-4.2q42.66,0,72.69,20C1202.34,73.06,1213.23,91.33,1213.23,113.81ZM354.77,63.57c-22.13-14-42.14-24.58-60.06-31.95-21.78-8.78-42.16-13.36-61.11-13.36-27.76,0-53.74,7-75.18,25.65A325.91,325.91,0,0,1,195.67,52a446,446,0,0,1,62.17,22.14c12.29,5.26,22.47,9.84,30.55,14s19,10.18,32.31,17.91c1.05-2.8,2.82-6.68,5.28-11.59,2.8-4.92,5.26-8.44,7-10.19q-25.26-17.39-47.42-27.4C267,48.82,250.09,44.61,234.66,44.61a94.5,94.5,0,0,0-15.81,1.76c6-3.87,15.81-6,28.78-6,5.29,0,6.35,0,17.58,1.41,12.29,1.76,25.27,6,39.68,12.64a288.55,288.55,0,0,1,35.84,20.72c.69-.34,3.52-2.8,8.44-7C352.31,65.69,354.08,63.93,354.77,63.57Zm52,67.81-22.13-13.71c-23.9-14.75-40.05-25.29-48.48-31.26-2.46,2.46-5.26,6.68-8.09,12.65-1.74,3.86-3.14,7-3.52,9.13a191.56,191.56,0,0,0,29.53,14.75c16.5,6.68,30.19,10.19,41.08,10.19A44.74,44.74,0,0,0,406.77,131.38Zm28.09-15.11c-6-3.86-11.6-7.73-17.2-11.59-20-13.35-31.62-21.08-34.42-22.84C370.92,73.76,362.86,68.5,358.63,66c-1,.72-2.81,1.76-4.55,3.18-3.17,2.45-6.34,5.25-9.83,8.41,7,4.58,19.67,12.65,37.56,24.94,20,13.71,32.33,21.78,36.9,24.6A68.37,68.37,0,0,0,434.86,116.27ZM602.4,13.35c-8.77-5.62-22.12-9.48-37.22-9.48-15.46,0-28.47,4.21-39.33,13a61.3,61.3,0,0,0-19,27.74,71.18,71.18,0,0,1,22.84,16.5C539.88,72,545.14,84.65,545.14,98.7a24.47,24.47,0,0,1-3.85,13c-3.52,5.27-8.44,8.09-14.41,8.09-10.18,0-18.61-5.28-24.93-15.47A65.26,65.26,0,0,1,492.8,71a72.64,72.64,0,0,1,3.52-23.18c-9.83-5.28-28.78-9.13-48.11-9.13-27,0-52.34,5.61-75.86,20,15.09,9.84,29.5,19.68,43.53,29.15s23.19,16.17,27.76,20c5.63-6.68,8.78-16.87,8.78-23.54a11,11,0,0,0-.35-3.86c-1.74-12.65-9.83-20.37-20-19.33v-1.4a42.23,42.23,0,0,1,7.72-.7c6.32,0,11.23,1.06,15.09,3.52q8.44,5.25,8.43,16.85a36.76,36.76,0,0,1-5.26,19,45.78,45.78,0,0,1-9.83,12q23.21,19,54.8,33.71c21.07,9.49,38.62,14.41,52.34,14.41,20,0,33.7-5.62,46.71-15.81C581,125.75,568,99.06,568,73.76,568,53.74,581.34,27.75,602.4,13.35Zm-61.46,82.9q0-15.3-13.69-29.5c-7-7.38-14.41-12.31-22.12-15.11a85.22,85.22,0,0,0-2.83,20.72,65.37,65.37,0,0,0,7.37,29.5c4.92,9.49,10.55,14.41,17.21,14.41C536.37,116.27,540.94,110.65,540.94,96.25Zm89.22-20.37a108.33,108.33,0,0,0-3.86-29.16c-3.86-13.35-10.18-23.54-19.67-30.56-9.15,7-15.8,17.21-19.67,30.56a106.47,106.47,0,0,0-3.88,29.16c0,22.12,7.75,46,23.55,62.51C622.07,122.59,630.16,97.3,630.16,75.88ZM840.91,58.66c-22.84-13.7-50.59-20-76.23-20-20.73,0-36.16,3.15-47.77,9.13,2.46,6,3.52,13.69,3.52,23.18a59.92,59.92,0,0,1-8.78,32c-6.69,11.23-15.09,16.87-25.3,16.87-11.57,0-18.26-12.65-18.26-21.09,0-14.4,4.92-26.69,14.75-37.59A72.39,72.39,0,0,1,706,44.61a53.81,53.81,0,0,0-18.27-27c-10.89-9.14-24.23-13.7-39.67-13.7s-27,2.8-37.25,9.48C632.27,28.46,645.25,53,645.25,73.76c0,26.34-11.92,50.94-34,68.85,11.57,9.49,28.09,15.81,46.7,15.81,14,0,31.24-4.56,51.63-14a259.06,259.06,0,0,0,55.51-34.07,56.82,56.82,0,0,1-9.83-11.6,37.08,37.08,0,0,1-5.29-19.32c0-15.45,11.26-20.37,23.55-20.37a42.32,42.32,0,0,1,7.72.7v1.4c-17.21-1.4-21.78,18.63-20.38,23.54,0,8.08,2.11,15.11,8.77,23.19,7.41-6,20-14.75,38-27C816.33,74.82,827.57,67.45,840.91,58.66Zm-130,13.7a87.15,87.15,0,0,0-2.8-20.72c-7.38,2.46-14.41,7.73-21.79,15.11-9.49,9.47-14,19.3-14,29.5,0,14,4.54,20,14,20,6.69,0,12.3-4.92,17.21-14.41A63.25,63.25,0,0,0,710.94,72.36ZM869,77.62c-1.74-1.74-3.86-3.5-5.63-5.26A49.87,49.87,0,0,0,854.61,66q-10,5.81-54.8,35.83c-5.26,3.52-12.29,8.44-21.41,14.41a67.76,67.76,0,0,0,16.15,10.89c5.6-3.52,17.92-11.59,36.87-24.6C850.75,89.57,863,81.14,869,77.62Zm19.67,30.57c-.69-2.81-2.46-6.67-5.26-11.59-2.46-5.27-4.57-8.43-6.32-10.19C870.75,91,862,96.6,850.4,104c-7.37,4.56-22.12,13.69-43.9,27.4a37.45,37.45,0,0,0,11.92,1.75c11.26,0,25-3.17,40.76-9.84A192.68,192.68,0,0,0,888.68,108.19Zm166.13-64.28c-21.4-18.61-46.7-25.65-75.15-25.65-19,0-39.36,4.22-60.77,13-17.2,7-37.24,17.92-60.43,32.31,2.83,1.76,11.27,9.14,14.07,11.59a282.58,282.58,0,0,1,35.81-20.72c14.07-6.66,27.42-10.88,39.71-12.64,6-.35,11.58-1.41,18.61-1.41,12.29,0,21.78,1.76,27.76,5.27a67.44,67.44,0,0,0-15.13-1.4c-15.8,0-32.64,4.22-51.28,12.29C913.63,62.87,897.83,72,880.25,84.3c1.77,1.75,3.86,5.27,6.69,10.54,3.14,5.26,4.91,8.78,5.6,11.24,24.24-14,41.82-23.18,62.88-32a423.55,423.55,0,0,1,48.11-17.57C1023.57,50.58,1040.78,46.37,1054.81,43.91Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  .section-two-columns {
+    overflow: hidden;
+    background-color: $white;
+    &.light-blue-bg {
+      background-color: $color-bg3;
+    }
+    &.purple-translucency-bg {
+      background-color: rgba(99, 23, 59, .8);
+    }
+    .container {
+      position: relative;
+      z-index: 3;
+      max-width: 1980px;
+      padding: 0;
+    }
+    &.abstract-bg {
+      position: relative;
+      &:after {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        left: 30%;
+        left: -webkit-calc(50% - 623px);
+        left: calc(50% - 623px);
+        bottom: -90px;
+        width: 2440px;
+        height: 368px;
+        background-position: bottom left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1213.23 183'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23828487;opacity:0.2;%7D%3C/style%3E%3C/defs%3E%3Ctitle%3EResource 2%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='Artwork'%3E%3Cpath class='cls-1' d='M1213.23,113.81c0,32-17.89,49.17-45,49.17-10.18,0-19-2.46-26.33-7.72s-10.89-10.89-10.89-16.87c0-13,11.24-19,24.24-19a26.58,26.58,0,0,0-8.78,5.62,19.09,19.09,0,0,0-3.88,12.29c0,12.64,12.66,21.08,27.07,21.08,11.57,0,20.72-3.16,27.38-9.84q11.58-11.06,11.61-34.77c0-17.92-8.43-33.72-25-47.78-17.92-15.09-40.73-22.82-68.49-22.82-19,0-34.78,2.11-47.42,6,7.38,9.83,12.29,20.72,12.29,33.72a31.24,31.24,0,0,1-7,20.38c-6,7-14.38,10.53-26,10.53-8.43,0-15.81-3.16-22.13-9.13-4.92-4.58-7.72-9.49-8.43-14.41l1.4-.7c1.06,6,13,14.41,23.9,14.41a26.57,26.57,0,0,0,17.89-6.34c6.35-5.26,9.49-13,9.49-22.48s-3.86-20.36-8.43-24.58c-8.43,2.12-22.81,7-42.85,14.41s-38.65,15.1-56.2,23.18l-65.69,30.56a64.14,64.14,0,0,1,1.78,14.4c0,13-3.18,24.23-9.15,33C881,177.38,869.73,183,854.61,183a30.32,30.32,0,0,1-15.81-4.56c-6.66-3.86-10.18-9.13-10.18-15.46,0-9.84,8.78-14.4,17.55-14.4a12.22,12.22,0,0,0,3.18.35l.68,1.75a13.39,13.39,0,0,0-7.71,2.12c-3.87,2.46-5.64,6.67-5.64,11.93,0,9.49,7.41,15.47,19,15.47,10.89,0,20-4.57,27.39-13.35,7.4-9.13,11.26-20,11.26-33,0-3.16,0-4.92-1.77-13.71-26.7,11.59-46,17.56-60.06,17.56-13.69,0-21.44-1.4-29.5-4.21-12.29,6.31-25,12.65-37.24,18.62-15.1,5.26-29.51,8.08-43.91,8.08a153,153,0,0,0,38.3-12.65c6-3.16,16.5-9.48,32-19a52.22,52.22,0,0,1-17.58-9.83c-22.81,14-35.82,21.78-39.33,23.52-26.33,13-52,19.33-76.21,19.33a94,94,0,0,1-52.34-15.81,92.31,92.31,0,0,1-52.34,15.81c-24.24,0-49.88-6.32-76.24-19.33-3.51-1.74-16.49-9.47-39.33-23.52-3.86,3.16-13.69,8.77-17.55,9.83q24.74,15.28,31.62,19a130.29,130.29,0,0,0,38.62,12.29c-17.9.36-36.54-3.86-55.15-12.29-8.77-4.56-17.2-9.48-26-14.05a113.22,113.22,0,0,1-29.5,4.21c-14.06,0-34.07-6-60.08-17.56A75.81,75.81,0,0,0,319,134.18c0,25.64,15.81,46,38.65,46,12.63,0,18.95-5.27,18.95-15.47,0-8.41-4.92-14-13.35-14l.72-1.75c9.83-1.4,20.72,2.81,20.72,14,0,6.67-3.17,11.6-9.83,15.46A30.63,30.63,0,0,1,358.63,183c-14.75,0-26-5.62-33.7-16.51-6.32-9.13-9.49-20.36-9.49-33.36a65.92,65.92,0,0,1,1.74-14.4L251.52,88.17C234.66,80.44,216,72.71,196,65.33c-20-7.72-34.79-12.63-43.57-14.75-5.6,5.27-8.43,13.35-8.43,24.58,0,9.49,3.17,16.87,9.15,22.14A26.68,26.68,0,0,0,171.42,104c11.24,0,22.84-7.73,23.87-14.41l1.43.7c-.71,4.92-3.51,9.83-8.43,14.41-6.35,6-13.72,9.13-22.12,9.13-11.27,0-19.7-3.51-25.67-10.19a31.22,31.22,0,0,1-7.38-20.72c0-7.38,1.06-13.69,3.52-19.33a79.34,79.34,0,0,1,8.8-14.39c-12.66-3.86-28.47-6-47.42-6C70.6,43.21,47.76,50.94,29.5,66,13,79.74,4.57,95.89,4.57,113.81c0,15.11,3.86,26.7,11.61,34.42,6.66,6.67,15.78,10.19,27.38,10.19,15.1,0,27-8.08,27-21.08,0-10.18-3.85-14-12.63-17.91,13,0,24.24,6,24.24,19C82.21,150,66,163,45,163c-27,0-45-17.21-45-49.17,0-22.12,10.55-40.39,31.62-54.1q32.14-21.08,73.77-21.06c20.73,0,32.65,1.4,45.65,4.2C162.65,32,177,24.24,194.61,19.67c13-3.16,28.44-4.92,46.36-4.92,42.14,0,87.81,14.41,126.81,40.75Q387.28,45,404.65,40.75a226.25,226.25,0,0,1,52.68-6c13.72,0,30.21,1.76,41.11,7C509.67,15.45,536,0,565.87,0c15.47,0,29.53,3.87,40.76,10.53,12-7,25.64-10.53,40.73-10.53,30.56,0,55.86,15.11,67.44,41.8,4.57-2.11,10.89-3.87,19.32-4.91a139,139,0,0,1,21.78-2.12c19.33,0,36.88,1.76,52,5.62,11.57,2.82,23.87,7.73,37.59,15.11,37.93-25.64,85-40.75,126.8-40.75,23.87,0,43.19,2.82,57.94,8.09a97.68,97.68,0,0,1,32,20c8.43-1.74,28.81-4.2,45.68-4.2q42.66,0,72.69,20C1202.34,73.06,1213.23,91.33,1213.23,113.81ZM354.77,63.57c-22.13-14-42.14-24.58-60.06-31.95-21.78-8.78-42.16-13.36-61.11-13.36-27.76,0-53.74,7-75.18,25.65A325.91,325.91,0,0,1,195.67,52a446,446,0,0,1,62.17,22.14c12.29,5.26,22.47,9.84,30.55,14s19,10.18,32.31,17.91c1.05-2.8,2.82-6.68,5.28-11.59,2.8-4.92,5.26-8.44,7-10.19q-25.26-17.39-47.42-27.4C267,48.82,250.09,44.61,234.66,44.61a94.5,94.5,0,0,0-15.81,1.76c6-3.87,15.81-6,28.78-6,5.29,0,6.35,0,17.58,1.41,12.29,1.76,25.27,6,39.68,12.64a288.55,288.55,0,0,1,35.84,20.72c.69-.34,3.52-2.8,8.44-7C352.31,65.69,354.08,63.93,354.77,63.57Zm52,67.81-22.13-13.71c-23.9-14.75-40.05-25.29-48.48-31.26-2.46,2.46-5.26,6.68-8.09,12.65-1.74,3.86-3.14,7-3.52,9.13a191.56,191.56,0,0,0,29.53,14.75c16.5,6.68,30.19,10.19,41.08,10.19A44.74,44.74,0,0,0,406.77,131.38Zm28.09-15.11c-6-3.86-11.6-7.73-17.2-11.59-20-13.35-31.62-21.08-34.42-22.84C370.92,73.76,362.86,68.5,358.63,66c-1,.72-2.81,1.76-4.55,3.18-3.17,2.45-6.34,5.25-9.83,8.41,7,4.58,19.67,12.65,37.56,24.94,20,13.71,32.33,21.78,36.9,24.6A68.37,68.37,0,0,0,434.86,116.27ZM602.4,13.35c-8.77-5.62-22.12-9.48-37.22-9.48-15.46,0-28.47,4.21-39.33,13a61.3,61.3,0,0,0-19,27.74,71.18,71.18,0,0,1,22.84,16.5C539.88,72,545.14,84.65,545.14,98.7a24.47,24.47,0,0,1-3.85,13c-3.52,5.27-8.44,8.09-14.41,8.09-10.18,0-18.61-5.28-24.93-15.47A65.26,65.26,0,0,1,492.8,71a72.64,72.64,0,0,1,3.52-23.18c-9.83-5.28-28.78-9.13-48.11-9.13-27,0-52.34,5.61-75.86,20,15.09,9.84,29.5,19.68,43.53,29.15s23.19,16.17,27.76,20c5.63-6.68,8.78-16.87,8.78-23.54a11,11,0,0,0-.35-3.86c-1.74-12.65-9.83-20.37-20-19.33v-1.4a42.23,42.23,0,0,1,7.72-.7c6.32,0,11.23,1.06,15.09,3.52q8.44,5.25,8.43,16.85a36.76,36.76,0,0,1-5.26,19,45.78,45.78,0,0,1-9.83,12q23.21,19,54.8,33.71c21.07,9.49,38.62,14.41,52.34,14.41,20,0,33.7-5.62,46.71-15.81C581,125.75,568,99.06,568,73.76,568,53.74,581.34,27.75,602.4,13.35Zm-61.46,82.9q0-15.3-13.69-29.5c-7-7.38-14.41-12.31-22.12-15.11a85.22,85.22,0,0,0-2.83,20.72,65.37,65.37,0,0,0,7.37,29.5c4.92,9.49,10.55,14.41,17.21,14.41C536.37,116.27,540.94,110.65,540.94,96.25Zm89.22-20.37a108.33,108.33,0,0,0-3.86-29.16c-3.86-13.35-10.18-23.54-19.67-30.56-9.15,7-15.8,17.21-19.67,30.56a106.47,106.47,0,0,0-3.88,29.16c0,22.12,7.75,46,23.55,62.51C622.07,122.59,630.16,97.3,630.16,75.88ZM840.91,58.66c-22.84-13.7-50.59-20-76.23-20-20.73,0-36.16,3.15-47.77,9.13,2.46,6,3.52,13.69,3.52,23.18a59.92,59.92,0,0,1-8.78,32c-6.69,11.23-15.09,16.87-25.3,16.87-11.57,0-18.26-12.65-18.26-21.09,0-14.4,4.92-26.69,14.75-37.59A72.39,72.39,0,0,1,706,44.61a53.81,53.81,0,0,0-18.27-27c-10.89-9.14-24.23-13.7-39.67-13.7s-27,2.8-37.25,9.48C632.27,28.46,645.25,53,645.25,73.76c0,26.34-11.92,50.94-34,68.85,11.57,9.49,28.09,15.81,46.7,15.81,14,0,31.24-4.56,51.63-14a259.06,259.06,0,0,0,55.51-34.07,56.82,56.82,0,0,1-9.83-11.6,37.08,37.08,0,0,1-5.29-19.32c0-15.45,11.26-20.37,23.55-20.37a42.32,42.32,0,0,1,7.72.7v1.4c-17.21-1.4-21.78,18.63-20.38,23.54,0,8.08,2.11,15.11,8.77,23.19,7.41-6,20-14.75,38-27C816.33,74.82,827.57,67.45,840.91,58.66Zm-130,13.7a87.15,87.15,0,0,0-2.8-20.72c-7.38,2.46-14.41,7.73-21.79,15.11-9.49,9.47-14,19.3-14,29.5,0,14,4.54,20,14,20,6.69,0,12.3-4.92,17.21-14.41A63.25,63.25,0,0,0,710.94,72.36ZM869,77.62c-1.74-1.74-3.86-3.5-5.63-5.26A49.87,49.87,0,0,0,854.61,66q-10,5.81-54.8,35.83c-5.26,3.52-12.29,8.44-21.41,14.41a67.76,67.76,0,0,0,16.15,10.89c5.6-3.52,17.92-11.59,36.87-24.6C850.75,89.57,863,81.14,869,77.62Zm19.67,30.57c-.69-2.81-2.46-6.67-5.26-11.59-2.46-5.27-4.57-8.43-6.32-10.19C870.75,91,862,96.6,850.4,104c-7.37,4.56-22.12,13.69-43.9,27.4a37.45,37.45,0,0,0,11.92,1.75c11.26,0,25-3.17,40.76-9.84A192.68,192.68,0,0,0,888.68,108.19Zm166.13-64.28c-21.4-18.61-46.7-25.65-75.15-25.65-19,0-39.36,4.22-60.77,13-17.2,7-37.24,17.92-60.43,32.31,2.83,1.76,11.27,9.14,14.07,11.59a282.58,282.58,0,0,1,35.81-20.72c14.07-6.66,27.42-10.88,39.71-12.64,6-.35,11.58-1.41,18.61-1.41,12.29,0,21.78,1.76,27.76,5.27a67.44,67.44,0,0,0-15.13-1.4c-15.8,0-32.64,4.22-51.28,12.29C913.63,62.87,897.83,72,880.25,84.3c1.77,1.75,3.86,5.27,6.69,10.54,3.14,5.26,4.91,8.78,5.6,11.24,24.24-14,41.82-23.18,62.88-32a423.55,423.55,0,0,1,48.11-17.57C1023.57,50.58,1040.78,46.37,1054.81,43.91Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
     }
   }
-}
 
-.section-more-ways {
-  .container {}
-}
+  .section-more-ways {
+    .container {}
+  }
   .more-ways-list {
     overflow: hidden;
     margin: 0 -10px;
@@ -375,6 +386,7 @@
       width: 33.333%;
       padding: 0 10px;
       margin-bottom: 20px;
+      color: $white;
       a {
         color: $white;
         &:hover,
@@ -395,164 +407,168 @@
         padding: 0;
       }
     }
-    @media all and (max-width: 560px) {
-      //max-width: 420px;
-      //margin: 0 auto;
+  }
+
+  .more-way-box {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    .centered-img {
+      padding-bottom: 105%;
+      background-color: #000;
+      img {
+        max-width: 100%;
+        opacity: 0.5;
+      }
+    }
+    .inner-box {
+      position: absolute;
+      display: block;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .inner-table {
+      display: table;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+    }
+    .inner-cell {
+      display: table-cell;
+      width: 100%;
+      vertical-align: bottom;
+    }
+    .more-way-subtitle {
+      position: relative;
+      display: block;
+      padding-bottom: 30px;
+      margin-bottom: 21px;
+      font-size: $size-heading5;
+      line-height: 1.1;
+      word-spacing: .01em;
+      text-transform: uppercase;
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 4px;
+        max-width: 198px;
+        width: 100%;
+        height: 6px;
+        background-color: $white;
+        @include css3-prefix('transition', '.25s');
+      }
+      @media all and (max-width: 768px) {
+        padding-bottom: 24px;
+        margin-bottom: 18px;
+        font-size: 22px;
+        &:after {
+          height: 4px;
+        }
+      }
+    }
+    .more-way-title {
+      display: block;
+      min-height: 136px;
+      font-size: $size-heading3;
+      text-transform: uppercase;
+      font-weight: $light;
+      font-family: $font-secondary;
+      line-height: 1.3;
+      @media all and (max-width: 768px) {
+        min-height: 100px;
+        font-size: 36px;
+      }
     }
   }
 
-        .more-way-box {
-          overflow: hidden;
-          position: relative;
-          display: block;
-          .centered-img {
-            padding-bottom: 105%;
-            img {
-              max-width: 100%;
-            }
-          }
-          .inner-box {
-            position: absolute;
-            display: block;
-            z-index: 5;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-          }
-          .inner-table {
-            display: table;
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-          }
-          .inner-cell {
-            display: table-cell;
-            width: 100%;
-            vertical-align: bottom;
-          }
-          .more-way-subtitle {
-            position: relative;
-            display: block;
-            padding-bottom: 30px;
-            margin-bottom: 21px;
-            font-size: $size-heading5;
-            line-height: 1.1;
-            word-spacing: .01em;
-            text-transform: uppercase;
-            &:after {
-              position: absolute;
-              content: '';
-              bottom: 0;
-              left: 4px;
-              max-width: 198px;
-              width: 100%;
-              height: 6px;
-              background-color: $white;
-              @include css3-prefix('transition', '.25s');
-            }
-            @media all and (max-width: 768px) {
-              padding-bottom: 24px;
-              margin-bottom: 18px;
-              font-size: 22px;
-              &:after {
-                height: 4px;
-              }
-            }
-          }
-          .more-way-title {
-            display: block;
-            min-height: 136px;
-            font-size: $size-heading3;
-            text-transform: uppercase;
-            font-weight: $light;
-            font-family: $font-secondary;
-            line-height: 1.3;
-            @media all and (max-width: 768px) {
-              min-height: 100px;
-              font-size: 36px;
-            }
-          }
-        }
+  .color-purple {
+    .section-title, .banner-title,
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6,
+    .date-box,
+    &.section-interesting-info .content,
+    &.section-banner .content {
+      color: $color-text6;
+    }
+    .section-title:after,
+    &.section-interesting-info .section-title:after,
+    &.section-banner .banner-title-box:after {
+      background-color: $color-text6;
+    }
+  }
+  .color-gold {
+    .section-title, .banner-title,
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6,
+    .date-box,
+    &.section-interesting-info .content,
+    &.section-banner .content {
+      color: $color-text2;
+    }
+    .section-title:after,
+    &.section-interesting-info .section-title:after,
+    &.section-banner .banner-title-box:after {
+      background-color: $color-text2;
+    }
+  }
+  .color-light-blue {
+    .section-title, .banner-title,
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6,
+    .date-box,
+    &.section-interesting-info .content,
+    &.section-banner .content {
+      color: $color-text3;
+    }
+    .section-title:after,
+    &.section-interesting-info .section-title:after,
+    &.section-banner .banner-title-box:after {
+      background-color: $color-text3;
+    }
+  }
+  .inverse {
+    .section-title, .banner-title,
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6,
+    .date-box,
+    &.section-two-columns .content,
+    &.section-interesting-info .content,
+    &.section-banner .content {
+      color: $white;
+    }
+    .section-title:after,
+    &.section-interesting-info .section-title:after,
+    &.section-banner .banner-title-box:after {
+      background-color: $white;
+    }
+  }
 
-.color-purple {
-  .section-title,
-  & .content h1,
-  & .content h2,
-  & .content h3,
-  & .content h4,
-  & .content h5,
-  & .content h6,
-  & .date-box,
-  &.section-interesting-info .content{
-
-    color: $color-text6;
+  #cursor-15px .nicescroll-cursors {
+    right: -15px;
   }
-  &.section-interesting-info .section-title:after {
-    background-color: $color-text6;
+  #cursor-8px {
+    z-index: 99 !important;
+    .nicescroll-cursors {
+      right: 2px;
+    }
   }
-}
-.color-gold {
-  .section-title,
-  & .content h1,
-  & .content h2,
-  & .content h3,
-  & .content h4,
-  & .content h5,
-  & .content h6,
-  & .date-box,
-  &.section-interesting-info .content {
-    color: $color-text2;
-  }
-  &.section-interesting-info .section-title:after {
-    background-color: $color-text2;
-  }
-}
-.color-light-blue {
-  .section-title,
-  & .content h1,
-  & .content h2,
-  & .content h3,
-  & .content h4,
-  & .content h5,
-  & .content h6,
-  & .date-box,
-  &.section-interesting-info .content {
-    color: $color-text3;
-  }
-  &.section-interesting-info .section-title:after {
-    background-color: $color-text3;
-  }
-}
-
-.inverse {
-  .section-title,
-  & .content h1,
-  & .content h2,
-  & .content h3,
-  & .content h4,
-  & .content h5,
-  & .content h6,
-  & .date-box,
-  &.section-two-columns .content,
-  &.section-interesting-info .content {
-    color: $white;
-  }
-  &.section-interesting-info .section-title:after {
-    background-color: $white;
-  }
-}
-
-
-
-#cursor-15px .nicescroll-cursors {
-  right: -15px;
-}
-#cursor-8px {
-  z-index: 99 !important;
-  .nicescroll-cursors {
-    right: 2px;
-  }
-}
-
-@media all and (max-width: 1024px) {}

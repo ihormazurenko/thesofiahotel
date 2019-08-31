@@ -84,7 +84,7 @@ jQuery(document).ready(function($) {
                     innerSliders.each(function (i) {
                         new Swiper(innerSliders.eq(i), {
                             effect: 'fade',
-                            loop: true,
+                            loop: false,
                             navigation: {
                                 nextEl: '.swiper-button-next',
                                 prevEl: '.swiper-button-prev',
@@ -101,7 +101,7 @@ jQuery(document).ready(function($) {
                     bannerSliders.each(function (i) {
                         new Swiper(bannerSliders.eq(i), {
                             effect: 'fade',
-                            loop: true,
+                            loop: false,
                             pagination: {
                                 el: '.swiper-pagination',
                                 clickable: true
@@ -121,7 +121,7 @@ jQuery(document).ready(function($) {
                             spaceBetween: 0,
                             freeMode: true,
                             freeModeSticky: true,
-                            loop: true,
+                            loop: false,
                             navigation: {
                                 nextEl: '.swiper-button-next',
                                 prevEl: '.swiper-button-prev',
@@ -242,7 +242,8 @@ jQuery(document).ready(function($) {
                 $(window).on('load', function () {
                     var hash = window.location.hash;
                     if (hash.length) {
-                        $('.accordion-box .panel'+hash).slideDown().prev().addClass('active');
+                        $('.accordion-box .panel'+hash).slideDown().attr('aria-hidden', 'false');
+                        $('.accordion-box .panel'+hash).prev().addClass('active').find('a').attr('aria-expanded', 'true');
                     }
                 });
 
@@ -252,10 +253,13 @@ jQuery(document).ready(function($) {
                     var panel = $(this).next();
 
                     if(panel.is(':visible')) {
-                        panel.slideUp();
+                        panel.slideUp().attr('aria-hidden', 'true');
+                        $(this).find('a').attr('aria-expanded', 'false');
                     } else {
-                        panel.slideDown();
+                        panel.slideDown().attr('aria-hidden', 'false');
                         $('.accordion-box .panel').not(panel).slideUp().prev().removeClass('active');
+                        $('.accordion-box').find('a').attr('aria-expanded', 'false');
+                        $(this).find('a').attr('aria-expanded', 'true');
                     }
 
                 });
@@ -367,6 +371,10 @@ jQuery(document).ready(function($) {
             $('.gallery-type .tab-list').on('click', 'a', function () {
                 var filterValue = $(this).attr('data-filter');
 
+                if ($(this).attr('href') == '#') {
+                    history.pushState("", document.title, window.location.pathname);
+                }
+
                 $('.gallery-type .tab-list a').removeClass('active');
                 $(this).addClass('active');
 
@@ -427,16 +435,6 @@ jQuery(document).ready(function($) {
                 });
             });
         }
-
-
-        // $(window).on('load resize', function(){
-        //     var body = $('body');
-        //     if ($(this).scrollTop() > 0) {
-        //         body.addClass('scrolling');
-        //     } else {
-        //         body.removeClass('scrolling');
-        //     }
-        // });
 
 
         //header scroll effect

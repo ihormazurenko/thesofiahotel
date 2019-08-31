@@ -152,6 +152,7 @@
           p {}
           .price {}
           .additional-info {
+            display: block;
             margin-top: -5px;
             font-size: 20px;
             @media all and (max-width: 1024px) {

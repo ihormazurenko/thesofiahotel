@@ -22,6 +22,7 @@
 
                 <a href="#burger-menu" title="<?php esc_attr_e('Navigation menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup" data-open="">
                     <span></span>
+                    <span class="sr-only">Expand Navigation</span>
                 </a>
 
                 <div class="weather-box">45◦C<span class="icon">&#x26C5;</span></div>
@@ -110,19 +111,19 @@
                                             <ul class="social-list">
                                                 <?php
                                                     if ($social['facebook'])
-                                                        echo "<li><a href='".esc_url($social['facebook'])."' title='Facebook' target='_blank' rel='nofollow noopener'><i class='fab fa-facebook-square'></i></a></li>";
+                                                        echo "<li><a href='".esc_url($social['facebook'])."' title='Facebook' target='_blank' rel='nofollow noopener'><i class='fab fa-facebook-square'></i><span class=\"sr-only\">Visit our Facebook</span></a></li>";
 
                                                     if ($social['twitter'])
-                                                        echo "<li><a href='".esc_url($social['twitter'])."' title='Twitter' target='_blank' rel='nofollow noopener'><i class='fab fa-twitter'></i></a></li>";
+                                                        echo "<li><a href='".esc_url($social['twitter'])."' title='Twitter' target='_blank' rel='nofollow noopener'><i class='fab fa-twitter'></i><span class=\"sr-only\">Visit our Twitter</span></a></li>";
 
                                                     if ($social['instagram'])
-                                                        echo "<li><a href='".esc_url($social['instagram'])."' title='Instagram' target='_blank' rel='nofollow noopener'><i class='fab fa-instagram'></i></a></li>";
+                                                        echo "<li><a href='".esc_url($social['instagram'])."' title='Instagram' target='_blank' rel='nofollow noopener'><i class='fab fa-instagram'></i><span class=\"sr-only\">Visit our Instagram</span></a></li>";
 
                                                     if ($social['yelp'])
-                                                        echo "<li><a href='".esc_url($social['yelp'])."' title='Yelp' target='_blank' rel='nofollow noopener'><i class='fab fa-yelp'></i></a></li>";
+                                                        echo "<li><a href='".esc_url($social['yelp'])."' title='Yelp' target='_blank' rel='nofollow noopener'><i class='fab fa-yelp'></i><span class=\"sr-only\">Visit our Yelp</span></a></li>";
 
                                                     if ($social['tripadvisor'])
-                                                        echo "<li><a href='".esc_url($social['tripadvisor'])."' title='TripAdvisor' target='_blank' rel='nofollow noopener'><i class='fab fa-tripadvisor'></i></a></li>";
+                                                        echo "<li><a href='".esc_url($social['tripadvisor'])."' title='Trip Advisor' target='_blank' rel='nofollow noopener'><i class='fab fa-tripadvisor'></i><span class=\"sr-only\">Visit our Trip Advisor</span></a></li>";
                                                 ?>
                                             </ul>
                                         </div>
@@ -145,6 +146,7 @@
 
                 <a href="#burger-menu" title="<?php esc_attr_e('Navigation Menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup">
                     <span></span>
+                    <span class="sr-only">Expand Navigation</span>
                 </a>
 
                 <div class="weather-box">45◦C<span class="icon">&#x26C5;</span></div>
