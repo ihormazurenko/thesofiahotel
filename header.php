@@ -22,10 +22,10 @@
 
                 <a href="#burger-menu" title="<?php esc_attr_e('Navigation menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup" data-open="">
                     <span></span>
-                    <span class="sr-only">Expand Navigation</span>
+                    <i class="sr-only"><?php _e('Menu', 'the-sofia-hotel'); ?></i>
                 </a>
 
-                <div class="weather-box">45◦C<span class="icon">&#x26C5;</span></div>
+                <div class="weather-box"><?php echo do_shortcode('[shortcode-weather-atlas city_selector=2338455 background_color="transparent" daily="0" sunrise_sunset="0" layout="horizontal" font_size="12px" current="0"]') ?></div>
 
                 <?php
                     $header_btn = get_field('header_btn', 'option');
@@ -39,7 +39,7 @@
                     }
                 ?>
             </div>
-            <div class="burger-box" id="burger-menu">
+            <div class="burger-box" id="burger-menu" role="dialog" aria-modal="true" aria-label="menu">
                 <div class="hero">
                     <div class="hero-img" style="background-image: url(<?php echo get_bloginfo('template_url'); ?>/img/burger-bg.jpg);"></div>
                     <div class="burger-inner-wrap">
@@ -111,19 +111,19 @@
                                             <ul class="social-list">
                                                 <?php
                                                     if ($social['facebook'])
-                                                        echo "<li><a href='".esc_url($social['facebook'])."' title='Facebook' target='_blank' rel='nofollow noopener'><i class='fab fa-facebook-square'></i><span class=\"sr-only\">Visit our Facebook</span></a></li>";
+                                                        echo "<li><a href='".esc_url($social['facebook'])."' title='Facebook' target='_blank' rel='nofollow noopener'><i class='fab fa-facebook-square'></i><span class='sr-only'>Visit our Facebook</span></a></li>";
 
                                                     if ($social['twitter'])
-                                                        echo "<li><a href='".esc_url($social['twitter'])."' title='Twitter' target='_blank' rel='nofollow noopener'><i class='fab fa-twitter'></i><span class=\"sr-only\">Visit our Twitter</span></a></li>";
+                                                        echo "<li><a href='".esc_url($social['twitter'])."' title='Twitter' target='_blank' rel='nofollow noopener'><i class='fab fa-twitter'></i><span class='sr-only'>Visit our Twitter</span></a></li>";
 
                                                     if ($social['instagram'])
-                                                        echo "<li><a href='".esc_url($social['instagram'])."' title='Instagram' target='_blank' rel='nofollow noopener'><i class='fab fa-instagram'></i><span class=\"sr-only\">Visit our Instagram</span></a></li>";
+                                                        echo "<li><a href='".esc_url($social['instagram'])."' title='Instagram' target='_blank' rel='nofollow noopener'><i class='fab fa-instagram'></i><span class='sr-only'>Visit our Instagram</span></a></li>";
 
                                                     if ($social['yelp'])
-                                                        echo "<li><a href='".esc_url($social['yelp'])."' title='Yelp' target='_blank' rel='nofollow noopener'><i class='fab fa-yelp'></i><span class=\"sr-only\">Visit our Yelp</span></a></li>";
+                                                        echo "<li><a href='".esc_url($social['yelp'])."' title='Yelp' target='_blank' rel='nofollow noopener'><i class='fab fa-yelp'></i><span class='sr-only'>Visit our Yelp</span></a></li>";
 
                                                     if ($social['tripadvisor'])
-                                                        echo "<li><a href='".esc_url($social['tripadvisor'])."' title='Trip Advisor' target='_blank' rel='nofollow noopener'><i class='fab fa-tripadvisor'></i><span class=\"sr-only\">Visit our Trip Advisor</span></a></li>";
+                                                        echo "<li><a href='".esc_url($social['tripadvisor'])."' title='Trip Advisor' target='_blank' rel='nofollow noopener'><i class='fab fa-tripadvisor'></i><span class='sr-only'>Visit our Trip Advisor</span></a></li>";
                                                 ?>
                                             </ul>
                                         </div>
@@ -146,10 +146,10 @@
 
                 <a href="#burger-menu" title="<?php esc_attr_e('Navigation Menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup">
                     <span></span>
-                    <span class="sr-only">Expand Navigation</span>
+                    <i class="sr-only"><?php _e('Expand Navigation', 'the-sofia-hotel'); ?></i>
                 </a>
 
-                <div class="weather-box">45◦C<span class="icon">&#x26C5;</span></div>
+                <div class="weather-box"><?php echo do_shortcode('[shortcode-weather-atlas city_selector=2338455 background_color="transparent" daily="0" text_color="#939598" sunrise_sunset="0" layout="horizontal" font_size="12px" current="0"]') ?></div>
 
                 <?php
                     if ($header_btn && is_array($header_btn) && $header_btn['show']) {

@@ -85,6 +85,24 @@
       font-size: 0.9em;
       margin-left: 2px;
     }
+    .weather-atlas-wrapper {
+      .weather-atlas-body {padding: 0;}
+      // .current_text {display: none;}
+
+      .current_temp {
+        .wi {font-size: 2.5em; }
+        .temp {font-size: 2.75em; font-family: 'Georgia', 'Bentham', serif;}
+      }
+      .weather-atlas-footer {display: none;}
+      .weather-atlas-header {display: none;}
+    }
+    .weather-atlas-wrapper {
+      text-shadow: none;
+    }
+     
+    
+    
+    
     @media all and (max-width: 640px) {
       //position: absolute;
       //right: 90px;
@@ -96,6 +114,8 @@
       //right: 30px;
     }
   }
+  
+
 
   .btn-find-rooms {
     float: right;
@@ -452,6 +472,12 @@
       @media all and (max-width: 768px) {
         @include calc('height', '100vh - 40px - 46px');
       }
+    }
+  }
+  .section-contact-us.full & {
+    padding-bottom: 150px;
+    @media all and (max-width: 768px) {
+      padding-bottom: 200px;
     }
   }
   .hero-box {

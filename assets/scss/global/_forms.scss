@@ -103,16 +103,11 @@ textarea:-moz-placeholder {
 span.wpcf7-not-valid-tip {
   font-size: 22px;
 }
-div.wpcf7-validation-errors,
-div.wpcf7-acceptance-missing,
-div.wpcf7-response-output,
-div.wpcf7-mail-sent-ok {
+div.wpcf7-response-output {
   overflow: hidden;
   margin-left: 0;
   margin-right: 0;
-}
-div.wpcf7-response-output {
-  //background-color: #ff0000;
+  text-align: center;
 }
 div.wpcf7-mail-sent-ok {
   background-color: #398f14;

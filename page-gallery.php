@@ -78,14 +78,14 @@ get_header(); ?>
                             }
                     ?>
                         <div class="tabs-nav">
-                            <ul class="tab-list">
+                            <ul class="tab-list" role="tablist">
                                 <li>
-                                    <a href="#" title="<?php esc_attr_e('View all', 'the-sofia-hotel'); ?>" class="view-all" data-filter="*"><?php _e('View all', 'the-sofia-hotel'); ?></a>
+                                    <a href="#" title="<?php esc_attr_e('View all', 'the-sofia-hotel'); ?>" role="tab" aria-selected="true" aria-controls="popup-gallery" class="view-all" data-filter="*"><?php _e('View all', 'the-sofia-hotel'); ?></a>
                                 </li>
                                 <?php
                                     $colors = ['light-blue', 'gold', 'purple', 'grey', 'dark'];
                                     foreach ($tabs_arr as $tab) {
-                                        echo "<li><a href='#{$tab["slug"]}' title='".esc_attr($tab["title"])."' class='color-".current($colors)." {$tab["slug"]}' data-filter='.{$tab["slug"]}'>{$tab["title"]}</a></li>";
+                                        echo "<li><a href='#{$tab["slug"]}' title='".esc_attr($tab["title"])."' role='tab' aria-selected='false' aria-controls='popup-gallery' class='color-".current($colors)." {$tab["slug"]}' data-filter='.{$tab["slug"]}' aria-label='Filter the photo gallery by {$tab["title"]}'>{$tab["title"]}</a></li>";
                                         $media_cats[$tab['slug']]['color'] = current($colors);
                                         next($colors);
                                     }
@@ -96,7 +96,7 @@ get_header(); ?>
 
                     <div class="tab-section">
                         <div class="tab-inner-box">
-                            <div class="grid grid-isotope popup-gallery">
+                            <ul class="grid grid-isotope popup-gallery" id="popup-gallery">
                                 <?php
                                     $n = 1;
                                     foreach ($gallery as $image) :
@@ -111,7 +111,7 @@ get_header(); ?>
                                             $image_class = '';
                                         }
                                     ?>
-                                    <div class="grid-item <?php echo $cat_slug . $image_class; ?>">
+                                    <li class="grid-item <?php echo $cat_slug . $image_class; ?>">
                                         <a href="<?php echo esc_url($image['url']); ?>" class="img-shadow">
                                             <?php echo wp_get_attachment_image($image['id'], 'large', false, array('alt' => esc_attr($image['alt']))); ?>
                                             <span class="gallery-overlay <?php echo $media_cats[$cat_slug]['color']; ?>">
@@ -122,10 +122,10 @@ get_header(); ?>
                                                 <?php } ?>
                                             </span>
                                         </a>
-                                    </div>
+                                    </li>
                                 <?php $n++;
                                 endforeach; ?>
-                            </div>
+                            </ul>
                         </div>
                     </div>
                 </div>

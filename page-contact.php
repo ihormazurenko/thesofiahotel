@@ -21,24 +21,22 @@ get_header();
                     <div class="bottom-box">
                         <div class="accordion-box" id="accordion-box">
                             <?php
-                            if (have_rows('contact_accordions')) :
+                                if (have_rows('contact_accordions')) :
 
-                                $index = 0;    
+                                    $index = 0;
 
-                                while( have_rows('contact_accordions') ): the_row();
+                                    while( have_rows('contact_accordions') ): the_row();
 
-                                $label = get_sub_field('accordion_label');
-                                $title = get_sub_field('contact_title');
-                                $content = get_sub_field('contact_content');
-                                $form = get_sub_field('form_shortcode');
-
-
+                                    $label = get_sub_field('accordion_label');
+                                    $title = get_sub_field('contact_title');
+                                    $content = get_sub_field('contact_content');
+                                    $form = get_sub_field('form_shortcode');
                             ?>
 
-                                <h3 class="accordion">
-                                    <a href="#tab<?php print $index; ?>" id="tabLabel<?php print $index; ?>" class="smooth-js" aria-expanded="false" aria-controls="tab<?php print $index; ?>" role="tab" title=""><?php print $label; ?> <i class="fa fa-chevron-down"></i></a>
-                                </h3>
-                                <div class="panel" id="tab<?php print $index; ?>" role="tabpanel" aria-hidden="true" aria-labelledby="tabLabel<?php print $index; ?>" data-parent="#accordion-box">
+                                <div class="accordion">
+                                    <a href="#tab<?php print $index; ?>" id="tabLabel<?php print $index; ?>" class="smooth-accordion-js" aria-expanded="false" aria-controls="tab<?php print $index; ?>"  title=""><?php print $label; ?> <i class="fa fa-chevron-down"></i></a>
+                                </div>
+                                <div class="panel" id="tab<?php print $index; ?>"  aria-hidden="true" aria-labelledby="tabLabel<?php print $index; ?>" data-parent="#accordion-box">
                                     <div class="<?php print ($form) ? '' : 'content'; ?>">
                                         <h4><?php print $title; ?></h4>
                                         <?php print $content; ?>
@@ -64,6 +62,7 @@ get_header();
                 </div>
             </div>
         </div>
+
         <div class="bottom-sticky-box">
             <p><?php the_field('contact_bottom_text'); ?></p>
         </div>

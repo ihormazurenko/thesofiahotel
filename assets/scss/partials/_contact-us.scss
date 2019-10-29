@@ -98,6 +98,7 @@
     }
     @media all and (max-width: 1024px) {
       font-size: 24px;
+      line-height: 1.2;
     }
     &:hover,
     &:focus,
@@ -212,8 +213,6 @@
 }
 .panel .wpcf7 {
   margin-top: 40px;
-
-  
 }
 .modal-form-btn-box {
   margin-top: 22px;
@@ -232,3 +231,4 @@
     display: block;
   }
 }
+

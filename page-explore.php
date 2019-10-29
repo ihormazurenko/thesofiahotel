@@ -49,14 +49,15 @@ $places_data = json_decode(file_get_contents($url),true);
                 ?>
 
                 <div class="tabs-nav">
+
                     <ul class="tab-list">
                         <li>
-                            <a href="#all" data-types="tsh, coffee, dining, nightlife, shops, sites" title="<?php esc_attr_e('View all', 'the-sofia-hotel'); ?>" class="view-all" data-filter="*"><?php _e('View all', 'the-sofia-hotel'); ?></a>
+                            <a href="#all" data-types="tsh, coffee, dining, nightlife, shops, sites" title="<?php esc_attr_e('View all', 'the-sofia-hotel'); ?>" class="view-all" data-filter="*" aria-label="Show all locations on the map"><?php _e('View all', 'the-sofia-hotel'); ?></a>
                         </li>
                         <?php
                         $colors = ['light-blue', 'gold', 'purple', 'grey', 'dark'];
                         foreach ($cats as $cat) {
-                            echo "<li><a href='#{$cat->slug}' data-types=\"tsh, {$cat->slug}\" title='".esc_attr($cat->name)."' class='color-".current($colors)." {$icon_rel[$cat->slug]}' data-filter='.{$cat->slug}'>{$cat->name}</a></li>";
+                            echo "<li><a href='#{$cat->slug}' data-types=\"tsh, {$cat->slug}\" title='".esc_attr($cat->name)."' class='color-".current($colors)." {$icon_rel[$cat->slug]}' data-filter='.{$cat->slug}' aria-label='Filter locations on the map by {$cat->name}'>{$cat->name}</a></li>";
                             next($colors);
                         }
                         ?>
@@ -65,8 +66,10 @@ $places_data = json_decode(file_get_contents($url),true);
             <?php } ?>
 
             <div class="map-wrap">
-                <div id="map"></div>
+                <div id="map" role="region" aria-label="map"></div>
             </div>
+
+            <ul id="map-markers" class="sr-only" role="list"></ul>
 
             <script>
                 tsh_marker_base_url = "<?php echo get_bloginfo('template_url') . '/img/'; ?>";

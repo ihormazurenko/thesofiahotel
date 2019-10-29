@@ -18,7 +18,15 @@ img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
 a:link, a:visited              { font-family: $font-main; color: $color-text3; text-decoration:none; }
 a:hover                        { text-decoration:none; }
-a:focus                        { outline-color: #4d90fe; }
+a, button, input {
+  &:focus {
+    outline: none;
+    border: 1px solid #4D90FE;
+    -webkit-box-shadow: 0 0 5px #4D90FE;
+    box-shadow: 0 0 5px #4D90FE;
+    border-radius: 4px;
+  }
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -146,6 +154,23 @@ img {
   padding: 0 20px;
 }
 
+
+.sr-only,
+.ui-datepicker-trigger {
+  position: absolute;
+  margin: -1px 0 0 -1px;
+  padding: 0;
+  display: block;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  line-height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+  outline: 0;
+}
+
 @import '../global/content';
 
 /*----------------------------------------------------------------------------------*/
@@ -157,6 +182,7 @@ img {
   max-width: 1980px;
   margin: 0 auto;
   min-height: 100%;
+  @include calc('min-height', '100% - 365px');
 }
 .content-wrap {
   padding: 60px 0;

@@ -164,17 +164,31 @@
   width: 100%;
   > li {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     padding: 0 17px;
     &:first-child {
       padding-left: 0;
-      width: 180px;
+      width: 170px;
+      .subscribe-title {
+        display: table-cell;
+        height: 57px;
+        vertical-align: middle;
+      }
     }
     &:last-child {
       padding-right: 0;
       width: 315px;
+      @media all and (max-width: 1080px) {
+        width: 250px;
+      }
       @media all and (max-width: 768px) {
         width: 215px;
+      }
+    }
+    .input-row {
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
     a.btn, .btn {
@@ -187,6 +201,7 @@
   }
   @media all and (max-width: 768px) {
     display: block;
+    height: auto;
     > li {
       display: block;
       width: 100%;
@@ -195,10 +210,20 @@
       &:first-child {
         width: 100%;
         text-align: center;
+        .subscribe-title {
+          display: block;
+          height: auto;
+          padding-bottom: 15px;
+        }        
       }
       &:last-child {
         width: 100%;
         text-align: center;
+      }
+      .input-row {
+        &, &:last-child {
+          margin-bottom: 40px;
+        }
       }
     }
   }

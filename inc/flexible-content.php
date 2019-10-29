@@ -172,7 +172,7 @@
                     echo "<section class='section-slider'>
                             <div class='container'>
                                 <div class='single-slider{$small_class}'>
-                                    <div class='swiper-container'>
+                                    <div class='swiper-container' role='region' aria-label='Carousel'>
                                         <div class='swiper-wrapper'>";
 
                                         foreach ($section['images'] as $img) {

@@ -46,18 +46,9 @@ jQuery(document).ready(function($) {
         prevent();
 
 
-        // for burger menu
-        // $('.menu-toggle').on('click', function(){
-        //     $('.menu-toggle').toggleClass('active');
-        //     $('#header-main').toggleClass('show-burger');
-        //     $(document.body).toggleClass('overflow');
-        // });
-
         //for burger menu and modal
-        $('.open-tsh-popup').on('click', function(e){
-            e.preventDefault();
-
-            var modalId = $(this).attr('href'),
+        function toggleMenu(){
+            var modalId = '#burger-menu',
                 mainHeader = $('#header-main');
 
             if (mainHeader.hasClass('show-burger')) {
@@ -71,7 +62,38 @@ jQuery(document).ready(function($) {
             mainHeader.toggleClass('show-burger');
             $(modalId).toggleClass('show-tsh-popup');
             $(document.body).toggleClass('overflow');
+
+            if (mainHeader.hasClass('show-burger')) {
+                mainHeader.siblings().find('a, button, input, textarea').attr({
+                    'aria-hidden' : 'true',
+                    'tabindex' : '-1'
+                });
+                $('.btn-jump-to-content').attr({
+                    'aria-hidden' : 'true',
+                    'tabindex' : '-1'
+                });
+            } else {
+                mainHeader.siblings().find('a, button, input, textarea').removeAttr('aria-hidden tabindex');
+                $('.btn-jump-to-content').removeAttr('aria-hidden tabindex');
+            }
+        }
+        $('.open-tsh-popup').on('click', function(e){
+            e.preventDefault();
+            $(this).focus();
+
+            toggleMenu();
         });
+
+        //if esc key is clicked and the menu is open
+        $(document).on('keyup',function(evt) {
+            if (evt.keyCode == 27) {
+                var mainHeader = $('#header-main');
+                if (mainHeader.hasClass('show-burger')) {
+                    toggleMenu();
+                }
+            }
+        });
+        
 
         //for slider
         $(function () {
@@ -177,29 +199,153 @@ jQuery(document).ready(function($) {
 
         //for Book datepickers
         if (typeof jQuery.ui != 'undefined') {
+            setTimeout(function () {
+                $('.ui-datepicker').find('a[href="#"]').on('click', function (e) {
+                    e.preventDefault();
+                });
+            }, 1000);
+
+/*
             $(function () {
+                var datepcikerDiv = $('#ui-datepicker-div');
+
                 $("#check-in").datepicker({
+                    showOn: 'both',
+                    buttonText: 'Launch Check in date picker',
                     defaultDate: "0",
                     dateFormat: "mm/dd/yy",
                     changeMonth: true,
                     changeYear: true,
                     numberOfMonths: 1,
                     onSelect: function (selectedDate) {
-                        console.log(selectedDate);
+                        datepcikerDiv.attr({
+                            'aria-hidden' : 'false',
+                            'aria-expanded' : 'true'
+                        });
                         $("#check-out").datepicker("option", "minDate", selectedDate);
+
+                        $("#datepickerMessage").text(
+                            "selected "
+                            + $.datepicker.formatDate ("DD d MM yy", new Date(date))
+                        );
+                    },
+                    onClose: function () {
+                        datepcikerDiv.attr({
+                            'aria-hidden' : 'true',
+                            'aria-expanded' : 'false'
+                        });
+                        $(this).closest('li').next().find('input, button').focus();
                     }
                 });
                 $("#check-out").datepicker({
+                    showOn: 'both',
+                    buttonText: 'Launch Check out date picker',
                     defaultDate: "+1w",
                     dateFormat: "mm/dd/yy",
                     changeMonth: true,
                     changeYear: true,
                     numberOfMonths: 1,
                     onSelect: function (selectedDate) {
+                        datepcikerDiv.attr({
+                            'aria-hidden' : 'false',
+                            'aria-expanded' : 'true'
+                        });
                         $("#check-in").datepicker("option", "maxDate", selectedDate);
+
+                        // var message = $('.ui-datepicker-calendar').find('.ui-state-active').text() +
+                        //     ' ' + $('.ui-datepicker-month').find('[selected]').text() +
+                        //     ' ' + $('.ui-datepicker-year').find('[selected]').text();
+                        // console.log(message);
+                    },
+                    onClose: function () {
+                        datepcikerDiv.attr({
+                            'aria-hidden' : 'true',
+                            'aria-expanded' : 'false'
+                        });
+                        $(this).closest('li').next().find('input, button').focus();
                     }
                 });
-            });
+
+
+/*
+                    var $date = $("#check-in");
+                    var $datepicker = null;
+                    var visible = false;
+
+                    $.datepicker.setDefaults({
+                        showOn: "both",
+                        buttonText: 'Launch date picker',
+                        dateFormat: "mm/dd/yy",
+                        changeMonth: true,
+                        changeYear: true,
+                        numberOfMonths: 1,
+                        beforeShow: function () {
+                            visible = true;
+                        },
+                        onClose: function () {
+                            visible = false;
+                            $(this).closest('li').next().find('input, button').focus();
+                        }
+                    });
+
+                    $date.datepicker({
+                        buttonText: 'Launch Check in date picker',
+                        defaultDate: "0",
+                        onSelect: function (date) {
+                            datepcikerDiv.attr({
+                                'aria-hidden' : 'false',
+                                'aria-expanded' : 'true'
+                            });
+                            $("#datepickerMessage").text(
+                                "selected "
+                                + $.datepicker.formatDate("DD d MM yy", new Date(date))
+                            );
+                            $("#check-out").datepicker("option", "minDate", selectedDate);
+                        }, // onSelect
+                        onClose: function () {
+                            datepcikerDiv.attr({
+                                'aria-hidden' : 'true',
+                                'aria-expanded' : 'false'
+                            });
+                        }
+                    });
+
+
+                    $datepicker = $date.datepicker("widget");
+                    if ($datepicker.length == 0) {
+                        return false;
+                    }
+
+
+// extracts currently highlighted date from calendar (including week day) and sticks it in the date field on arrow press
+                    $date.on ("keydown", function (e) {
+                        if (! visible) return true;
+                        var key = e.keyCode;
+                        var message, date, day, month, year, $datepicker;
+                        $datepicker = $(this).datepicker("widget");
+
+                        if (key >= 37 && key <= 40 && ! e.ctrlKey) {
+                            e.ctrlKey = true;
+                            $date.trigger(e);
+                            return false;
+                        } // if
+
+                        if (key >= 33 && key <=40) {
+                            day = $datepicker.find(".ui-state-hover").text();
+                            month = $datepicker.find(".ui-datepicker-month").text();
+                            year = $datepicker.find(".ui-datepicker-year").text();
+                            date = new Date(month + " " + day + " " + year);
+                            message = $.datepicker.formatDate("DD d MM yy", date);
+                            $("#datepickerMessage").text(message);
+                            return false;
+                        } // if
+
+
+                        return true;
+                    }); // keydown
+
+
+            }); */
         }
 
 
@@ -235,6 +381,10 @@ jQuery(document).ready(function($) {
 
         //for accordion
         $(function () {
+            $('.accordion-box .accordion a').on('click', function (e) {
+                e.preventDefault();
+            });
+
             var accordion = $('.accordion-box .accordion');
 
             if (accordion.length && $('.accordion-box .panel').length) {
@@ -261,14 +411,36 @@ jQuery(document).ready(function($) {
                         $('.accordion-box').find('a').attr('aria-expanded', 'false');
                         $(this).find('a').attr('aria-expanded', 'true');
                     }
-
                 });
+
+                // if (typeof SmoothScroll !== 'undefined') {
+                //     var scroll = new SmoothScroll('.smooth-accordion-js', {
+                //         speed: 750,
+                //         easing: 'easeInQuad',
+                //         offset: function (anchor, toggle) {
+                //
+                //             setTimeout(function () {
+                //                 if (toggle.classList.closest('.my-header-nav')) {
+                //                     return 25;
+                //                 } else {
+                //                     return 50;
+                //                 }
+                //
+                //                 console.log(anchor.offset().top);
+                //             }, 400);
+                //             // Integer or Function returning an integer. How far to offset the scrolling anchor location in pixels
+                //             // This example is a function, but you could do something as simple as `offset: 25`
+                //
+                //             // An example returning different values based on whether the clicked link was in the header nav or not
+                //         },
+                //     });
+                // }
             }
         });
 
 
         //for popup
-        if (typeof $.fn.magnificPopup !== 'undefined') {
+        if (typeof $.fn.magnificPopup !== 'undefined') { 
             $(function () {
                 if ($('.popup-gallery a > img').length) {
                     $('.popup-gallery').magnificPopup({
@@ -276,6 +448,7 @@ jQuery(document).ready(function($) {
                         type: 'image',
                         tLoading: 'Loading image #%curr%...',
                         mainClass: 'mfp-img-mobile',
+                        focus: '.mfp-close',
                         gallery: {
                             enabled: true,
                             navigateByImgClick: true,
@@ -283,8 +456,21 @@ jQuery(document).ready(function($) {
                         },
                         image: {
                             tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                        },
+                        callbacks: {
+                            open: function() {
+                                $el = $('.mfp-gallery');
+                                if ($el.length) {
+                                    $el.attr({
+                                        'role' : 'dialog',
+                                        'aria-modal' : 'true',
+                                        'aria-label' : 'gallery'
+                                    });
+                                }
+                            }
                         }
                     });
+
                 }
 
                 $('.popup-modal').magnificPopup({
@@ -375,8 +561,8 @@ jQuery(document).ready(function($) {
                     history.pushState("", document.title, window.location.pathname);
                 }
 
-                $('.gallery-type .tab-list a').removeClass('active');
-                $(this).addClass('active');
+                $('.gallery-type .tab-list a').removeClass('active').attr('aria-selected','false');
+                $(this).addClass('active').attr('aria-selected','true');
 
                 $(item).removeClass('width-50 width-66');
                 var filterItem = (filterValue !== '*') ? item+filterValue : item;
@@ -391,6 +577,8 @@ jQuery(document).ready(function($) {
                 });
 
                 $grid.isotope({filter: filterValue});
+
+
             });
 
             if (hash) {
@@ -401,7 +589,9 @@ jQuery(document).ready(function($) {
 
         // ajax Load More button
         var load_more       = $('#load-more'),
-            load_more_box   = load_more.parent('.load-more-box');
+            load_more_box   = load_more.parent('.load-more-box'),
+            insert_box      = $('#insert-list');
+
         if (load_more.length) {
             load_more.on('click', function (e) {
                 e.preventDefault();
@@ -410,10 +600,12 @@ jQuery(document).ready(function($) {
                 load_more_box.addClass('loading');
 
                 var data = {
-                    'action' : 'load_more',
-                    'query'  : newQuery,
-                    'page'   : current_page
+                    'action'    : 'load_more',
+                    'query'     : newQuery,
+                    'page'      : current_page,
+                    'template'  : insert_box.hasClass('service-list') ? 'news' : 'default',
                 };
+
                 $.ajax({
                     url: load_posts_var.load_post_ajaxurl,
                     data: data,
@@ -422,7 +614,7 @@ jQuery(document).ready(function($) {
                     success: function (result) {
                         if( result) {
                             current_page++;
-                            $('#insert-list').append(result);
+                            insert_box.append(result);
                             if (current_page == max_pages) {
                                 load_more_box.remove();
                             } else {
@@ -435,6 +627,13 @@ jQuery(document).ready(function($) {
                 });
             });
         }
+
+        //weather module for screen readers
+        $(function(){
+            $('.current_text').addClass('sr-only'); 
+            $('i.wi').attr('aria-hidden', "true"); 
+
+        });
 
 
         //header scroll effect

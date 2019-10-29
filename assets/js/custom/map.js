@@ -211,10 +211,11 @@ jQuery(document).ready(function($) {
             var beaches = JSON.parse(tsh_arr);
 
             function setMarkers(map) {
+                var markerList = $('#map-markers');
+
                 // Adds markers to the map.
                 for (var i = 0; i < beaches.length; i++) {
                     var beach = beaches[i];
-
 
                     if (beach['place_type'] == 'tsh') {
                         var image = {
@@ -230,7 +231,6 @@ jQuery(document).ready(function($) {
                             origin: new google.maps.Point(0, 0),
                             anchor: new google.maps.Point(10, 10)
                         };
-
                     }
 
                     var raitingStr = '';
@@ -245,6 +245,9 @@ jQuery(document).ready(function($) {
 
                     if (!markerGroups[beach['place_type']]) markerGroups[beach['place_type']] = [];
                     markerGroups[beach['place_type']].push(marker);
+
+                    markerList.append('<li class="' + beach['place_type'] + '" role="listitem"><p>' + beach['place_title'] + '</p><div>' +
+                        decodeEntities(beach['place_short_desc']) + '</div></li>');
 
                     var infowindow = new google.maps.InfoWindow({
                         maxWidth: 340
@@ -308,10 +311,12 @@ jQuery(document).ready(function($) {
                             if ($.inArray(key, markerArr) !== -1) {
                                 for (var i = 0; i < markerGroups[key].length; i++) {
                                     markerGroups[key][i].setVisible(true);
+                                    markerList.find('li.'+key).show(0);
                                 }
                             } else {
                                 for (var i = 0; i < markerGroups[key].length; i++) {
                                     markerGroups[key][i].setVisible(false);
+                                    markerList.find('li.'+key).hide(0);
                                 }
                             }
 

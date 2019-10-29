@@ -34,7 +34,9 @@
                     <header>
                         <h1><?php echo $title; ?></h1>
                     </header>
-                <?php endif; ?>
+                <?php else :
+                    the_title('<h1 class="sr-only">', '</h1>');
+                endif; ?>
 
                 <?php if ($content) :
                     $content_class = $hero['content_wide'] ? ' wide' : '';
@@ -66,7 +68,7 @@
         <div class="scroll-box">
             <span><?php _e('Enjoy More', 'the-sofia-hotel'); ?></span>
             <a href="#content" class="scroll-link smooth-js" title="<?php esc_attr_e('Enjoy More', 'the-sofia-hotel'); ?>">
-                <img src="<?php echo get_bloginfo('template_url'); ?>/img/click-arrow.svg" alt="click">
+                <img src="<?php echo get_bloginfo('template_url'); ?>/img/click-arrow.svg" alt="Scroll down to learn more">
             </a>
         </div>
     <?php endif; ?>

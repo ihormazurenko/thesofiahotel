@@ -1,13 +1,6 @@
             </div><!-- end div for lace -->
         </div> <!-- end #main-content -->
 
-            <?php if (get_current_user_id() == 1) { ?>
-                <?php get_template_part('inc/popup', 'thank'); ?>
-                <?php get_template_part('inc/popup', 'form'); ?>
-                <?php get_template_part('inc/popup', 'book'); ?>
-                <?php get_template_part('inc/popup', 'let-us-know'); ?>
-            <?php } ?>
-
         <footer class="footer" id="footer">
             <div class="container">
                 <?php
@@ -58,7 +51,7 @@
                         <header class="footer-box-header">
                             <div class="footer-box-header-inner">
                                 <?php if ($hha['img']) {
-                                    echo "<img src='{$hha['img']['url']}' alt='".esc_attr__('Historic Hotels of America', 'the-sofia-hotel')."'>";
+                                    echo "<img src='{$hha['img']['url']}' alt='".esc_attr__('Historic Hotels of America National Trust of Historic Preservation', 'the-sofia-hotel')."'>";
                                 } ?>
                             </div>
                         </header>
@@ -100,6 +93,25 @@
                                     echo "<li><a href='".esc_url($social['tripadvisor'])."' title='Trip Advisor' target='_blank' rel='nofollow noopener'><i class='fab fa-tripadvisor'></i><span class=\"sr-only\">Visit our Trip Advisor</span></a></li>";
                             ?>
                         </ul>
+
+                        <?php /*
+                        <!--Start Guestfolio Signup Assets-->
+                        <script src="https://guestfolio.net/assets/embedded.js" type="text/javascript"></script>
+                        <!--End Guestfolio Signup Assets-->
+
+                        <div class="twelve columns">
+                            <form action="https://guestfolio.net/subscriptions/signup" method="post" id="guestfolio"><input type="text" id="website-url" name="website_url" value="" style="position: absolute;left: -999em;"><input type="hidden" id="hotel" name="hotel" value="OTA1"><div id="first-name-row" class="row">
+                                    <div class="four columns"><label for="first-name">First name:</label></div>
+                                    <div class="eight columns"><input type="text" id="first-name" name="subscriber[first_name]" value="" class="input-text" placeholder="First name"></div>
+                                </div><div id="last-name-row" class="row">
+                                    <div class="four columns"><label for="last-name">Last name:</label></div>
+                                    <div class="eight columns"><input type="text" id="last-name" name="subscriber[last_name]" value="" class="input-text" placeholder="Last name"></div>
+                                </div><div id="email-address-row" class="row">
+                                    <div class="four columns"><label for="email">Email:</label></div>
+                                    <div class="eight columns"><input type="email" id="email" name="subscriber[email]" value="" required="required" class="email input-text" placeholder="email@example.com"></div>
+                                </div><input type="submit" id="submit" name="submit" class="small radius white button" value="Submit"></form>
+                        </div>
+                    <!--End Guestfolio Signup Form--> */ ?>
                     </div>
                     <?php endif; ?>
                 </div>

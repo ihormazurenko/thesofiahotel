@@ -5,7 +5,7 @@ function load_style_script(){
 
     wp_enqueue_style('jquery-ui.min', '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css', array(), null );
     wp_enqueue_style('swiper.min', '//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css', array(), null );
-    wp_enqueue_style('screen', get_template_directory_uri() . '/assets/css/screen.css', array(), null );
+    wp_enqueue_style('screen', get_template_directory_uri() . '/assets/css/screen.css', array(), '1.0.2' );
     wp_enqueue_style('style', get_stylesheet_uri(), array(), null );
 
     wp_enqueue_script('modernizr.min', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.8.3', false );
@@ -28,6 +28,7 @@ function load_style_script(){
     wp_enqueue_script('smooth-scroll.polyfills', get_template_directory_uri() . '/assets/js/smooth-scroll.polyfills.min.js', array(), '16.1.0', true );
     wp_enqueue_script('isotope.pkgd.min', '//unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js', array(), '3.0.6', true );
     wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/js/custom/scripts.js', array('jquery'), null, true );
+    wp_enqueue_script('datepicker', get_template_directory_uri() . '/assets/js/custom/datepicker.js', array('jquery'), null, true );
 
     if ( is_page(69) ) {
         wp_enqueue_script('custom-map', get_template_directory_uri() . '/assets/js/custom/map.js', array('jquery'), '1.0.0', true );
@@ -186,3 +187,24 @@ function element_id($text = '') {
 
 //update Places date
 add_action( 'save_post_place', 'places_cron_job', 10, 3 );
+
+
+// for the date of Press article
+function news_date($post_id) {
+
+    // if revision or post autosave or insufficient editing permissions
+    if ( wp_is_post_revision($post_id) || (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) || !current_user_can( 'edit_post', $post_id ) )
+        return;
+
+    if (empty($_POST['acf']) || get_current_screen()->id !== "news")
+        return;
+
+    $date = trim($_POST['acf']['field_5d696e643493d']['field_5d696ead3493f']) ? strtotime($_POST['acf']['field_5d696e643493d']['field_5d696ead3493f']) : 2;
+
+    update_post_meta($post_id, 'date_news_U', $date);
+
+    return $post_id;
+
+}
+add_action('save_post_news', 'news_date', -1);
+

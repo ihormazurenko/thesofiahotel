@@ -2,6 +2,7 @@
     $logo       = get_field('logo');
     $details    = get_field('details');
     $button     = get_field('button');
+    $title  = strip_tags(get_the_title());
 
     if ($details && is_array($details)) {
         $desc = trim($details['desc']);
@@ -26,11 +27,11 @@
             ?>
             </div>
 
-            <?php if ($desc) { ?>
+            <?php if ($desc || $title) { ?>
                 <div class="service-desc">
-                    <div class="content"><?php echo $desc; ?></div>
+                    <div class="content"><?php echo ($desc) ? $desc : '"' . $title . '"'; ?></div>
                 </div>
-                <a href="#" class="read-more" title="<?php esc_attr_e('Read More', 'the-sofia-hotel'); ?>"><?php _e('Read More', 'the-sofia-hotel'); ?></a>
+                
             <?php } ?>
 
             <?php if ($date) { ?>
@@ -41,7 +42,7 @@
                 </ul>
             <?php } ?>
 
-            <?php if ($btn) {
+            <?php if ($btn && $button['target']) {
                 $label  = trim($button['label']) ? $button['label'] : __('Read More', 'the-sofia-hotel');
                 $target = $button['target'] ? 'target="_blank" rel="nofollow noopener"' : 'target="_self"';
 

@@ -127,6 +127,9 @@
 }
 .load-more-box {
   padding: 46px 0 66px;
+  .section-services + & {
+    border-top: 1px solid #c1c1c1;
+  }
   .sk-double-bounce {
     display: none;
   }
