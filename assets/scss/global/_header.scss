@@ -40,6 +40,9 @@
   .container {
     max-width: 2560px;
     padding: 60px 72px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     @media all and (max-width: 1024px) {
       padding: 60px 60px 50px;
     }
@@ -52,9 +55,9 @@
     }
   }
   .logo {
-    float: left;
+    // float: left;
     width: 312px;
-    text-align: left;
+    text-align: left; 
     img {
       display: block;
       max-width: 100%;
@@ -68,8 +71,14 @@
       max-width: 176px;
     }
   }
+  .right-content {
+    .inner {
+      display: flex;
+      flex-direction: row;
+    }
+  }
   .weather-box {
-    float: right;
+    // float: right;
     margin-top: 10px;
     color: $white;
     font-family: 'Georgia', 'Bentham', serif;
@@ -86,7 +95,7 @@
       margin-left: 2px;
     }
     .weather-atlas-wrapper {
-      .weather-atlas-body {padding: 0;}
+      .weather-atlas-body {padding: 0; margin-right: 16px;}
       // .current_text {display: none;}
 
       .current_temp {
@@ -118,8 +127,9 @@
 
 
   .btn-find-rooms {
-    float: right;
-    margin-top: 12px;
+    // float: right;
+    align-self: center;
+    // margin-top: 12px;
     &:not(:last-child) {
       margin-left: 32px;
     }

@@ -19,25 +19,32 @@
                         <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo.svg" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
                     </a>
                 </div>
+                
+                <div class="right-content">
+                    <div class="inner">
+                        <?php
+                            $header_btn = get_field('header_btn', 'option');
 
-                <a href="#burger-menu" title="<?php esc_attr_e('Navigation menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup" data-open="">
-                    <span></span>
-                    <i class="sr-only"><?php _e('Menu', 'the-sofia-hotel'); ?></i>
-                </a>
+                            if ($header_btn && is_array($header_btn) && $header_btn['show']) {
+                                if ( trim($header_btn['url']) ) {
+                                    $label  = trim($header_btn['label']) ? $header_btn['label'] : __('Find Rooms', 'the-sofia-hotel');
+                                    $target = $header_btn['target'] ? 'target="_blank" rel="nofollow noopener"' : 'target="_self"';
+                                    echo "<a href='".esc_url($header_btn['url'])."' class='btn btn-sm btn-find-rooms' title='".esc_attr($label)."' {$target}>{$label}</a>";
+                                }
+                            }
+                        ?>
 
-                <div class="weather-box"><?php echo do_shortcode('[shortcode-weather-atlas city_selector=2338455 background_color="transparent" daily="0" sunrise_sunset="0" layout="horizontal" font_size="12px" current="0"]') ?></div>
+                        <div class="weather-box"><?php echo do_shortcode('[shortcode-weather-atlas city_selector=2338455 background_color="transparent" daily="0" sunrise_sunset="0" layout="horizontal" font_size="12px" current="0"]') ?></div>
 
-                <?php
-                    $header_btn = get_field('header_btn', 'option');
+                        <a href="#burger-menu" title="<?php esc_attr_e('Navigation menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup" data-open="">
+                            <span></span>
+                            <i class="sr-only"><?php _e('Menu', 'the-sofia-hotel'); ?></i>
+                        </a>
 
-                    if ($header_btn && is_array($header_btn) && $header_btn['show']) {
-                        if ( trim($header_btn['url']) ) {
-                            $label  = trim($header_btn['label']) ? $header_btn['label'] : __('Find Rooms', 'the-sofia-hotel');
-                            $target = $header_btn['target'] ? 'target="_blank" rel="nofollow noopener"' : 'target="_self"';
-                            echo "<a href='".esc_url($header_btn['url'])."' class='btn btn-sm btn-find-rooms' title='".esc_attr($label)."' {$target}>{$label}</a>";
-                        }
-                    }
-                ?>
+                        
+                    </div>
+                </div>
+                
             </div>
             <div class="burger-box" id="burger-menu" role="dialog" aria-modal="true" aria-label="menu">
                 <div class="hero">
