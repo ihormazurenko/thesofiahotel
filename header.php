@@ -52,24 +52,6 @@
                     <div class="burger-inner-wrap">
                         <div class="burger-inner-box">
                             <div class="container">
-                                <div class="right-box">
-                                    <?php if (has_nav_menu('main-menu')) { ?>
-                                        <nav class="burger-menu-box">
-                                            <ul class="burger-menu">
-                                                <?php
-                                                wp_nav_menu(array(
-                                                    'theme_location'  => 'main-menu',
-                                                    'menu'            => 'Main Menu',
-                                                    'container'       => false,
-                                                    'items_wrap'      => '%3$s',
-                                                    'depth'           => 1
-                                                ));
-                                                ?>
-                                            </ul>
-                                        </nav>
-                                    <?php } ?>
-                                </div>
-
                                 <div class="left-box">
                                     <?php if (has_nav_menu('secondary-menu')) { ?>
                                         <nav class="burger-menu-box small">
@@ -136,6 +118,27 @@
                                         </div>
                                     <?php endif; ?>
                                 </div>
+
+                                
+                                <div class="right-box">
+                                    <?php if (has_nav_menu('main-menu')) { ?>
+                                        <nav class="burger-menu-box">
+                                            <ul class="burger-menu">
+                                                <?php
+                                                wp_nav_menu(array(
+                                                    'theme_location'  => 'main-menu',
+                                                    'menu'            => 'Main Menu',
+                                                    'container'       => false,
+                                                    'items_wrap'      => '%3$s',
+                                                    'depth'           => 1
+                                                ));
+                                                ?>
+                                            </ul>
+                                        </nav>
+                                    <?php } ?>
+                                </div>
+
+                                
                             </div>
                         </div>
                     </div>

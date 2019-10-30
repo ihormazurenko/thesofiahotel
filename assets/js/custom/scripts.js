@@ -22,6 +22,14 @@ jQuery(document).ready(function($) {
 
 	});
 
+    // Navigation order for mobile
+    // revere the order of the boxes
+    $(function(){
+        if ($(window).width() < 641) {
+           $('.burger-inner-box .left-box').insertAfter($('.burger-inner-box .right-box'));
+        }        
+    });
+
 
     // for smooth scroll
     $(function () {

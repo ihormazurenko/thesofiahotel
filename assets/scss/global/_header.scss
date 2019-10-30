@@ -536,7 +536,9 @@
     }
   }
   .container {
-    display: table;
+    // display: table;
+    display: flex;
+    flex-wrap: wrap; 
     width: 100%;
     padding-top: 20px;
   //  overflow: hidden;
