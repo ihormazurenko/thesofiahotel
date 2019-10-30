@@ -187,8 +187,19 @@
     }
     .input-row {
       margin-bottom: 25px;
+      position: relative;
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+    label {
+      position: absolute;
+      top: 20px;
+      font: 400 16px "Lato", "Arial", sans-serif;
+      text-transform: uppercase;
+
+      &.shift {
+        top: 2px;
       }
     }
     a.btn, .btn {

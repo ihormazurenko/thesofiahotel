@@ -77,16 +77,16 @@ get_header(); ?>
                                 <li>
                                     <span class="sr-only"><?php _e('* indicates a required field', 'the-sofia-hotel'); ?></span>
                                     <div class="input-row">
-                                        <label for="first-name" class="sr-only"><?php _e('First name', 'the-sofia-hotel'); ?></label>
-                                        <input type="text" id="first-name" name="subscriber[first_name]" value="" class="input-style" placeholder="<?php esc_attr_e('FIRST NAME', 'the-sofia-hotel'); ?>">
+                                        <label for="first-name" class=""><?php _e('First name', 'the-sofia-hotel'); ?></label>
+                                        <input type="text" id="first-name" name="subscriber[first_name]" value="" class="input-style" >
                                     </div>
                                     <div class="input-row">
-                                        <label for="last-name" class="sr-only"><?php _e('Last name', 'the-sofia-hotel'); ?></label>
-                                        <input type="text" id="last-name" name="subscriber[last_name]" value="" class="input-style" placeholder="<?php esc_attr_e('LAST NAME', 'the-sofia-hotel'); ?>">
+                                        <label for="last-name" class=""><?php _e('Last name', 'the-sofia-hotel'); ?></label>
+                                        <input type="text" id="last-name" name="subscriber[last_name]" value="" class="input-style" >
                                     </div>
                                     <div class="input-row">
-                                        <label for="email" class="sr-only"><?php _e('Email', 'the-sofia-hotel'); ?></label>
-                                        <input type="email" id="email" name="subscriber[email]" value="" required="required" class="input-style" placeholder="<?php esc_attr_e('EMAIL', 'the-sofia-hotel'); ?> (required)">
+                                        <label for="email" class=""><?php _e('Email', 'the-sofia-hotel'); ?> (required)</label>
+                                        <input type="email" id="email" name="subscriber[email]" value="" required="required" class="input-style" >
                                     </div>
                                 </li>
                                 <li>

@@ -99,7 +99,16 @@ textarea:-moz-placeholder {
   color: $white;
   @include transition($transition-other);
 }
+.wpcf7 label {
+  position: absolute;
+  top: 20px;
+  font: 400 16px "Lato", "Arial", sans-serif;
+  text-transform: uppercase;
 
+  &.shift {
+    top: 2px;
+  }
+}
 span.wpcf7-not-valid-tip {
   font-size: 22px;
 }

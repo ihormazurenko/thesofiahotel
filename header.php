@@ -150,23 +150,34 @@
                         <img src="<?php echo get_bloginfo('template_url'); ?>/img/logo_v2.svg" alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
                     </a>
                 </div>
+                
+                <div class="right-content">
+                    <div class="inner">
+                        
 
-                <a href="#burger-menu" title="<?php esc_attr_e('Navigation Menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup">
-                    <span></span>
-                    <i class="sr-only"><?php _e('Expand Navigation', 'the-sofia-hotel'); ?></i>
-                </a>
+                        
 
-                <div class="weather-box"><?php echo do_shortcode('[shortcode-weather-atlas city_selector=2338455 background_color="transparent" daily="0" text_color="#939598" sunrise_sunset="0" layout="horizontal" font_size="12px" current="0"]') ?></div>
+                        <?php
+                            if ($header_btn && is_array($header_btn) && $header_btn['show']) {
+                                if ( trim($header_btn['url']) ) {
+                                    $label  = trim($header_btn['label']) ? $header_btn['label'] : __('Find Rooms', 'the-sofia-hotel');
+                                    $target = $header_btn['target'] ? 'target="_blank" rel="nofollow noopener"' : 'target="_self"';
+                                    echo "<a href='".esc_url($header_btn['url'])."' class='btn btn-sm btn-find-rooms' title='".esc_attr($label)."' {$target}>{$label}</a>";
+                                }
+                            }
+                        ?>
 
-                <?php
-                    if ($header_btn && is_array($header_btn) && $header_btn['show']) {
-                        if ( trim($header_btn['url']) ) {
-                            $label  = trim($header_btn['label']) ? $header_btn['label'] : __('Find Rooms', 'the-sofia-hotel');
-                            $target = $header_btn['target'] ? 'target="_blank" rel="nofollow noopener"' : 'target="_self"';
-                            echo "<a href='".esc_url($header_btn['url'])."' class='btn btn-sm btn-find-rooms' title='".esc_attr($label)."' {$target}>{$label}</a>";
-                        }
-                    }
-                ?>
+                        <div class="weather-box"><?php echo do_shortcode('[shortcode-weather-atlas city_selector=2338455 background_color="transparent" daily="0" text_color="#939598" sunrise_sunset="0" layout="horizontal" font_size="12px" current="0"]') ?></div>
+
+                        <a href="#burger-menu" title="<?php esc_attr_e('Navigation Menu', 'the-sofia-hotel') ?>" class="menu-toggle open-tsh-popup">
+                            <span></span>
+                            <i class="sr-only"><?php _e('Menu', 'the-sofia-hotel'); ?></i>
+                        </a>
+
+                        
+                    </div>
+                </div>
+                
             </div>
         </header>
 

@@ -58,6 +58,9 @@
     // float: left;
     width: 312px;
     text-align: left; 
+    a {
+      display: block;
+    }
     img {
       display: block;
       max-width: 100%;
@@ -95,7 +98,12 @@
       margin-left: 2px;
     }
     .weather-atlas-wrapper {
-      .weather-atlas-body {padding: 0; margin-right: 16px;}
+      .weather-atlas-body {padding: 0; 
+      
+        @media all and (min-width: 641px) {
+          margin-right: 16px;
+        }
+      }
       // .current_text {display: none;}
 
       .current_temp {
@@ -142,7 +150,8 @@
       .btn-find-rooms {
         display: block;
         position: absolute;
-        left: 42px;
+        left: 14px;
+        // left: 42px;
         right: auto;
         top: 72px;
         .admin-bar & {

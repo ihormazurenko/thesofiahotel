@@ -635,6 +635,22 @@ jQuery(document).ready(function($) {
 
         });
 
+        //newsletter form features
+        $(function(){
+            $('.subscribe-form-list input').on('keydown', function() {
+                $(this).siblings('label').addClass('shift');
+            });              
+            $(".wpcf7 input[type=text], .wpcf7 input[type=email]").on('keydown', function() {
+                $(this).parent().parent().find('label').addClass('shift');
+            }); 
+            $(".wpcf7 input[type=date], .wpcf7 select:not(#rq-future-events)").parent().parent().find('label').addClass('shift');
+
+            $('.wpcf7 textarea').on('keydown', function() {
+                $(this).parent().parent().find('label').addClass('shift');
+            }); 
+        });
+
+
 
         //header scroll effect
         function scrollEffects() {

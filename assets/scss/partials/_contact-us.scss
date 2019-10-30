@@ -156,6 +156,9 @@
 }
 
 .modal-form-list {
+  li {
+    position: relative;
+  }
   > li {
     &:not(:last-child) {
       margin-bottom: 53px;
